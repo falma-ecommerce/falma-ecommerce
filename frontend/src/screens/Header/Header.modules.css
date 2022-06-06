@@ -1,0 +1,16 @@
+.dropdown-nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px
+
+
+}
+#dropdown-basic-button {
+    background-color: white !important;
+    margin: 20px;
+    color: black;
+    border: none;
+
+
+}
