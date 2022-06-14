@@ -1,0 +1,17 @@
+.shoe-carousel {   
+    border: 0.1rem solid ;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    margin: 2rem 0;
+}
+
+.shoe-carousel img{
+    height:60vh;
+    width: 32.8vw;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    border: 0.1rem solid ;
+}
+  
+.carousel-category {
+  display: flex;
+  justify-content: space-between;
+}
