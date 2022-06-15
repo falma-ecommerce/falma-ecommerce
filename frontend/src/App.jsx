@@ -1,14 +1,25 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import HomeScreen from "./screens/HomeScreen/HomeScreen";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 const App = () => {
   return (
-    <main>
-     <h1>It's FALMA </h1>
-     <h1>Check Out falma Sales✨  </h1>
-    </main>
+    <BrowserRouter>
+      <div>
+        {/* <header>
+        <Link to="/">Falma</Link>
+      </header> */}
+        <main>
+          <Routes>
+            <Route path="/" element={<HomeScreen />} />
+          </Routes>
+          
+        </main>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
-
