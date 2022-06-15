@@ -20,7 +20,8 @@ export default function ControlledCarousel() {
         <Carousel.Item className="carouselItem">
           <img
             className="d-block w-100"
-            src="../images/menCover2.jpg"
+            src="../images/menCover1a.jpg"
+         
             alt="First slide"
           />
           
