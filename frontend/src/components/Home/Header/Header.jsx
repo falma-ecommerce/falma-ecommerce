@@ -48,7 +48,7 @@ export default function Header() {
       <div className="dropdown-nav">
         <div>
           <Button id="dropdown-basic-button" title="All">
-            All
+            <a href="/all-products">All</a>
           </Button>
         </div>
         <div>
