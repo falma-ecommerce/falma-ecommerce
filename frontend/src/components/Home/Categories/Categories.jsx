@@ -47,7 +47,7 @@ const Categories = () => {
         </div>
       </Link>
 
-      <Link to="/children-cloths" >
+      <Link to="/children-cloths">
         <div class="bg-items">
           <div
             class="items"
