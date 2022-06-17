@@ -1,0 +1,32 @@
+.products-link {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.products-link img {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 0.7rem;
+}
+
+.all-products {
+  text-decoration: none;
+}
+
+.products-header {
+  text-align: center;
+}
+
+.products-name {
+  color: black;
+  font-size: 1.3rem;
+  margin-bottom: 5rem;
+  max-width: fit-content;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: black;
+}
