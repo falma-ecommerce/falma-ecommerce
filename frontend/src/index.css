@@ -1,19 +1,10 @@
-:root {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-}
-/* body {
+body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  body {
-    background-color: rgb(247, 107, 94);
   }
   .site-container {
     min-height: 100vh;
@@ -64,10 +55,10 @@
   .checkout-steps > div.active {
     border-bottom: 0.2rem solid #f08000;
     color: #f08000;
-  } */
+  }
   
   /* sidebar */
-  /* .navbar-brand {
+  .navbar-brand {
     font-weight: bold;
   }
   .side-navbar {
@@ -77,7 +68,8 @@
     left: -300px;
     background-color: #100901;
     transition: 0.5s;
-  }  
+  }
+  
   .site-container {
     transition: 0.4s;
   }
@@ -89,11 +81,11 @@
   }
   .text-bold {
     font-weight: bold;
-  } */
+  }
   
   /* Map */
   
-  /* .full-box {
+  .full-box {
     height: 100vh;
     max-width: initial;
   }
@@ -133,4 +125,4 @@
   button.thumbnail {
     padding: 0;
   }
-   */
+  
