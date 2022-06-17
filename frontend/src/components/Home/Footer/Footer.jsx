@@ -72,16 +72,10 @@ const Footer = () => {
         <div className="icons">
           <div className="paypal">
             <FaCcPaypal />
-          </div>
-          <div className="paypal2">
-            <FaPaypal />
-          </div>
+          </div>          
           <div className="visa">
             <FaCcVisa />
-          </div>
-          <div className="visa">
-            <RiVisaFill />
-          </div>
+          </div>          
           <div className="visa">
             <FaCcApplePay />
           </div>
@@ -90,10 +84,10 @@ const Footer = () => {
           </div>
         </div>
         <Heading className="text-center">
-          <h7 style={{ color: "#DAA03DFF "}}>
+          <p style={{ color: "#DAA03DFF "}}>
            &copy;{new Date().getFullYear()}  @Falma | Only for Educational Purposes
-          </h7>
-          <div class="paymentimages"></div>
+          </p>
+          
         </Heading>
       </Container>
     </Box>

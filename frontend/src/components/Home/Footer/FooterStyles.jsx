@@ -42,7 +42,7 @@ export const FooterLink = styled.a`
     transition: 270ms ease-in;
   }
 `;
-export const Heading = styled.p`
+export const Heading = styled.div`
   // text-align: center;
   font-size: 1rem;
   color: #fff;
