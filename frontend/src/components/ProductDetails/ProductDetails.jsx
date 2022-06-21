@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { sanitize } from "dompurify";
 import "./ProductDetails.modules.css";
 
 const Product = () => {
@@ -28,7 +29,7 @@ const Product = () => {
       currency: "USD",
     },
     headers: {
-      "X-RapidAPI-Key": "f439ca48dcmsh0405e7dd2edfc2dp12bbb7jsnd0ed07516ab0",
+      "X-RapidAPI-Key": "43dbb5626dmsh7ef4091c1093b66p1426f5jsn4563f68a5f5e",
       "X-RapidAPI-Host": "asos2.p.rapidapi.com",
     },
   };
@@ -47,62 +48,75 @@ const Product = () => {
       });
   }, []);
   console.log(firstUrl);
+  console.log(product);
   return (
     <div>
-      <h1>Product Detail</h1>
+      {/* <h1>Product Detail</h1> */}
       {/* <h3>{product && product.name}</h3> */}
       <div className="product-detail">
-        <div className="images">
-          {images &&
-            images.map((product, index) => (
-              <div className="hover-image" key={index}>
-                <img 
-                  id={index}
-                  onClick={() => handleClick("https://" + product.url)}
-                  src={`https://${product.url}`}
-                  width="150"
-                  height="200"
-                  alt="Article not no longer in stock"
-                ></img>
-              </div>
-            ))}
+        <div className="product-image">
+          <div className="images">
+            {images &&
+              images.map((product, index) => (
+                <div className="hover-image" key={index}>
+                  <img
+                    id={index}
+                    onClick={() => handleClick("https://" + product.url)}
+                    src={`https://${product.url}`}
+                    // width=""
+                    // height="200"
+                    style={{ height: "20.55vh" }}
+                    alt="Article not no longer in stock"
+                  ></img>
+                </div>
+              ))}
+          </div>
+          <div className="firstUrl">
+            {firstUrl && (
+              <img
+                id="main-image"
+                src={`https://${firstUrl.url}`}
+                style={{ height: "83.5vh" }}
+                // width=""
+                // height="813"
+                alt="Article not no longer in stock"
+              ></img>
+            )}
+          </div>
         </div>
-        <div className="firstUrl">
-          {firstUrl && (
-            <img
-              id="main-image"
-              src={`https://${firstUrl.url}`}
-              width="700"
-              height="813"
-              alt="Article not no longer in stock"
-            ></img>
-          )}
-        </div>
+
         <div className="all-product-info">
           <h3>{productInfo && productInfo.name}</h3>
+          <p>
+            {product && product.gender}{" "}
+            {productInfo && productInfo.displaySizeText}
+          </p>
           <p>{productInfo && productInfo.price.current.text}</p>
           <p>{productInfo && productInfo.colour}</p>
-          <p>{productInfo && productInfo.displaySizeText}</p>
+
           <p>{productInfo && productInfo.id}</p>
-          {/* <h3>{product && product.description}</h3> */}
+
           <hr className="line"></hr>
-          <ul>
-            <li>
-              <strong>
-                <p>By Another Influence</p>
-              </strong>
-              <ul>
-                {" "}
-                <li>One for your wardrobe </li> <li>Crew neck</li>
-                <li>Contrast sleeve panels </li> <li>Fitted trims</li>
-                <li>Regular fit </li>
-                <li>No surprises, just a classic cut</li>
-              </ul>
-            </li>
-          </ul>
-          <div> 
-            <br />
-            <Link className="cart" to={"/cart"}>
+          <p
+            dangerouslySetInnerHTML={{ __html: sanitize(product?.description) }}
+          ></p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: sanitize(product && product.info && product.info.aboutMe),
+            }}
+          ></p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: sanitize(product?.info?.sizeAndFit),
+            }}
+          ></p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: sanitize(product?.info?.careInfo),
+            }}
+          ></p>
+          <div>
+            <Link className="cart" to={"/basket"}>
               <p>ADD TO CART</p>
             </Link>
           </div>

@@ -4,10 +4,10 @@ import "./ShoesCarousel.modules.css";
 
 const ShoesCarousel = () => {
   return (
-    <div className="shoe-carousel">
+    <div className="all-carousel-category">
       <Carousel>
-        <div className="carousel-category">
-          <div >
+        <div className="shoe-carousel">
+          <div className="carousel-category">
             <img
               src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://ae01.alicdn.com/kf/H66b6b1cafc6049179e07e930481ecbc1f/Classic-Men-s-Formal-Shoes-High-quality-Leather-Men-s-Shoes-Italian-Style-Men-Dress-Shoes.jpg"
               alt=""
@@ -27,8 +27,8 @@ const ShoesCarousel = () => {
           </div>
         </div>
 
-        <div className="carousel-category">
-          <div >
+        <div className="shoe-carousel">
+          <div className="carousel-category">
             <img
               src="https://images.meesho.com/images/products/85920902/m3wrc_512.jpg"
               alt=""
@@ -48,8 +48,8 @@ const ShoesCarousel = () => {
           </div>
         </div>
 
-        <div className="carousel-category">
-          <div >
+        <div className="shoe-carousel">
+          <div className="carousel-category">
             <img
               src="https://ae01.alicdn.com/kf/H77c73d5a20a64ebc8d1dd5cbcc010c7aQ/2022-New-Kids-Sport-Shoes-For-Boys-Sneakers-Girls-Fashion-Spring-Casual-Children-Shoes-Boy-Running.jpg"
               alt=""

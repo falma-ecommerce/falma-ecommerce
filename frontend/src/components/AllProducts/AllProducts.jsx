@@ -23,8 +23,8 @@ const AllProducts = () => {
       lang: "en-US",
     },
     headers: {
-      "X-RapidAPI-Key": "f439ca48dcmsh0405e7dd2edfc2dp12bbb7jsnd0ed07516ab0",
-      "X-RapidAPI-Host": "asos2.p.rapidapi.com",
+      'X-RapidAPI-Key': '43dbb5626dmsh7ef4091c1093b66p1426f5jsn4563f68a5f5e',
+      'X-RapidAPI-Host': 'asos2.p.rapidapi.com',
     },
   };
   useEffect(() => {
@@ -41,7 +41,7 @@ const AllProducts = () => {
 
   return (
     <>
-      <h1 className="products-header">All Products</h1>
+      {/* <h1 className="products-header">All Products</h1> */}
       <motion.div
         className="products-link"
         layout
