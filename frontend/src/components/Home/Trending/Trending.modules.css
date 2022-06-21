@@ -11,13 +11,11 @@
 .product img {
   width: 95%;
   height: 91%;
-  /* transition: width 5s; */
   box-shadow: 3px 13px 15px 0px rgba(0, 0, 0, 0.5);
 }
 .product img:hover {
   width: 94%;
   height: 90%;
-  /* transition: width 2s ease-in-out; */
   box-shadow: 3px 13px 15px 0px rgba(0, 0, 0, 0.5);
   z-index: 1;
   

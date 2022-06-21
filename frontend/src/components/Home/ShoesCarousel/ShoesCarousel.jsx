@@ -1,18 +1,20 @@
 import React from "react";
 import Carousel from "nuka-carousel";
 import "./ShoesCarousel.modules.css";
+import { Link } from "react-router-dom";
 
 const ShoesCarousel = () => {
   return (
     <div className="shoe-carousel">
       <Carousel>
-        <div className="carousel-category">
+         <Link to='/men-shoes'>
+        <div className="carousel-category">         
           <div >
             <img
               src="../shoe-img/shoe-m1.jpg"
               alt=""
             />
-          </div>
+          </div>         
           <div className="carousel-category">
           <img
               src="../shoe-img/shoe-m2.jpg"
@@ -26,7 +28,9 @@ const ShoesCarousel = () => {
             />
           </div>
         </div>
+        </Link>
 
+        <Link to='/women-shoes'>
         <div className="carousel-category">
           <div >
             <img
@@ -47,7 +51,9 @@ const ShoesCarousel = () => {
             />
           </div>
         </div>
-
+        </Link>
+        
+        <Link to='/sport-shoes'>
         <div className="carousel-category">
           <div >
             <img
@@ -68,7 +74,7 @@ const ShoesCarousel = () => {
             />
           </div>
         </div>
-
+        </Link>
       </Carousel>
     </div>
   );

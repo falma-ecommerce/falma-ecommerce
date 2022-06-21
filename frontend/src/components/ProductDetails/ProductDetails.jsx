@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+
 import "./ProductDetails.modules.css";
 
 const Product = () => {
@@ -11,6 +12,7 @@ const Product = () => {
   const [productInfo, setProductInfo] = useState();
   const { id } = useParams();
 
+  
   const handleClick = (url) => {
     const mainImage = document.getElementById("main-image");
     mainImage.src = url;
@@ -19,19 +21,9 @@ const Product = () => {
 
   const options = {
     method: "GET",
-    url: "https://asos2.p.rapidapi.com/products/v3/detail",
-    params: {
-      id: id,
-      lang: "en-US",
-      store: "US",
-      sizeSchema: "US",
-      currency: "USD",
-    },
-    headers: {
-      "X-RapidAPI-Key": "f439ca48dcmsh0405e7dd2edfc2dp12bbb7jsnd0ed07516ab0",
-      "X-RapidAPI-Host": "asos2.p.rapidapi.com",
-    },
+    url: `/extApi/product/details/${id}` 
   };
+  
   useEffect(() => {
     axios
       .request(options)
@@ -79,7 +71,7 @@ const Product = () => {
           )}
         </div>
         <div className="all-product-info">
-          <h3>{productInfo && productInfo.name}</h3>
+          <h4>{productInfo && productInfo.name}</h4>
           <p>{productInfo && productInfo.price.current.text}</p>
           <p>{productInfo && productInfo.colour}</p>
           <p>{productInfo && productInfo.displaySizeText}</p>

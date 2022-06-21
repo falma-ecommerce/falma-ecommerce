@@ -86,7 +86,7 @@ const Categories = () => {
           >
             <div className="four"></div>
             <div className="details">
-              <h2>MEN</h2>
+              <h2>MEN CLOTHES</h2>
             </div>
           </div>
         </div>
@@ -107,7 +107,7 @@ const Categories = () => {
           >
             <div className="five"></div>
             <div className="details">
-              <h2>MEN</h2>
+              <h2>WOMEN CLOTHES</h2>
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@ const Categories = () => {
           >
             <div className="six"></div>
             <div className="details">
-              <h2>MEN</h2>
+              <h2>KIDS CLOTHES</h2>
             </div>
           </div>
         </div>
