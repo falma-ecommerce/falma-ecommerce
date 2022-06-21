@@ -9,27 +9,7 @@ const Products = ({ q }) => {
 
   const myProductsOptions = {
     method: "GET",
-<<<<<<< HEAD:frontend/src/components/AllProducts/AllProducts.jsx
-    url: "https://asos2.p.rapidapi.com/products/v2/list",
-    params: {
-      store: "US",
-      offset: "0",
-      categoryId: "4209",
-      limit: "48",
-      country: "US",
-      sort: "freshness",
-      q: 'all',
-      currency: "USD",
-      sizeSchema: "US",
-      lang: "en-US",
-    },
-    headers: {
-      'X-RapidAPI-Key': '43dbb5626dmsh7ef4091c1093b66p1426f5jsn4563f68a5f5e',
-      'X-RapidAPI-Host': 'asos2.p.rapidapi.com',
-    },
-=======
     url: `/extApi/products?q=${q}`,
->>>>>>> freemanupdate:frontend/src/components/Products/Products.jsx
   };
 
   useEffect(() => {
