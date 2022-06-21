@@ -9,7 +9,7 @@
 .nav-info {
     /* display: flex; */
     display: grid;    
-    grid-template-columns: 1.3fr 2fr auto;
+    grid-template-columns: 1.2fr 2fr auto;
     margin: 20px 40px ;
     justify-content: center;
     /* width: 80%; */

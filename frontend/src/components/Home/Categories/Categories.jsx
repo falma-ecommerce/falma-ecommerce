@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import "./Categories.modules.css";
 
 const Categories = () => {
+
+  
   return (
     <div className="container">
-      <Link to="/men-cloths">
+      <Link to="/menCategory">
         <div className="bg-items">
           <div
             className="items"
@@ -26,7 +29,7 @@ const Categories = () => {
         </div>
       </Link>
 
-      <Link to="/women-cloths">
+      <Link to="/womenCategory">
         <div className="bg-items">
           <div
             className="items"
@@ -47,7 +50,7 @@ const Categories = () => {
         </div>
       </Link>
 
-      <Link to="/children-cloths">
+      <Link to="/kidsCategory" >
         <div className="bg-items">
           <div
             className="items"
@@ -68,7 +71,7 @@ const Categories = () => {
         </div>
       </Link>
 
-      <Link to="/men-shoes">
+      <Link to="/men/cloths">
         <div className="bg-items">
           <div
             className="items"
@@ -83,13 +86,13 @@ const Categories = () => {
           >
             <div className="four"></div>
             <div className="details">
-              <h2>MEN</h2>
+              <h2>MEN CLOTHES</h2>
             </div>
           </div>
         </div>
       </Link>
 
-      <Link to="/women-shoes">
+      <Link to="/women/cloths">
         <div className="bg-items">
           <div
             className="items"
@@ -104,13 +107,13 @@ const Categories = () => {
           >
             <div className="five"></div>
             <div className="details">
-              <h2>MEN</h2>
+              <h2>WOMEN CLOTHES</h2>
             </div>
           </div>
         </div>
       </Link>
 
-      <Link to="/children-shoes">
+      <Link to="/kids/cloths">
         <div className="bg-items">
           <div
             className="items"
@@ -125,7 +128,7 @@ const Categories = () => {
           >
             <div className="six"></div>
             <div className="details">
-              <h2>MEN</h2>
+              <h2>KIDS CLOTHES</h2>
             </div>
           </div>
         </div>

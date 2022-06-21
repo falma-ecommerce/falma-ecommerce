@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./AllProducts.modules.css";
 import axios from "axios";
 import { AnimatePresence, motion } from "framer-motion";
+import "./Products.modules.css";
 
-const AllProducts = () => {
+const Products = ({ q }) => {
   const [products, setProducts] = useState([]);
 
   const myProductsOptions = {
     method: "GET",
+<<<<<<< HEAD:frontend/src/components/AllProducts/AllProducts.jsx
     url: "https://asos2.p.rapidapi.com/products/v2/list",
     params: {
       store: "US",
@@ -26,7 +27,11 @@ const AllProducts = () => {
       'X-RapidAPI-Key': '43dbb5626dmsh7ef4091c1093b66p1426f5jsn4563f68a5f5e',
       'X-RapidAPI-Host': 'asos2.p.rapidapi.com',
     },
+=======
+    url: `/extApi/products?q=${q}`,
+>>>>>>> freemanupdate:frontend/src/components/Products/Products.jsx
   };
+
   useEffect(() => {
     axios
       .request(myProductsOptions)
@@ -73,4 +78,4 @@ const AllProducts = () => {
   );
 };
 
-export default AllProducts;
+export default Products;

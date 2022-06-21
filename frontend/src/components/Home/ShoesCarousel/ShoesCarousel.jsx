@@ -1,74 +1,80 @@
 import React from "react";
 import Carousel from "nuka-carousel";
 import "./ShoesCarousel.modules.css";
+import { Link } from "react-router-dom";
 
 const ShoesCarousel = () => {
   return (
     <div className="all-carousel-category">
       <Carousel>
-        <div className="shoe-carousel">
-          <div className="carousel-category">
+         <Link to='/men-shoes'>
+        <div className="carousel-category">         
+          <div >
             <img
-              src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://ae01.alicdn.com/kf/H66b6b1cafc6049179e07e930481ecbc1f/Classic-Men-s-Formal-Shoes-High-quality-Leather-Men-s-Shoes-Italian-Style-Men-Dress-Shoes.jpg"
+              src="../shoe-img/shoe-m1.jpg"
+              alt=""
+            />
+          </div>         
+          <div className="carousel-category">
+          <img
+              src="../shoe-img/shoe-m2.jpg"
               alt=""
             />
           </div>
           <div className="carousel-category">
           <img
-              src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://ae01.alicdn.com/kf/Hb18ec96e8d694ec693a70bb1844cc6a2G/High-Quality-Genuine-Leather-Italian-Mens-Shoes-Oxford-Shoes-For-Men-Formal-Wedding-Dress-Shoes-Zapatos.jpg"
-              alt=""
-            />
-          </div>
-          <div className="carousel-category">
-          <img
-              src="https://www.cartrollers.com/wp-content/uploads/2022/03/Mens-Black-Designers-Corporate-Shoes-2.jpeg"
+              src="../shoe-img/shoe-m3.jpeg"
               alt=""
             />
           </div>
         </div>
+        </Link>
 
-        <div className="shoe-carousel">
-          <div className="carousel-category">
+        <Link to='/women-shoes'>
+        <div className="carousel-category">
+          <div >
             <img
-              src="https://images.meesho.com/images/products/85920902/m3wrc_512.jpg"
+              src="../shoe-img/shoe-w1.jpeg"
               alt=""
             />
           </div>
           <div className="carousel-category">
           <img
-              src="https://rukminim1.flixcart.com/image/714/857/kykgb680/shoe/s/u/9/3-879-pink-t-rock-pink-grey-original-imagarhhfjqnfxvn.jpeg?q=50"
+              src="../shoe-img/shoe-w2.jpg"
               alt=""
             />
           </div>
           <div className="carousel-category">
           <img
-              src="http://cdn.shopify.com/s/files/1/0520/5635/9093/products/1601538091390_IMG_5083-originnm80prcnt_1200x1200.jpg?v=1612106660"
+              src="../shoe-img/shoe-w3.jpg"
               alt=""
             />
           </div>
         </div>
-
-        <div className="shoe-carousel">
-          <div className="carousel-category">
+        </Link>
+        
+        <Link to='/sport-shoes'>
+        <div className="carousel-category">
+          <div >
             <img
-              src="https://ae01.alicdn.com/kf/H77c73d5a20a64ebc8d1dd5cbcc010c7aQ/2022-New-Kids-Sport-Shoes-For-Boys-Sneakers-Girls-Fashion-Spring-Casual-Children-Shoes-Boy-Running.jpg"
+              src="../shoe-img/shoe-c1.jpeg"
               alt=""
             />
           </div>
           <div className="carousel-category">
           <img
-              src="https://ae01.alicdn.com/kf/H9282b3e7b3454531af377a4a83555837x/New-Trend-Kids-Unisex-Casual-Shoes-Black-Kids-Sneakers-For-Boys-Fashion-Teenage-Trainers-Size-31.jpg"
+              src="../shoe-img/shoe-c2.jpg"
               alt=""
             />
           </div>
           <div className="carousel-category">
           <img
-              src="https://ae01.alicdn.com/kf/H271cc91e34f645d38e5c63874cc6a4ebd/JGVIKOTO-New-Boys-Shoes-Fashion-Soft-Flat-Loafers-For-Toddler-Boy-Big-Kids-Sneakers-Children-Flats.jpg_Q90.jpg_.webp"
+              src="../shoe-img/shoe-c3.jpg"
               alt=""
             />
           </div>
         </div>
-
+        </Link>
       </Carousel>
     </div>
   );
