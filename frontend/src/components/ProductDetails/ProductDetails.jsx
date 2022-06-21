@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import "./ProductDetails.modules.css";
 
-const Product = () => {
+const ProductDetails = () => {
   const [product, setProduct] = useState({});
   const [images, setImages] = useState([]);
   const [firstUrl, setFirstUrl] = useState();
@@ -104,4 +104,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ProductDetails;
