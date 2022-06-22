@@ -7,73 +7,46 @@ const ShoesCarousel = () => {
   return (
     <div className="shoe-carousel">
       <Carousel>
-         <Link to='/men-shoes'>
-        <div className="carousel-category">         
-          <div >
-            <img
-              src="../shoe-img/shoe-m1.jpg"
-              alt=""
-            />
-          </div>         
+        <Link to="/men-shoes">
           <div className="carousel-category">
-          <img
-              src="../shoe-img/shoe-m2.jpg"
-              alt=""
-            />
+            <div className="carousel-img">
+              <img src="../shoe-img/shoe-m1.jpg" alt="" />
+            </div>
+            <div className="carousel-img">
+              <img src="../shoe-img/shoe-m2.jpg" alt="" />
+            </div>
+            <div className="carousel-img">
+              <img src="../shoe-img/shoe-m3.jpeg" alt="" />
+            </div>
           </div>
-          <div className="carousel-category">
-          <img
-              src="../shoe-img/shoe-m3.jpeg"
-              alt=""
-            />
-          </div>
-        </div>
-        </Link>
-
-        <Link to='/women-shoes'>
-        <div className="carousel-category">
-          <div >
-            <img
-              src="../shoe-img/shoe-w1.jpeg"
-              alt=""
-            />
-          </div>
-          <div className="carousel-category">
-          <img
-              src="../shoe-img/shoe-w2.jpg"
-              alt=""
-            />
-          </div>
-          <div className="carousel-category">
-          <img
-              src="../shoe-img/shoe-w3.jpg"
-              alt=""
-            />
-          </div>
-        </div>
         </Link>
         
-        <Link to='/sport-shoes'>
-        <div className="carousel-category">
-          <div >
-            <img
-              src="../shoe-img/shoe-c1.jpeg"
-              alt=""
-            />
-          </div>
+        <Link to="/women-shoes">
           <div className="carousel-category">
-          <img
-              src="../shoe-img/shoe-c2.jpg"
-              alt=""
-            />
+            <div className="carousel-img">
+              <img src="../shoe-img/shoe-w1.jpeg" alt="" />
+            </div>
+            <div className="carousel-img">
+              <img src="../shoe-img/shoe-w2.jpg" alt="" />
+            </div>
+            <div className="carousel-img">
+              <img src="../shoe-img/shoe-w3.jpg" alt="" />
+            </div>
           </div>
+        </Link>
+
+        <Link to="/sport-shoes">
           <div className="carousel-category">
-          <img
-              src="../shoe-img/shoe-c3.jpg"
-              alt=""
-            />
+            <div className="carousel-img">
+              <img src="../shoe-img/shoe-c1.jpeg" alt="" />
+            </div>
+            <div className="carousel-img">
+              <img src="../shoe-img/shoe-c2.jpg" alt="" />
+            </div>
+            <div className="carousel-img">
+              <img src="../shoe-img/shoe-c3.jpg" alt="" />
+            </div>
           </div>
-        </div>
         </Link>
       </Carousel>
     </div>
