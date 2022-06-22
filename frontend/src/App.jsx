@@ -6,6 +6,7 @@ import Header from "./components/Home/Header/Header"
 import Products from "./components/Products/Products";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import "./App.css";
+import Cart from "./components/Cart/Cart";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/women-shoes" element={<Products q="women-shoes" />} />
             <Route path="/sport-shoes" element={<Products q="sport-shoes" />} />
             <Route path="/product-details/:id" element={<ProductDetails />}/>
+            <Route path="/myCart" element={<Cart />}/>
           </Routes> 
         </main>
       </div>

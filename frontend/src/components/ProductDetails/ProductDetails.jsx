@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { sanitize } from 'dompurify'
+import { sanitize } from "dompurify";
 import "./ProductDetails.modules.css";
 
 const ProductDetails = () => {
@@ -12,7 +12,6 @@ const ProductDetails = () => {
   const [productInfo, setProductInfo] = useState();
   const { id } = useParams();
 
-  
   const handleClick = (url) => {
     const mainImage = document.getElementById("main-image");
     mainImage.src = url;
@@ -21,9 +20,9 @@ const ProductDetails = () => {
 
   const options = {
     method: "GET",
-    url: `/extApi/product/details/${id}` 
+    url: `/extApi/product/details/${id}`,
   };
-  
+
   useEffect(() => {
     axios
       .request(options)
@@ -38,12 +37,20 @@ const ProductDetails = () => {
         console.error(error);
       });
   }, []);
-  console.log(firstUrl);
-  console.log(product);
+
+  // let myProductCart = []
+
+
+  const addToCart = () => {
+    alert("I am a cart")
+    // myProductCart.push(product)
+    // document.getElementById("shopping-cart-count").innerText=myProductCart.length
+    // document.cookie =myProductCart
+    // console.log(myProductCart)
+  };
+
   return (
     <div>
-      {/* <h1>Product Detail</h1> */}
-      {/* <h3>{product && product.name}</h3> */}
       <div className="product-detail">
         <div className="product-image">
           <div className="images">
@@ -103,9 +110,9 @@ const ProductDetails = () => {
             }}
           ></p>
           <div>
-            <Link className="cart" to={"/basket"}>
-              <p>ADD TO CART</p>
-            </Link>
+            <button onClick={addToCart} className="cart">
+              ADD TO CART
+            </button>
           </div>
         </div>
       </div>

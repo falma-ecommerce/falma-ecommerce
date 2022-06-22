@@ -1,7 +1,5 @@
-.shoe-carousel {
-  border: 0.1rem solid;
+.carousel-category {
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-  margin: 2rem 0;
   display: flex;
   justify-content: center;
   gap: 0.5rem;
@@ -9,15 +7,15 @@
   max-width: fit-content;
 }
 
-.shoe-carousel img {
+.carousel-category img {
   height: 60vh;
-  min-width: 32.7vw;
+  min-width: 32.77vw;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
   border: 0.1rem solid;
 }
 
 @media only screen and (max-width: 400px) {
   .shoe-carousel img {
-    width: 100%;
+    width: 100vw;
   }
 }

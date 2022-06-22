@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 const ShoesCarousel = () => {
   return (
     <div className="all-carousel-category">
-      <Carousel>
+      <Carousel >
          <Link to='/men-shoes'>
         <div className="carousel-category">         
-          <div >
+          <div>
             <img
               src="../shoe-img/shoe-m1.jpg"
               alt=""

@@ -29,20 +29,19 @@ h1 {
   font-size: 1.2rem;
   max-width: 35%;
 }
-.cart p {
+.cart{
   border: 0.1rem solid black;
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 0.5rem 2rem;
+  min-width: 100%;
 }
-.cart {
-  text-decoration: none;
-}
-.cart:hover p{
+
+.cart:hover{
   background-color: black;
   color: white;
 }
 
-.cart:active p{
+.cart:active {
   transform: translateY(0.2rem);
 }
 
