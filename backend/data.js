@@ -2,8 +2,8 @@ const data = {
     products: [
       {
         name: 'Nike Slim shirt',
-        slug: 'nike-slim-shirt',
-        category: 'Men Trending',
+        slug: 'nike-slim-shirt',       
+        category: 'Trending',
         image: '/images/men1.jpg', // 679px × 829px
         price: 120,
         countInStock: 10,
@@ -14,8 +14,8 @@ const data = {
       },
       {
         name: 'Adidas Fit Shirt',
-        slug: 'adidas-fit-shirt',
-        category: 'Women Trending',
+        slug: 'adidas-fit-shirt',       
+        category: 'Seasonal',
         image: '/images/women5a.jpg',
         price: 250,
         countInStock: 20,
@@ -26,8 +26,8 @@ const data = {
       },
       {
         name: 'Nike Slim Pant',
-        slug: 'nike-slim-pant',
-        category: 'Children Trending',
+        slug: 'nike-slim-pant',        
+        category: 'Sales',
         image: '/images/kids1a.jpg',
         price: 25,
         countInStock: 15,
