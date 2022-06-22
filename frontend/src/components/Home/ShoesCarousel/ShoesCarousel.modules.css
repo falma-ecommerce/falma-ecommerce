@@ -1,17 +1,21 @@
-.shoe-carousel {   
-    border: 0.1rem solid ;
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-    margin: 2rem 0;
+.carousel-category {
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  max-width: fit-content;
 }
 
-.shoe-carousel img{
-    height:60vh;
-    width: 32.8vw;
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-    border: 0.1rem solid ;
+.carousel-category img {
+  height: 60vh;
+  min-width: 32.70vw;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  border: 0.1rem solid;
 }
-  
-.carousel-category {
-  display: flex;
-  justify-content: space-between;
+
+@media only screen and (max-width: 400px) {
+  .shoe-carousel img {
+    width: 100vw;
+  }
 }

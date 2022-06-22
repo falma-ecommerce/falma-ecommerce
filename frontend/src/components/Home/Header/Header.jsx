@@ -38,8 +38,9 @@ export default function Header() {
             </NavLink>
           </div>
           <div>
-            <NavLink to="/basket">
+            <NavLink to="/myCart">
               <ShoppingCartIcon />
+              {/* <p id="shopping-cart-count">0</p> */}
             </NavLink>
           </div>
         </div>

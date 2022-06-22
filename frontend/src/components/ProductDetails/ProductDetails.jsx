@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import { sanitize } from "dompurify";
 import "./ProductDetails.modules.css";
 
 const ProductDetails = () => {
@@ -12,7 +12,6 @@ const ProductDetails = () => {
   const [productInfo, setProductInfo] = useState();
   const { id } = useParams();
 
-  
   const handleClick = (url) => {
     const mainImage = document.getElementById("main-image");
     mainImage.src = url;
@@ -21,9 +20,9 @@ const ProductDetails = () => {
 
   const options = {
     method: "GET",
-    url: `/extApi/product/details/${id}` 
+    url: `/extApi/product/details/${id}`,
   };
-  
+
   useEffect(() => {
     axios
       .request(options)
@@ -38,65 +37,82 @@ const ProductDetails = () => {
         console.error(error);
       });
   }, []);
-  console.log(firstUrl);
+
+  // let myProductCart = []
+
+
+  const addToCart = () => {
+    alert("I am a cart")
+    // myProductCart.push(product)
+    // document.getElementById("shopping-cart-count").innerText=myProductCart.length
+    // document.cookie =myProductCart
+    // console.log(myProductCart)
+  };
+
   return (
     <div>
-      <h1>Product Detail</h1>
-      {/* <h3>{product && product.name}</h3> */}
       <div className="product-detail">
-        <div className="images">
-          {images &&
-            images.map((product, index) => (
-              <div className="hover-image" key={index}>
-                <img 
-                  id={index}
-                  onClick={() => handleClick("https://" + product.url)}
-                  src={`https://${product.url}`}
-                  width="150"
-                  height="200"
-                  alt="Article not no longer in stock"
-                ></img>
-              </div>
-            ))}
+        <div className="product-image">
+          <div className="images">
+            {images &&
+              images.map((product, index) => (
+                <div className="hover-image" key={index}>
+                  <img
+                    id={index}
+                    onClick={() => handleClick("https://" + product.url)}
+                    src={`https://${product.url}`}
+                    // width=""
+                    // height="200"
+                    style={{ height: "20.55vh" }}
+                    alt="Article not no longer in stock"
+                  ></img>
+                </div>
+              ))}
+          </div>
+          <div className="firstUrl">
+            {firstUrl && (
+              <img
+                id="main-image"
+                src={`https://${firstUrl.url}`}
+                style={{ height: "83.5vh" }}
+                // width=""
+                // height="813"
+                alt="Article not no longer in stock"
+              ></img>
+            )}
+          </div>
         </div>
-        <div className="firstUrl">
-          {firstUrl && (
-            <img
-              id="main-image"
-              src={`https://${firstUrl.url}`}
-              width="700"
-              height="813"
-              alt="Article not no longer in stock"
-            ></img>
-          )}
-        </div>
+
         <div className="all-product-info">
           <h4>{productInfo && productInfo.name}</h4>
           <p>{productInfo && productInfo.price.current.text}</p>
           <p>{productInfo && productInfo.colour}</p>
-          <p>{productInfo && productInfo.displaySizeText}</p>
+
           <p>{productInfo && productInfo.id}</p>
-          {/* <h3>{product && product.description}</h3> */}
+
           <hr className="line"></hr>
-          <ul>
-            <li>
-              <strong>
-                <p>By Another Influence</p>
-              </strong>
-              <ul>
-                {" "}
-                <li>One for your wardrobe </li> <li>Crew neck</li>
-                <li>Contrast sleeve panels </li> <li>Fitted trims</li>
-                <li>Regular fit </li>
-                <li>No surprises, just a classic cut</li>
-              </ul>
-            </li>
-          </ul>
-          <div> 
-            <br />
-            <Link className="cart" to={"/cart"}>
-              <p>ADD TO CART</p>
-            </Link>
+          <p
+            dangerouslySetInnerHTML={{ __html: sanitize(product?.description) }}
+          ></p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: sanitize(product && product.info && product.info.aboutMe),
+            }}
+          ></p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: sanitize(product?.info?.sizeAndFit),
+            }}
+          ></p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: sanitize(product?.info?.careInfo),
+            }}
+          ></p>
+          <div>
+            <button onClick={addToCart} className="cart">
+              ADD TO CART
+            </button>
           </div>
         </div>
       </div>

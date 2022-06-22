@@ -17,8 +17,8 @@ const Categories = () => {
                 "url(" +
                 "http://cdn.shopify.com/s/files/1/0849/8112/products/Women-Business-Pant-Suits.jpg?v=1647376493" +
                 ")",
-              width: "100%",
-              height: "65vh",
+              minWidth: "19vw",
+              height: "60vh",
             }}
           >
             <div className="one"></div>
@@ -38,8 +38,8 @@ const Categories = () => {
                 "url(" +
                 "http://cdn.shopify.com/s/files/1/0849/8112/products/Women-Business-Pant-Suits.jpg?v=1647376493" +
                 ")",
-              width: "100%",
-              height: "65vh",
+              minWidth: "19vw",
+              height: "60vh",
             }}
           >
             <div className="two"></div>
@@ -59,8 +59,8 @@ const Categories = () => {
                 "url(" +
                 "http://cdn.shopify.com/s/files/1/0849/8112/products/Women-Business-Pant-Suits.jpg?v=1647376493" +
                 ")",
-              width: "100%",
-              height: "65vh",
+              minWidth: "19vw",
+              height: "60vh",
             }}
           >
             <div className="three"></div>
@@ -80,8 +80,8 @@ const Categories = () => {
                 "url(" +
                 "http://cdn.shopify.com/s/files/1/0849/8112/products/Women-Business-Pant-Suits.jpg?v=1647376493" +
                 ")",
-              width: "100%",
-              height: "65vh",
+              minWidth: "19vw",
+              height: "60vh",
             }}
           >
             <div className="four"></div>
@@ -101,8 +101,8 @@ const Categories = () => {
                 "url(" +
                 "http://cdn.shopify.com/s/files/1/0849/8112/products/Women-Business-Pant-Suits.jpg?v=1647376493" +
                 ")",
-              width: "100%",
-              height: "65vh",
+              minWidth: "19vw",
+              height: "60vh",
             }}
           >
             <div className="five"></div>
@@ -122,8 +122,8 @@ const Categories = () => {
                 "url(" +
                 "http://cdn.shopify.com/s/files/1/0849/8112/products/Women-Business-Pant-Suits.jpg?v=1647376493" +
                 ")",
-              width: "100%",
-              height: "65vh",
+              minWidth: "19vw",
+              height: "60vh",
             }}
           >
             <div className="six"></div>

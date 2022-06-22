@@ -5,9 +5,16 @@ import { Link } from "react-router-dom";
 
 const ShoesCarousel = () => {
   return (
-    <div className="shoe-carousel">
-      <Carousel>
-        <Link to="/men-shoes">
+    <div className="all-carousel-category">
+      <Carousel >
+         <Link to='/men-shoes'>
+        <div className="carousel-category">         
+          <div>
+            <img
+              src="../shoe-img/shoe-m1.jpg"
+              alt=""
+            />
+          </div>         
           <div className="carousel-category">
             <div className="carousel-img">
               <img src="../shoe-img/shoe-m1.jpg" alt="" />
@@ -18,6 +25,7 @@ const ShoesCarousel = () => {
             <div className="carousel-img">
               <img src="../shoe-img/shoe-m3.jpeg" alt="" />
             </div>
+          </div>
           </div>
         </Link>
         

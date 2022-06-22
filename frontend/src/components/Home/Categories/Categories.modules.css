@@ -4,9 +4,12 @@ body {
   
   .container {
     margin: 0 auto;
-    display: grid;
+    /* display: grid;
     gap: 25px; 
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   
   /* .container:after {
@@ -17,8 +20,7 @@ body {
   
   .bg-items {
     padding: 20px;
-    width: 100%;
-    margin: 20px;
+    margin: 10px;
     /* background-color: white; */
     cursor: pointer;
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
@@ -64,7 +66,7 @@ body {
   .one {
     left: 100%;
     bottom: 100%;
-    width: inherit;
+    width: 100%;
     height: inherit;
     background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
     transition: all 0.3s;
@@ -82,7 +84,7 @@ body {
   /* two */
   
   .two {
-    width: inherit;
+    width: 100%;
     height: inherit;
     background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
     transition: all 0.3s;
@@ -104,7 +106,7 @@ body {
   .three {
     left: 0;
     top: 0;
-    width: inherit;
+    width: 100%;
     height: inherit;
     background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
     transition: all 0.3s;
@@ -124,7 +126,7 @@ body {
   /* four */
   
   .four {
-    width: inherit;
+    width: 100%;
     height: inherit;
     background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
     transition: all 0.3s;
@@ -146,7 +148,7 @@ body {
   /* five */
   
   .five {
-      width: inherit;
+      width: 100%;
       height: inherit;
       background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
       transition: all 0.3s;
@@ -167,7 +169,7 @@ body {
   /* six */
   
   .six {
-      width: inherit;
+      width: 100%;
       height: inherit;
       background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
       transition: all 0.3s;

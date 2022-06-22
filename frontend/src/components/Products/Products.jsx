@@ -26,7 +26,7 @@ const Products = ({ q }) => {
 
   return (
     <>
-      <h1 className="products-header">All Products</h1>
+      {/* <h1 className="products-header">All Products</h1> */}
       <motion.div
         className="products-link"
         layout
