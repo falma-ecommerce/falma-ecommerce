@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import "./Categories.modules.css";
 
 const Categories = () => {
-
-  
   return (
     <div className="container">
       <Link to="/menCategory">
@@ -50,13 +48,8 @@ const Categories = () => {
         </div>
       </Link>
 
-<<<<<<< HEAD
-      <Link to="/children-cloths">
-        <div class="bg-items">
-=======
-      <Link to="/kidsCategory" >
+      <Link to="/kidsCategory">
         <div className="bg-items">
->>>>>>> 2cbe9f49738114a674473ea2f4739876939b879b
           <div
             className="items"
             style={{
