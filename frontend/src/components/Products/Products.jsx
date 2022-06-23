@@ -40,9 +40,11 @@ const Products = ({ q }) => {
             <div className="price">
               <p>{product.price.current.text}</p>
             </div>
+            <Helmet>
             <div className="products-name">
               <p>{product.name}</p>
             </div>
+            </Helmet>
           </Link>
         ))}
     </>
