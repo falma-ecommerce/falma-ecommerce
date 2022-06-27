@@ -86,7 +86,7 @@ body {
   .two {
     width: 100%;
     height: inherit;
-    background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
+    background-image: url("https://images.unsplash.com/photo-1576350591619-5f0841c6cab5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=672&q=80");
     transition: all 0.3s;
     left: 0;
     bottom: 100%;
@@ -108,7 +108,7 @@ body {
     top: 0;
     width: 100%;
     height: inherit;
-    background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
+    background-image: url("https://img01.ztat.net/article/spp-media-p1/068d49b63c744a74a68e0b57c1bde4eb/e28c4d81152740fa9aa2ce372f3755d1.jpg?imwidth=1800");
     transition: all 0.3s;
     transform: scale(0, 0);
     background-position: center;
