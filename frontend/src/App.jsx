@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Container from "react-bootstrap/Container"
 import Header from "./components/Home/Header/Header";
 import Products from "./components/Products/Products";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
@@ -14,6 +15,7 @@ const App = () => {
       <Header />
       <div>
         <main>
+          <Container>
           <Routes>
             <Route path="/" element={<HomeScreen />} />
             <Route path="/all-products" element={<Products q="all" />} />
@@ -33,6 +35,7 @@ const App = () => {
             <Route path="/product-details/:id" element={<ProductDetails />} />
             <Route path="/myCart" element={<Cart />} />
           </Routes>
+          </Container>
         </main>
       </div>
     </BrowserRouter>

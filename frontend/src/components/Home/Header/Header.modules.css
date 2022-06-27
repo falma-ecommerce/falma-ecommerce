@@ -1,50 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Monoton&family=Poppins:ital,wght@0,400;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&family=Monoton&family=Poppins:ital,wght@0,400;1,300&display=swap");
 
-.shipping-info{
-    text-align: center;
-    background-color: #211f22;
-    padding: 5px;
-    color: white
+.shipping-info {
+  text-align: center;
+  background-color: #211f22;
+  padding: 5px;
+  color: white;
 }
 .nav-info {
-    /* display: flex; */
-    display: grid;    
-    grid-template-columns: 1.2fr 2fr auto;
-    margin: 20px 40px ;
-    justify-content: center;
-    /* width: 80%; */
-    /* text-align: center; */
-    /* box-shadow: 0 5px 5px 0px #a09ea3; */
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 1.2fr 2fr auto;
+  margin: 20px 40px;
+  justify-content: center;
+  /* width: 80%; */
+  /* text-align: center; */
+  /* box-shadow: 0 5px 5px 0px #a09ea3; */
 }
 .searchForm {
-    width: 60%;
-    /* border: 1px solid black */
+  width: 60%;
+  /* border: 1px solid black */
 }
-.websiteName a{
-    text-decoration: underline;
+.websiteName a {
+  text-decoration: underline;
 }
 .websiteName h1 {
-    font-family: 'Faster One', cursive; 
-    color: black  
+  font-family: "Faster One", cursive;
+  color: black;
 }
 .login-cart {
-    display: flex;
-    align-items: space-between;
-    font-size: 2rem
+  display: flex;
+  align-items: space-between;
+  font-size: 2rem;
 }
-.loginIcon{
-    padding: 0 20px;
-    font-size: 2rem;
+.loginIcon {
+  padding: 0 20px;
+  font-size: 2rem;
 }
 .dropdown-nav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-    padding: 20px
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 20px;
 }
 #dropdown-basic-button {
-    background-color: white;
-    margin:  0 20px;
-    color: black;
-    border: none;
+  background-color: white;
+
+  margin: 0 20px;
+  color: black;
+  border: none;
 }
