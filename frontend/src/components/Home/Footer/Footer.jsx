@@ -5,7 +5,6 @@ import {
   FaCcVisa,
   FaCcApplePay,
   FaCcAmex,
-  FaPaypal,
 } from "react-icons/fa";
 import { RiVisaFill } from "react-icons/ri";
 
