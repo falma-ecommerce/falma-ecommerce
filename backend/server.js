@@ -4,10 +4,9 @@ import mongoose from "mongoose";
 import morgan from "morgan";
 import passport from 'passport';
 import configurePassport from './passport-config.js';
-import bodyParser from "body-parser";
-import cookieParser from "cookie-parser";
-// import expressValidator from "express-validator";
-import userRoutes from "./routes/userRoutes.js"
+
+
+
 
 dotenv.config();
 
@@ -37,8 +36,7 @@ mongoose
 
   //middleware
   app.use(morgan("dev"));
-  app.use(bodyParser.json());
-  app.use(cookieParser());
+
   // app.use(expressValidator());
   
 
