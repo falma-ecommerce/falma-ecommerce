@@ -1,15 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { sanitize } from "dompurify";
+import { CartContext } from "../../contexts/CartContext";
+
 import "./ProductDetails.modules.css";
 
-const Product = () => {
+const ProductDetails = () => {
   const [product, setProduct] = useState({});
+
   const [images, setImages] = useState([]);
   const [firstUrl, setFirstUrl] = useState();
   const [productInfo, setProductInfo] = useState();
   const { id } = useParams();
+
+  const {cartItems, addItemToCart} = useContext(CartContext);
 
   const handleClick = (url) => {
     const mainImage = document.getElementById("main-image");
@@ -19,19 +24,9 @@ const Product = () => {
 
   const options = {
     method: "GET",
-    url: "https://asos2.p.rapidapi.com/products/v3/detail",
-    params: {
-      id: id,
-      lang: "en-US",
-      store: "US",
-      sizeSchema: "US",
-      currency: "USD",
-    },
-    headers: {
-      "X-RapidAPI-Key": "f439ca48dcmsh0405e7dd2edfc2dp12bbb7jsnd0ed07516ab0",
-      "X-RapidAPI-Host": "asos2.p.rapidapi.com",
-    },
+    url: `/extApi/product/details/${id}`,
   };
+
   useEffect(() => {
     axios
       .request(options)
@@ -46,65 +41,74 @@ const Product = () => {
         console.error(error);
       });
   }, []);
-  console.log(firstUrl);
+
+  const addToCart = (product) => {
+    // alert("I am a cart");
+    addItemToCart(product, 1)
+  };
+
   return (
     <div>
-      <h1>Product Detail</h1>
-      {/* <h3>{product && product.name}</h3> */}
       <div className="product-detail">
-        <div className="images">
-          {images &&
-            images.map((product, index) => (
-              <div className="hover-image" key={index}>
-                <img 
-                  id={index}
-                  onClick={() => handleClick("https://" + product.url)}
-                  src={`https://${product.url}`}
-                  width="150"
-                  height="200"
-                  alt="Article not no longer in stock"
-                ></img>
-              </div>
-            ))}
+        <div className="product-image">
+          <div className="images">
+            {images &&
+              images.map((product, index) => (
+                <div className="hover-image" key={index}>
+                  <img
+                    id={index}
+                    onClick={() => handleClick("https://" + product.url)}
+                    src={`https://${product.url}`}
+                    style={{ height: "20.55vh" }}
+                    alt="Article not no longer in stock"
+                  ></img>
+                </div>
+              ))}
+          </div>
+          <div className="firstUrl">
+            {firstUrl && (
+              <img
+                id="main-image"
+                src={`https://${firstUrl.url}`}
+                style={{ height: "83.5vh" }}
+                alt="Article not no longer in stock"
+              ></img>
+            )}
+          </div>
         </div>
-        <div className="firstUrl">
-          {firstUrl && (
-            <img
-              id="main-image"
-              src={`https://${firstUrl.url}`}
-              width="700"
-              height="813"
-              alt="Article not no longer in stock"
-            ></img>
-          )}
-        </div>
+
         <div className="all-product-info">
-          <h3>{productInfo && productInfo.name}</h3>
-          <p>{productInfo && productInfo.price.current.text}</p>
-          <p>{productInfo && productInfo.colour}</p>
-          <p>{productInfo && productInfo.displaySizeText}</p>
+          <h4>{productInfo && productInfo.name}</h4>
+          <p>
+            {/* <span className="old-price">{productInfo && productInfo.price.previous.text}</span> */}
+            <span className="new-price">{productInfo && productInfo.price.current.text} </span> 
+            <span className="tax">(inkl. MwSt)</span>
+          </p>
           <p>{productInfo && productInfo.id}</p>
-          {/* <h3>{product && product.description}</h3> */}
+
           <hr className="line"></hr>
-          <ul>
-            <li>
-              <strong>
-                <p>By Another Influence</p>
-              </strong>
-              <ul>
-                {" "}
-                <li>One for your wardrobe </li> <li>Crew neck</li>
-                <li>Contrast sleeve panels </li> <li>Fitted trims</li>
-                <li>Regular fit </li>
-                <li>No surprises, just a classic cut</li>
-              </ul>
-            </li>
-          </ul>
-          <div> 
-            <br />
-            <Link className="cart" to={"/cart"}>
-              <p>ADD TO CART</p>
-            </Link>
+          <p
+            dangerouslySetInnerHTML={{ __html: sanitize(product?.description) }}
+          ></p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: sanitize(product && product.info && product.info.aboutMe),
+            }}
+          ></p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: sanitize(product?.info?.sizeAndFit),
+            }}
+          ></p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: sanitize(product?.info?.careInfo),
+            }}
+          ></p>
+          <div>
+            <button onClick={() => addToCart(product)} className="cart">
+              ADD TO CART
+            </button>
           </div>
         </div>
       </div>
@@ -112,4 +116,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ProductDetails;
