@@ -8,6 +8,7 @@ import ProductDetails from "./components/ProductDetails/ProductDetails";
 import "./App.css";
 import Cart from "./components/Cart/Cart";
 import { CartProvider } from "./contexts/CartContext";
+import ShippingAddress from "./components/ShippingAddress/ShippingAddress";
 
 const App = () => {
   return (
@@ -43,6 +44,7 @@ const App = () => {
               />
               <Route path="/product-details/:id" element={<ProductDetails />} />
               <Route path="/myCart" element={<Cart />} />
+              <Route path="/shipping-address" element={<ShippingAddress />}/>
             </Routes>
           </main>
         </div>

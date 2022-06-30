@@ -9,7 +9,7 @@ import {
 import { TiDeleteOutline } from "react-icons/ti";
 import { FaCcPaypal, FaCcVisa, FaCcApplePay, FaCcAmex } from "react-icons/fa";
 import "./Cart.modules.css";
-// import toast from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const Cart = () => {
   const cartRef = useRef();
@@ -25,6 +25,15 @@ const Cart = () => {
     shipment,
     itemTotal,
   } = useContext(CartContext);
+
+  const linkStyle = {
+    border: "0.1rem solid black",
+    textAlign: "center",
+    padding: "0.3rem 0",
+    margin: "0.8rem 0",
+    width: "100%",
+    borderRadius: "0.3rem"
+  };
 
   return (
     <>
@@ -121,7 +130,12 @@ const Cart = () => {
                     </div>
                   </div>
                   <hr />
-                  <button className="checkout">CHECKOUT</button>
+                  <div style={linkStyle}>
+                    <Link to="/all-products" className="checkout">Continue Shopping</Link>
+                  </div>
+                  <div style={linkStyle}>
+                    <Link to="/shipping-address" className="checkout">Proceed to checkout</Link>
+                  </div>
                 </div>
               )}
               <h5 className="payment-methods">Payment methods</h5>
@@ -142,16 +156,16 @@ const Cart = () => {
             </div>
           </div>
           <div className="cart-container">
-              {cartItems.length < 1 && (
-                <div className="empty-cart">
-                  <AiOutlineShopping size={150} />
-                  <h3>Your shopping bag is empty</h3>
-                  <Link className="shopping" to="/all-products">
-                    Continue Shopping
-                  </Link>
-                </div>
-              )}
-            </div>
+            {cartItems.length < 1 && (
+              <div className="empty-cart">
+                <AiOutlineShopping size={150} />
+                <h3>Your shopping bag is empty</h3>
+                <Link className="shopping" to="/all-products">
+                  Continue Shopping
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>

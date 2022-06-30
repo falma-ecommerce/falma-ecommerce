@@ -37,9 +37,7 @@ function CartProvider({ children }) {
       setCartItems([...cartItems, item]);
     }
     toast.success(`${qty} ${item.name} added to the cart.`);
-    // console.log("adding:", item);
-    // let newItems = [...cartItems, item];
-    // setCartItems(newItems);
+    
   };
 
   const removeItemFromCart = (item) => {
@@ -91,7 +89,7 @@ function CartProvider({ children }) {
     });
   };
   const itemPercentage = ((19/100)*totalPrice).toFixed(2);
-  const shipment = 3.99;
+  const shipment = (totalPrice > 75 ? 0 : 3.99).toFixed(2);
   const itemTotal = (+(totalPrice)+ -(itemPercentage)+ +(shipment)).toFixed(2)
 
   return (

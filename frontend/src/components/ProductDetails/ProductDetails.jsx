@@ -8,7 +8,6 @@ import "./ProductDetails.modules.css";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
-
   const [images, setImages] = useState([]);
   const [firstUrl, setFirstUrl] = useState();
   const [productInfo, setProductInfo] = useState();
