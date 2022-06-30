@@ -1,15 +1,17 @@
-import React from "react";
-import SearchIcon from "@mui/icons-material/Search";
+import React, { useContext } from "react";
+// import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { NavLink } from "react-router-dom";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import { Paper, TextField } from "@material-ui/core";
+import { CartContext } from "../../../contexts/CartContext";
 
 import "./Header.modules.css";
 
 export default function Header() {
+  const { totalQuantities } = useContext(CartContext);
   return (
     <div>
       <div className="shipping-info">
@@ -18,7 +20,7 @@ export default function Header() {
         </Marquee>
       </div>
       <div className="nav-info">
-        <div className='searchForm' >
+        <div className="searchForm">
           <Paper style={{ padding: "0 2rem" }}>
             <form>
               <TextField fullWidth label="Search...." />
@@ -40,7 +42,7 @@ export default function Header() {
           <div>
             <NavLink to="/myCart">
               <ShoppingCartIcon />
-              {/* <p id="shopping-cart-count">0</p> */}
+              <p id="shopping-cart-count">{totalQuantities}</p>
             </NavLink>
           </div>
         </div>
@@ -48,18 +50,17 @@ export default function Header() {
 
       <div className="dropdown-nav">
         <div>
-          <Button id="dropdown-basic-button" title="All">
-            <a href="/all-products">All</a>
-          </Button>
+          <NavLink to="/all-products" id="dropdown-basic-button" title="All">
+            All
+          </NavLink>
         </div>
         <div>
           <DropdownButton id="dropdown-basic-button" title="New Arrivals">
             <div>
-            <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Shoes</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
+              <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Shoes</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
             </div>
-            
           </DropdownButton>
         </div>
         <div>
