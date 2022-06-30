@@ -3,15 +3,9 @@ import dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
 import data from "./data.js";
-<<<<<<< HEAD
-
-
-
-=======
 import passport from "passport";
 import cookieParser from 'cookie-parser';
 import configurePassport from './passport-config.js';
->>>>>>> freemanchanges
 import ProductsRoute from "./routes/ProductsRoute.js";
 import ProductDetailsRoute from "./routes/ProductDetailsRoute.js";
 import userRouter from "./routes/userRouter.js";

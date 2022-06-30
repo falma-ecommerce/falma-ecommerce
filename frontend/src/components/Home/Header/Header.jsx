@@ -59,16 +59,7 @@ export default function Header() {
       <div> <Navigation /></div>
 
       <div className="dropdown-nav">
-<<<<<<< HEAD
        {/*  <div>
-=======
-      <div>
-          <Button id="dropdown-basic-button" title="All">
-            <a href="/">Home</a>
-          </Button>
-        </div>
-        <div>
->>>>>>> freemanchanges
           <NavLink to="/all-products" id="dropdown-basic-button" title="All">
             All
           </NavLink>
@@ -102,15 +93,10 @@ export default function Header() {
             <Dropdown.Item href="#/action-2">Shoes</Dropdown.Item>
             <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
           </DropdownButton>
-<<<<<<< HEAD
         </div> */}
       </div>
      
       
-=======
-        </div>
-      </div>      
->>>>>>> freemanchanges
     </div>
   );
 }

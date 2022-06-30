@@ -7,20 +7,6 @@
   color: white;
 }
 .nav-info {
-<<<<<<< HEAD
-  /* display: flex; */
-  display: grid;
-  grid-template-columns: 1.2fr 2fr auto;
-  margin: 20px 40px;
-  justify-content: center;
-  /* width: 80%; */
-  /* text-align: center; */
-  /* box-shadow: 0 5px 5px 0px #a09ea3; */
-}
-.searchForm {
-  width: 60%;
-  /* border: 1px solid black */
-=======
     /* display: flex; */
     display: grid;    
     grid-template-columns: 1fr 1fr auto auto;
@@ -33,7 +19,6 @@
 .searchForm {
     width: 60%;    
     /* border: 1px solid black */
->>>>>>> freemanchanges
 }
 .websiteName a {
   text-decoration: underline;

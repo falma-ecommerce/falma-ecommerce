@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import User from './models/user.js';
-=======
 import User from './models/userModel.js';
->>>>>>> freemanchanges
 import passportJWT from 'passport-jwt';
 
 const JWTStrategy = passportJWT.Strategy;
@@ -19,11 +15,7 @@ const configureJwtStrategy = (passport) => {
     },(jwtPayload, done) => {
         return( 
            User.findById(jwtPayload.sub)
-<<<<<<< HEAD
-               .select("_id firstname lastname username ip avatar message")
-=======
                .select("_id firstname lastname username email roles")
->>>>>>> freemanchanges
                .then((user)=> {
                 return done(null,user)
                })
