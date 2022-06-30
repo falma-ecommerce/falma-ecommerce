@@ -42,12 +42,12 @@ export default function Header() {
         <div className="login-cart">          
           <div className="loginIcon">
             <NavLink to="/signin">
-              <PersonOutlineIcon />
+              {/* <PersonOutlineIcon /> */}
             </NavLink>
           </div>
           <div>
             <NavLink to="/myCart">
-              <ShoppingCartIcon />             
+              {/* <ShoppingCartIcon /> */}
               <ShoppingCartIcon />
               <p id="shopping-cart-count">{totalQuantities}</p>
             </NavLink>
