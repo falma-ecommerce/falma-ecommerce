@@ -17,6 +17,7 @@
     "dompurify": "^2.3.8",
     "eslint-plugin-risxss": "^2.1.0",
     "framer-motion": "^6.3.11",
+    "logger-for-use-reducer": "^0.1.2",
     "material-icons": "^1.11.1",
     "material-ui-image": "^3.3.2",
     "nuka-carousel": "^5.1.1",
