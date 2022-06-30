@@ -43,15 +43,12 @@ const ProductDetails = () => {
     
   }, []);
 
-  // let myProductCart = []
+ 
 
 
   const addToCart = () => {
     alert("I am a cart")
-    // myProductCart.push(product)
-    // document.getElementById("shopping-cart-count").innerText=myProductCart.length
-    // document.cookie =myProductCart
-    // console.log(myProductCart)
+    
   };
 
   return (

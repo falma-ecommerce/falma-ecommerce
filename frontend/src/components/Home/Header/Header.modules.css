@@ -9,7 +9,7 @@
 .nav-info {
     /* display: flex; */
     display: grid;    
-    grid-template-columns: 1.2fr 2fr auto;
+    grid-template-columns: 1fr 1fr auto auto;
     margin: 20px 40px ;
     justify-content: center;
     /* width: 80%; */
@@ -17,7 +17,7 @@
     /* box-shadow: 0 5px 5px 0px #a09ea3; */
 }
 .searchForm {
-    width: 60%;
+    width: 60%;    
     /* border: 1px solid black */
 }
 .websiteName a{

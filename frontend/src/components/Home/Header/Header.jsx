@@ -1,15 +1,16 @@
-import React from "react";
-import SearchIcon from "@mui/icons-material/Search";
+import React, { useContext } from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { NavLink } from "react-router-dom";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import { Paper, TextField } from "@material-ui/core";
-
 import "./Header.modules.css";
+import { AuthContext } from "../../../contexts/AuthContext";
+import { PrivateNav, PublicNav } from "../../Navigation";
 
 export default function Header() {
+  const { loggedIn } = useContext(AuthContext);
   return (
     <div>
       <div className="shipping-info">
@@ -31,22 +32,29 @@ export default function Header() {
             <h1> FALMA Shop</h1>
           </NavLink>
         </div>
-        <div className="login-cart">
+        <div className="toggleNav" >
+        {loggedIn ? <PrivateNav /> : <PublicNav />}
+        </div>
+        <div className="login-cart">          
           <div className="loginIcon">
-            <NavLink to="/login">
+            <NavLink to="/signin">
               <PersonOutlineIcon />
             </NavLink>
           </div>
           <div>
             <NavLink to="/myCart">
-              <ShoppingCartIcon />
-              {/* <p id="shopping-cart-count">0</p> */}
+              <ShoppingCartIcon />             
             </NavLink>
           </div>
         </div>
       </div>
 
       <div className="dropdown-nav">
+      <div>
+          <Button id="dropdown-basic-button" title="All">
+            <a href="/">Home</a>
+          </Button>
+        </div>
         <div>
           <Button id="dropdown-basic-button" title="All">
             <a href="/all-products">All</a>
@@ -58,8 +66,7 @@ export default function Header() {
             <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
             <Dropdown.Item href="#/action-2">Shoes</Dropdown.Item>
             <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
-            </div>
-            
+            </div>            
           </DropdownButton>
         </div>
         <div>
@@ -83,7 +90,7 @@ export default function Header() {
             <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
           </DropdownButton>
         </div>
-      </div>
+      </div>      
     </div>
   );
 }

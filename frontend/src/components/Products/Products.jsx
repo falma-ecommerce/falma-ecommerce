@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { AnimatePresence, motion } from "framer-motion";
 import "./Products.modules.css";
 import { toast } from "react-toastify";
 import { getError } from "../../utils";
@@ -28,7 +27,7 @@ const Products = ({ q }) => {
   }, []);
 
   return (
-    <>
+    <div className="products-link" >
       {products &&
         products.map((product) => (
           <Link
@@ -40,14 +39,16 @@ const Products = ({ q }) => {
             <div className="price">
               <p>{product.price.current.text}</p>
             </div>
-            <Helmet>
+            
             <div className="products-name">
-              <p>{product.name}</p>
+              <Helmet>
+              <title>{product.name}</title>
+              </Helmet>
             </div>
-            </Helmet>
+            
           </Link>
         ))}
-    </>
+    </div>
   );
 };
 
