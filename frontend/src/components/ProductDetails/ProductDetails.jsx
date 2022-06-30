@@ -1,18 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { sanitize } from "dompurify";
+import { CartContext } from "../../contexts/CartContext";
+
 import "./ProductDetails.modules.css";
 import { toast } from "react-toastify";
 import { getError } from "../../utils";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
+
   const [images, setImages] = useState([]);
   const [firstUrl, setFirstUrl] = useState();
   const [productInfo, setProductInfo] = useState();
   const { id } = useParams();
+
+  const {cartItems, addItemToCart} = useContext(CartContext);
 
   const handleClick = (url) => {
     const mainImage = document.getElementById("main-image");
@@ -43,12 +47,9 @@ const ProductDetails = () => {
     
   }, []);
 
- 
-
-
-  const addToCart = () => {
-    alert("I am a cart")
-    
+  const addToCart = (product) => {
+    // alert("I am a cart");
+    addItemToCart(product, 1)
   };
 
   return (
@@ -63,8 +64,6 @@ const ProductDetails = () => {
                     id={index}
                     onClick={() => handleClick("https://" + product.url)}
                     src={`https://${product.url}`}
-                    // width=""
-                    // height="200"
                     style={{ height: "20.55vh" }}
                     alt="Article not no longer in stock"
                   ></img>
@@ -77,8 +76,6 @@ const ProductDetails = () => {
                 id="main-image"
                 src={`https://${firstUrl.url}`}
                 style={{ height: "83.5vh" }}
-                // width=""
-                // height="813"
                 alt="Article not no longer in stock"
               ></img>
             )}
@@ -87,9 +84,11 @@ const ProductDetails = () => {
 
         <div className="all-product-info">
           <h4>{productInfo && productInfo.name}</h4>
-          <p>{productInfo && productInfo.price.current.text}</p>
-          <p>{productInfo && productInfo.colour}</p>
-
+          <p>
+            {/* <span className="old-price">{productInfo && productInfo.price.previous.text}</span> */}
+            <span className="new-price">{productInfo && productInfo.price.current.text} </span> 
+            <span className="tax">(inkl. MwSt)</span>
+          </p>
           <p>{productInfo && productInfo.id}</p>
 
           <hr className="line"></hr>
@@ -112,7 +111,7 @@ const ProductDetails = () => {
             }}
           ></p>
           <div>
-            <button onClick={addToCart} className="cart">
+            <button onClick={() => addToCart(product)} className="cart">
               ADD TO CART
             </button>
           </div>

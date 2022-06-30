@@ -1,0 +1,97 @@
+.cart-wrapper {
+  margin: 0 10rem;
+  font-size: 1.3rem;
+  align-content: center;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+  min-width: 20vw;
+}
+
+.item-desc {
+  padding: 0 1rem;
+}
+
+.item-total {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 30vw;
+}
+
+.checkout {
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 2.5rem;
+}
+
+.paypal {
+  color: blue;
+}
+.visa {
+  color: red;
+}
+.apple-pay {
+  color: black;
+  background-color: white;
+}
+.america-express {
+  color: blue;
+}
+
+.payment-methods {
+  text-align: center;
+  margin: 1rem 0 0;
+}
+
+.cart-container {
+  text-align: center;
+  color: gray;
+}
+.shopping {
+  text-decoration: none;
+  border: 0.1rem solid black;
+  padding: 0.3rem 2rem;
+  background-color: black;
+  color: white;
+  border-radius: 0.2rem;
+}
+
+.shopping:hover {
+  color: black;
+  background-color: rgb(168, 168, 168);
+}
+
+.shopping:active {
+  transform: translateY(0.2rem);
+}
+@media only screen and (max-width: 1430px) {
+  .item-total {
+    justify-content: center;
+  }
+  .total-item {
+    border-top: 0.3rem solid black;
+    min-width: 60vw;
+    padding-top: 1rem;
+  }
+  .cart-bottom {
+    min-width: 50vw;
+  }
+}

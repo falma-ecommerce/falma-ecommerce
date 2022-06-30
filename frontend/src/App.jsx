@@ -12,9 +12,17 @@ import ProfileScreen from "./screens/SignupScreen/ProfileScreen";
 import SigninScreen from "./screens/SignupScreen/SigninScreen";
 import "./App.css";
 
+// const App = () => {
+//   return (
+//     <AuthProvider>
+import Cart from "./components/Cart/Cart";
+import { CartProvider } from "./contexts/CartContext";
+
 const App = () => {
   return (
-    <AuthProvider>
+
+    <CartProvider>
+      <AuthProvider>
       <BrowserRouter>
         <Header />
         <div>
@@ -49,11 +57,13 @@ const App = () => {
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signout" element={<SignoutScreen />} />
               <Route path="/profile" element={<ProfileScreen />} />
+              <Route path="/myCart" element={<Cart />} />
             </Routes>
           </main>
         </div>
       </BrowserRouter>
     </AuthProvider>
+    </CartProvider>
   );
 };
 
