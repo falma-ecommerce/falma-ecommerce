@@ -5,6 +5,8 @@ import { sanitize } from "dompurify";
 import { CartContext } from "../../contexts/CartContext";
 
 import "./ProductDetails.modules.css";
+import { toast } from "react-toastify";
+import { getError } from "../../utils";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
@@ -27,7 +29,8 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
-    axios
+    try {
+      axios
       .request(options)
       .then(function (response) {
         setProduct(response.data);
@@ -36,9 +39,11 @@ const ProductDetails = () => {
         setProductInfo(response.data.variants[0]);
         console.log(response.data.media.images);
       })
-      .catch(function (error) {
-        console.error(error);
-      });
+      
+    } catch (error) {
+      toast.error(getError(error))
+    }    
+    
   }, []);
 
   const addToCart = (product) => {

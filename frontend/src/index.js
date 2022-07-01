@@ -5,7 +5,6 @@
 // ReactDOM.render(
 //     <App />, document.querySelector('#root')
 // );
-
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App";
 import { createRoot } from "react-dom/client";
