@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 // import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { NavLink } from "react-router-dom";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+// import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import { Paper, TextField } from "@material-ui/core";
