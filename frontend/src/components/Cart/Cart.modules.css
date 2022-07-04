@@ -9,7 +9,7 @@
   align-items: center;
   padding: 1rem 0;
   flex-wrap: wrap;
-  min-width: 20vw;
+  max-width: 40vw;
 }
 
 .item-desc {

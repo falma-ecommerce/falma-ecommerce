@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { toast } from "react-hot-toast";
+import "react-toastify/dist/ReactToastify.css";
 
 const CartContext = createContext({});
 
@@ -18,8 +19,10 @@ function CartProvider({ children }) {
     const checkProductInCart = cartItems.find(
       (product) => product.id === item.id
     );
-    setTotalPrice((prevTotalPrice) => prevTotalPrice + item.price.current.value * quantity);
-    console.log(item.price)
+    setTotalPrice(
+      (prevTotalPrice) => prevTotalPrice + item.price.current.value * quantity
+    );
+    console.log(item.price);
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
     if (checkProductInCart) {
       // eslint-disable-next-line array-callback-return
@@ -37,7 +40,6 @@ function CartProvider({ children }) {
       setCartItems([...cartItems, item]);
     }
     toast.success(`${qty} ${item.name} added to the cart.`);
-    
   };
 
   const removeItemFromCart = (item) => {
@@ -46,7 +48,8 @@ function CartProvider({ children }) {
 
     setTotalPrice(
       (prevTotalPrice) =>
-        prevTotalPrice - foundProduct.price.current.value * foundProduct.quantity
+        prevTotalPrice -
+        foundProduct.price.current.value * foundProduct.quantity
     );
     setTotalQuantities(
       (prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity
@@ -63,7 +66,9 @@ function CartProvider({ children }) {
         ...newCartItems,
         { ...foundProduct, quantity: foundProduct.quantity + 1 },
       ]);
-      setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price.current.value);
+      setTotalPrice(
+        (prevTotalPrice) => prevTotalPrice + foundProduct.price.current.value
+      );
       setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
     } else if (value === "dec") {
       if (foundProduct.quantity > 1) {
@@ -71,7 +76,9 @@ function CartProvider({ children }) {
           ...newCartItems,
           { ...foundProduct, quantity: foundProduct.quantity - 1 },
         ]);
-        setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price.current.value);
+        setTotalPrice(
+          (prevTotalPrice) => prevTotalPrice - foundProduct.price.current.value
+        );
         setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
       }
     }
@@ -84,13 +91,13 @@ function CartProvider({ children }) {
   const decQty = () => {
     setQty((prevQty) => {
       if (prevQty - 1 < 1) return 1;
- 
+
       return prevQty - 1;
     });
   };
-  const itemPercentage = ((19/100)*totalPrice).toFixed(2);
+  const itemPercentage = ((19 / 100) * totalPrice).toFixed(2);
   const shipment = (totalPrice > 75 ? 0 : 3.99).toFixed(2);
-  const itemTotal = (+(totalPrice)+ -(itemPercentage)+ +(shipment)).toFixed(2)
+  const itemTotal = (+totalPrice + -itemPercentage + +shipment).toFixed(2);
 
   return (
     <CartContext.Provider
@@ -101,7 +108,7 @@ function CartProvider({ children }) {
         toggleCartItemQuantity,
         incQty,
         decQty,
-        showCart, 
+        showCart,
         setShowCart,
         totalPrice,
         totalQuantities,

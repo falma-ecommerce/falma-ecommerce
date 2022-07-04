@@ -1,139 +1,188 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
-import { Helmet } from "react-helmet-async";
-import Form from "react-bootstrap/Form";
-import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 import { FaCcPaypal, FaCcVisa, FaCcApplePay, FaCcAmex } from "react-icons/fa";
 import "./ShippingAddress.module.css";
 import { Link } from "react-router-dom";
 
 const ShippingAddress = () => {
-  const [fullName, setFullName] = useState("");
-  const [address, setAddress] = useState("");
-  const [city, setCity] = useState("");
-  const [postalCode, setPostalCode] = useState("");
-  const [country, setCountry] = useState("");
-
-  const { cartItems, totalPrice, itemPercentage, shipment, itemTotal } =
+  const { totalPrice, itemPercentage, shipment, itemTotal } =
     useContext(CartContext);
 
-  const linkStyle = {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    address: "",
+    city: "",
+    postCode: "",
+    country: "",
+  });
+
+  const { fullName, address, city, postCode, country } = formData;
+
+  const onChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    event.target.reset();
+
+    const newShipping = {
+      fullName,
+      address,
+      city,
+      postCode,
+      country,
+    };
+    alert(
+      `Your order will be shipped out within 24 hours.\nIncase of any changes in the shipping address, notify us immediately,`
+    );
+
+    try {
+      const response = await axios.post("/api/users/shipping", newShipping);
+      console.log("response ", response);
+      alert("Shipping address registration was successful");
+    } catch (error) {
+      console.error("An error happened", error);
+      alert(` Shipping address registration failed`);
+    }
+  };
+
+  const shippingContainerStyle = {
+    display: "flex",
+    justifyContent: "space-around",
+    flexWrap: "wrap",
+    padding: "0.3rem",
+    margin: "0.8rem",
+    borderRadius: "0.3rem",
+    border: "1rem solid black",
+    fontSize: "1.3rem"
+  };
+
+  const styleForm = {
+    minWidth: "40vw",
+  };
+
+  const shippingLinkStyle = {
     border: "0.1rem solid black",
     textAlign: "center",
-    padding: "0.3rem 0",
+    padding: "0.6rem 0",
     margin: "0.8rem 0",
     width: "100%",
     borderRadius: "0.3rem",
   };
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-  };
+  const buttonStyle = {
+    padding: "0.7rem 1rem",
+    margin: "0.5rem 38%"
+  }
 
   return (
-    <div>
-      <Helmet>
-        <title>Shipping Address</title>
-      </Helmet>
-      <div className="d-flex justify-content-md-around flex-wrap m-5">
-        <div className="shipping">
-          <Form onSubmit={submitHandler}>
-            <h3 className="my-3">Shipping Details</h3>
-            <Form.Group className="mb3" controlId="fullName">
-              <Form.Label>Full Name</Form.Label>
-              <Form.Control
-                onChange={(e) => setFullName(e.target.value)}
-                value={fullName}
-                placeholder="Enter full name"
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb3" controlId="address">
-              <Form.Label>Address</Form.Label>
-              <Form.Control
-                onChange={(e) => setAddress(e.target.value)}
-                value={address}
-                placeholder="Enter address"
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb3" controlId="city">
-              <Form.Label>City</Form.Label>
-              <Form.Control
-                onChange={(e) => setCity(e.target.value)}
-                value={city}
-                placeholder="Enter city"
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb3" controlId="PostalCode">
-              <Form.Label>Poster Code</Form.Label>
-              <Form.Control
-                onChange={(e) => setPostalCode(e.target.value)}
-                value={postalCode}
-                placeholder="Enter postal code"
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb3" controlId="country">
-              <Form.Label>Country</Form.Label>
-              <Form.Control
-                onChange={(e) => setCountry(e.target.value)}
-                value={country}
-                placeholder="Enter country"
-                required
-              />
-            </Form.Group>
-            <div style={linkStyle}>
-              <Link to="/shipping-address" className="checkout">
-                Continue to payment
-              </Link>
-            </div>
-          </Form>
+    <div style={shippingContainerStyle}>
+      <div>
+        <form onSubmit={handleSubmit} style={styleForm}>
+          <h1>Sipping Detail</h1>
+          <div className="shipping-address">
+            <h5>
+              <label>Full Name</label>
+            </h5>
+            <input
+              onChange={onChange}
+              type="text"
+              autoComplete="fullName"
+              name="fullName"
+              required={true}
+            />
+            <h5>
+              <label>Address</label>
+            </h5>
+            <input
+              onChange={onChange}
+              type="text"
+              autoComplete="address"
+              name="address"
+              required={true}
+            />
+            <h5>
+              <label>city</label>
+            </h5>
+            <input
+              onChange={onChange}
+              type="text"
+              autoComplete="city"
+              name="city"
+              required={true}
+            />
+            <h5>
+              <label>Post Code</label>
+            </h5>
+            <input
+              onChange={onChange}
+              type="number"
+              autoComplete="postCode"
+              name="postCode"
+              required={true}
+            />
+            <h5>
+              <label>Country</label>
+            </h5>
+            <input
+              onChange={onChange}
+              type="text"
+              autoComplete="country"
+              name="country"
+              required={true}
+            />
+          </div>
+          <div className="button-div">
+            {" "}
+            <button type="submit" style={buttonStyle}>Submit</button>
+          </div>
+        </form>
+      </div>
+      <div>
+        <h1>Order Overview</h1>
+        <div className="total">
+          <div>Subtotal</div>
+          <div>
+            <p>${totalPrice.toFixed(2)}</p>
+          </div>
         </div>
-        <div className="total-item">
-          <h3>Order Overview</h3>
-          {cartItems.length >= 1 && (
-            <div className="cart-bottom">
-              
-              <div className="total">
-                <div>Subtotal</div>
-                <div>
-                  <p>${totalPrice.toFixed(2)}</p>
-                </div>
-              </div>
-              <div className="total">
-                <div>Taxes 19 percent%</div>
-                <div>
-                  <p>${itemPercentage}</p>
-                </div>
-              </div>
-              <div className="total">
-                <div>Shipment</div>
-                <div>
-                  <p>${shipment}</p>
-                </div>
-              </div>
+        <div className="total">
+          <div>Taxes 19 percent%</div>
+          <div>
+            <p>${itemPercentage}</p>
+          </div>
+        </div>
+        <div className="total">
+          <div>Shipment</div>
+          <div>
+            <p>${shipment}</p>
+          </div>
+        </div>
 
-              <hr />
+        <hr />
 
-              <div className="total">
-                <div>
-                  <h3>TOTAL</h3>
-                </div>
-                <div>
-                  <h3>${itemTotal}</h3>
-                </div>
-              </div>
-              <hr />
-              
-              <div style={linkStyle}>
-                <Link to="/shipping-address" className="checkout">
-                  Proceed to checkout
-                </Link>
-              </div>
-            </div>
-          )}
+        <div className="total">
+          <div>
+            <h3>TOTAL</h3>
+          </div>
+          <div>
+            <h3>${itemTotal}</h3>
+          </div>
+        </div>
+        <hr />
+        <div style={shippingLinkStyle}>
+          <Link to="/all-products" className="checkout">
+            Continue Shopping
+          </Link>
+        </div>
+        <div style={shippingLinkStyle}>
+          <Link to="/payment" className="checkout">
+            Proceed to payment
+          </Link>
+        </div>
+
+        <div>
           <h5 className="payment-methods">Payment methods</h5>
           <div className="icons">
             <div className="paypal">

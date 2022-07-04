@@ -32,7 +32,7 @@ const Cart = () => {
     padding: "0.3rem 0",
     margin: "0.8rem 0",
     width: "100%",
-    borderRadius: "0.3rem"
+    borderRadius: "0.3rem",
   };
 
   return (
@@ -54,8 +54,8 @@ const Cart = () => {
                     />
                     <div className="item-desc">
                       <div className="flex top">
-                        <p>{item.price.current.text}</p>
                         <p>{item.name}</p>
+                        <p>{item.price.current.text}</p>
                       </div>
 
                       <div className="flex bottom">
@@ -131,10 +131,14 @@ const Cart = () => {
                   </div>
                   <hr />
                   <div style={linkStyle}>
-                    <Link to="/all-products" className="checkout">Continue Shopping</Link>
+                    <Link to="/all-products" className="checkout">
+                      Continue Shopping
+                    </Link>
                   </div>
                   <div style={linkStyle}>
-                    <Link to="/shipping-address" className="checkout">Proceed to checkout</Link>
+                    <Link to="/shipping-address" className="checkout">
+                      Proceed to checkout
+                    </Link>
                   </div>
                 </div>
               )}

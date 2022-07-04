@@ -1,7 +1,6 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -24,5 +23,7 @@
     "mongoose": "^6.4.0",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
