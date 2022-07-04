@@ -26,12 +26,12 @@ function Navigation() {
           
           <div id="navbarSupportedContent" className="collapse navbar-collapse">
             <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
+            <li className="nav-item px-3">
                 <a href="/all-products" className="nav-link font-weight-bold text-uppercase">
                  All 
                 </a>
               </li>
-              <li className="nav-item dropdown megamenu dropdown-hover">
+              <li className="nav-item dropdown megamenu dropdown-hover px-3">
                 <a
                   id="megamneu"
                   href="#"
@@ -49,8 +49,8 @@ function Navigation() {
                     <div className="row bg-white rounded-0 m-0 shadow-sm">
                       <div className="col-lg-7 col-xl-8">
                         <div className="p-4">
-                          <div className="row">
-                            <div className="col-lg-6 mb-4">
+                          <div className="row menu2">
+                            <div className="col-lg-6 mb-">
                               <h6 className="font-weight-bold text-uppercase">
                                Men
                               </h6>
@@ -214,7 +214,7 @@ function Navigation() {
                   </div>
                 </div>
               </li>
-              <li className="nav-item dropdown megamenu dropdown-hover">
+              <li className="nav-item dropdown megamenu dropdown-hover px-3">
                 <a
                   id="megamneu"
                   href="#"
@@ -229,19 +229,19 @@ function Navigation() {
                   className="dropdown-menu border-0 p-0 m-0"
                 >
                   <div className="">
-                    <div className="row bg-white rounded-0 m-0 shadow-sm">
-                      <div className="col-lg-7 col-xl-8">
+                    <div className="row bg-white rounded-0 m-0 shadow-sm ">
+                      <div className="col-lg-7 col-xl-8 ">
                         <div className="p-4">
-                          <div className="row">
-                            <div className="col-lg-6 mb-4">
-                              <h6 className="font-weight-bold text-uppercase">
+                          <div className="row menu2">
+                            <div className="col-lg-6 mb-4 ">
+                              <h6 className="font-weight-bold text-uppercase ">
                                Category
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
                                     href=""
-                                    className="nav-link text-small pb-0"
+                                    className="nav-link text-small pb-0 "
                                   >
                                     T-shirts & Polos
                                   </a>
@@ -397,7 +397,7 @@ function Navigation() {
                   </div>
                 </div>
               </li>
-              <li className="nav-item dropdown megamenu dropdown-hover">
+              <li className="nav-item dropdown megamenu dropdown-hover px-3">
               <a
                   id="megamneu"
                   href="#"
@@ -415,7 +415,7 @@ function Navigation() {
                     <div className="row bg-white rounded-0 m-0 shadow-sm">
                       <div className="col-lg-7 col-xl-8">
                         <div className="p-4">
-                          <div className="row">
+                          <div className="row menu2">
                             <div className="col-lg-6 mb-4">
                               <h6 className="font-weight-bold text-uppercase">
                                 Category
@@ -580,7 +580,7 @@ function Navigation() {
                   </div>
                 </div>
               </li>
-              <li className="nav-item dropdown megamenu dropdown-hover">
+              <li className="nav-item dropdown megamenu dropdown-hover px-3">
                 <a
                   id="megamneu"
                   href="#"
@@ -598,7 +598,7 @@ function Navigation() {
                     <div className="row bg-white rounded-0 m-0 shadow-sm">
                       <div className="col-lg-7 col-xl-8">
                         <div className="p-4">
-                          <div className="row">
+                          <div className="row menu2">
                             <div className="col-lg-6 mb-4">
                               <h6 className="font-weight-bold text-uppercase">
                               Girls
