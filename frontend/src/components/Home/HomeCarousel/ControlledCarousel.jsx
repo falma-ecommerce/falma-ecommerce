@@ -18,7 +18,7 @@ export default function ControlledCarousel() {
           <Link to="/menCategory">
             <img
               className="d-block w-100"
-              src="../images/menCover2.jpg"              
+              src="../images/menCover2.jpg"
               alt="First slide"
             />
 
@@ -30,34 +30,34 @@ export default function ControlledCarousel() {
         </Carousel.Item>
 
         <Carousel.Item className="carouselItem">
-        <Link to="/womenCategory">
-          <img
-            className="d-block w-100"
-            src="../images/womenCover.png"
-            // href="/womenCategory"
-            alt="Second slide"
-          />
-          <Carousel.Caption className="color">
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
+          <Link to="/womenCategory">
+            <img
+              className="d-block w-100"
+              src="../images/womenCover.png"
+              // href="/womenCategory"
+              alt="Second slide"
+            />
+            <Carousel.Caption className="color">
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption>
           </Link>
         </Carousel.Item>
 
         <Carousel.Item className="carouselItem">
-        <Link to="/kidsCategory">
-          <img
-            className="d-block w-100"
-            src="../images/childrenCover.jpeg"
-            alt="Third slide"
-          />
+          <Link to="/kidsCategory">
+            <img
+              className="d-block w-100"
+              src="../images/childrenCover.jpeg"
+              alt="Third slide"
+            />
 
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
+            <Carousel.Caption>
+              <h3>Third slide label</h3>
+              <p>
+                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              </p>
+            </Carousel.Caption>
           </Link>
         </Carousel.Item>
       </Carousel>
