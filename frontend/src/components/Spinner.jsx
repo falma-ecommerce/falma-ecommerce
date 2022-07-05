@@ -6,7 +6,7 @@ export default function Spinner() {
       <span class="sr-only">
         {" "}
         <br />
-        Loading...
+        {/* Loading... */}
       </span>
     </div>
   );
