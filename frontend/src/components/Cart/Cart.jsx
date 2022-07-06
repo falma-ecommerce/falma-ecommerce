@@ -49,7 +49,7 @@ const Cart = () => {
                   <div className="item" key={item.id}>
                     <img
                       src={`https://${item.media.images[0].url}`}
-                      style={{ width: "15vh" }}
+                      style={{ width: "15vh", padding: "0 1rem"}}
                       alt="Article not no longer in stock"
                     />
                     <div className="item-desc">
@@ -69,9 +69,7 @@ const Cart = () => {
                             >
                               <AiOutlineMinus />
                             </span>
-                            {/* <span className="num" onClick=""> */}
-                            {item.quantity}
-                            {/* </span> */}
+                            {item.quantity}                        
                             <span
                               className="plus"
                               onClick={() =>
@@ -100,6 +98,7 @@ const Cart = () => {
               {cartItems.length >= 1 && (
                 <div className="cart-bottom">
                   <h3>Order Overview</h3>
+                  <hr />
                   <div className="total">
                     <div>Subtotal</div>
                     <div>

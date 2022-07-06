@@ -1,13 +1,17 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import axios from "axios";
 import { FaCcPaypal, FaCcVisa, FaCcApplePay, FaCcAmex } from "react-icons/fa";
 import "./ShippingAddress.module.css";
 import { Link } from "react-router-dom";
+import { CheckoutContext } from "../../contexts/CheckoutContext";
 
 const ShippingAddress = () => {
   const { totalPrice, itemPercentage, shipment, itemTotal } =
     useContext(CartContext);
+
+  const { checkoutAddresses, updateCheckoutAddresses, setCheckoutAddresses } =
+    useContext(CheckoutContext);
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -47,6 +51,21 @@ const ShippingAddress = () => {
     }
   };
 
+  const loadShippingDetails = async () => {
+    try {
+      const response = await axios.get("/api/users/getShippingAddress");
+      setCheckoutAddresses(response.data.shippingAddress);
+      console.log("response ", response);
+    } catch (error) {
+      console.error("An error happened", error);
+      alert(` Shipping address registration failed`);
+    }
+  };
+  console.log(checkoutAddresses);
+  useEffect(() => {
+    loadShippingDetails();
+  }, []);
+
   const shippingContainerStyle = {
     display: "flex",
     justifyContent: "space-around",
@@ -55,7 +74,7 @@ const ShippingAddress = () => {
     margin: "0.8rem",
     borderRadius: "0.3rem",
     border: "1rem solid black",
-    fontSize: "1.3rem"
+    fontSize: "1.3rem",
   };
 
   const styleForm = {
@@ -73,71 +92,79 @@ const ShippingAddress = () => {
 
   const buttonStyle = {
     padding: "0.7rem 1rem",
-    margin: "0.5rem 38%"
-  }
+    margin: "0.5rem 38%",
+  };
 
   return (
     <div style={shippingContainerStyle}>
       <div>
-        <form onSubmit={handleSubmit} style={styleForm}>
-          <h1>Sipping Detail</h1>
-          <div className="shipping-address">
-            <h5>
-              <label>Full Name</label>
-            </h5>
-            <input
-              onChange={onChange}
-              type="text"
-              autoComplete="fullName"
-              name="fullName"
-              required={true}
-            />
-            <h5>
-              <label>Address</label>
-            </h5>
-            <input
-              onChange={onChange}
-              type="text"
-              autoComplete="address"
-              name="address"
-              required={true}
-            />
-            <h5>
-              <label>city</label>
-            </h5>
-            <input
-              onChange={onChange}
-              type="text"
-              autoComplete="city"
-              name="city"
-              required={true}
-            />
-            <h5>
-              <label>Post Code</label>
-            </h5>
-            <input
-              onChange={onChange}
-              type="number"
-              autoComplete="postCode"
-              name="postCode"
-              required={true}
-            />
-            <h5>
-              <label>Country</label>
-            </h5>
-            <input
-              onChange={onChange}
-              type="text"
-              autoComplete="country"
-              name="country"
-              required={true}
-            />
-          </div>
-          <div className="button-div">
-            {" "}
-            <button type="submit" style={buttonStyle}>Submit</button>
-          </div>
-        </form>
+        {checkoutAddresses && checkoutAddresses.length < 1 ? (
+          <form onSubmit={handleSubmit} style={styleForm}>
+            <h1>Sipping Detail</h1>
+            <div className="shipping-address">
+              <h5>
+                <label>Full Name</label>
+              </h5>
+              <input
+                onChange={onChange}
+                type="text"
+                autoComplete="fullName"
+                name="fullName"
+                required={true}
+              />
+              <h5>
+                <label>Address</label>
+              </h5>
+              <input
+                onChange={onChange}
+                type="text"
+                autoComplete="address"
+                name="address"
+                required={true}
+              />
+              <h5>
+                <label>city</label>
+              </h5>
+              <input
+                onChange={onChange}
+                type="text"
+                autoComplete="city"
+                name="city"
+                required={true}
+              />
+              <h5>
+                <label>Post Code</label>
+              </h5>
+              <input
+                onChange={onChange}
+                type="number"
+                autoComplete="postCode"
+                name="postCode"
+                required={true}
+              />
+              <h5>
+                <label>Country</label>
+              </h5>
+              <input
+                onChange={onChange}
+                type="text"
+                autoComplete="country"
+                name="country"
+                required={true}
+              />
+            </div>
+            <div className="button-div">
+              {" "}
+              <button type="submit" style={buttonStyle}>
+                Submit
+              </button>
+            </div>
+          </form>
+        ) : (
+          <>
+            <p>{checkoutAddresses[0]?.fullName}</p>
+          </>
+        )}
       </div>
       <div>
         <h1>Order Overview</h1>
@@ -172,7 +199,7 @@ const ShippingAddress = () => {
         </div>
         <hr />
         <div style={shippingLinkStyle}>
-          <Link to="/all-products" className="checkout">
+          <Link to="/success" className="checkout">
             Continue Shopping
           </Link>
         </div>

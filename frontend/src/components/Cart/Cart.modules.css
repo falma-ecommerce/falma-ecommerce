@@ -9,11 +9,11 @@
   align-items: center;
   padding: 1rem 0;
   flex-wrap: wrap;
-  max-width: 40vw;
 }
 
 .item-desc {
   padding: 0 1rem;
+   max-width: 40vw;
 }
 
 .item-total {

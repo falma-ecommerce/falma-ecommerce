@@ -1,8 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../contexts/CartContext";
-import axios from "axios";
+// import axios from "axios";
 import { Link } from "react-router-dom";
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
+import axios from "../../components/Utility/axiosInstance";
 import"./Payment.css"
 
 const Payment = () => {
@@ -15,7 +16,7 @@ const Payment = () => {
 
   const getShipmentInfo = async () => {
     try {
-      const res = await axios.get("/api/users/shipping");
+      const res = await axios.get("/api/users/getShippingAddress");
 
       setShipmentInfo(res.data.shippingDetail);
       console.log(res.data.shippingDetail);

@@ -1,20 +1,24 @@
-import React, {useState} from 'react';
+import React, {useState, useNavigate} from 'react';
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import { PayPalButton } from "react-paypal-button-v2";
 
 const PaypalPayment = (props) => {
     const {purchaseProduct} = props;
 
+    alert("Payment started")
+
     const [paidFor, setPaidFor] = useState(false);
     const [error, setError] = useState(null);
+    const navigate = useNavigate()
 
     const handleApprove = (orderId) => {
         setPaidFor(true);
+        navigate("/success")
     }
 
     if(paidFor){
         alert("Thank You for purchasing from FALMA SHOP");
     }
+
 
     if(error){
         alert(error);
@@ -47,8 +51,9 @@ const PaypalPayment = (props) => {
             onApprove = { async (data, action) => {
                 const order = await action.order.capture();
                 console.log("order", order);
-
                 handleApprove(data.orderID);
+                // navigate("/success")
+                alert("Thank you for your purchase")
             }}
             onCancel={() => {}}
             onError={(err) => {

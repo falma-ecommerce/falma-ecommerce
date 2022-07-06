@@ -66,7 +66,8 @@ export const shipping = expressAsyncHandler(async (req, res) => {
     address,
     city,
     postCode,
-    country
+    country,
+    user: req.user._id
   });
   return res
     .status(200)
@@ -74,7 +75,8 @@ export const shipping = expressAsyncHandler(async (req, res) => {
 });
 
 export const getShippingAddress = async (req, res) => {
-  return res.status(200).json({ shippingDetail: req.user });
+  const shippingAddress = await ShippingAddress.find({user:req.user._id})
+  return res.status(200).json({ shippingAddress });
 };
 
 export const signin = expressAsyncHandler(async (req, res) => {

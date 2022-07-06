@@ -11,10 +11,10 @@ input {
   margin-right: 1rem;
 }
 
-span {
+/* span {
   margin-right: 25px;
   font-weight: 700;
-}
+} */
 
 button {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,

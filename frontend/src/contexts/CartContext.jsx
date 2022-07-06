@@ -90,13 +90,13 @@ function CartProvider({ children }) {
 
   const decQty = () => {
     setQty((prevQty) => {
-      if (prevQty - 1 < 1) return 1;
+      if (prevQty - 1 < 1) return 1; 
 
       return prevQty - 1;
     });
   };
   const itemPercentage = ((19 / 100) * totalPrice).toFixed(2);
-  const shipment = (totalPrice > 75 ? 0 : 3.99).toFixed(2);
+  const shipment = (totalPrice > 75 ? 0 : totalPrice < 1 ? 0 : 3.99).toFixed(2)
   const itemTotal = (+totalPrice + -itemPercentage + +shipment).toFixed(2);
 
   return (
@@ -110,6 +110,9 @@ function CartProvider({ children }) {
         decQty,
         showCart,
         setShowCart,
+        setCartItems,
+        setTotalPrice,
+        setTotalQuantities,
         totalPrice,
         totalQuantities,
         itemPercentage,

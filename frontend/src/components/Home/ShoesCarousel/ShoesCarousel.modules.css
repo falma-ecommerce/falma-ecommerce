@@ -9,13 +9,13 @@
 
 .carousel-category img {
   height: 60vh;
-  min-width: 32.78vw;
+  min-width: 32.77vw;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
   border: 0.1rem solid;
 }
 
 @media only screen and (max-width: 400px) {
   .shoe-carousel img {
-    width: 100vw;
+    min-width: 100vw;
   }
 }
