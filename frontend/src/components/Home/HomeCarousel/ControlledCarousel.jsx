@@ -18,7 +18,7 @@ export default function ControlledCarousel() {
           <Link to="/menCategory">
             <img
               className="d-block w-100"
-              src="../images/menCover2.jpg"
+              src="../images/menF.jpg"
               alt="First slide"
             />
 
@@ -33,7 +33,7 @@ export default function ControlledCarousel() {
           <Link to="/womenCategory">
             <img
               className="d-block w-100"
-              src="../images/womenCover.png"
+              src="../images/women-F.jpg"
               // href="/womenCategory"
               alt="Second slide"
             />
@@ -48,7 +48,7 @@ export default function ControlledCarousel() {
           <Link to="/kidsCategory">
             <img
               className="d-block w-100"
-              src="../images/childrenCover.jpeg"
+              src="../images/kids-F.jpg"
               alt="Third slide"
             />
 

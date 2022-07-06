@@ -24,13 +24,13 @@ const ShoesCarousel = () => {
         <Link to="/women-shoes">
           <div className="carousel-category">
             <div className="carousel-img">
-              <img src="../shoe-img/shoe-w1.jpeg" alt="" />
+              <img src="../shoe-img/shoew1.jpg" alt="" />
             </div>
             <div className="carousel-img">
-              <img src="../shoe-img/shoe-w2.jpg" alt="" />
+              <img src="../shoe-img/shoew3.jpg" alt="" />
             </div>
             <div className="carousel-img">
-              <img src="../shoe-img/shoe-w3.jpg" alt="" />
+              <img src="../shoe-img/shoe4.jpg" alt="" />
             </div>
           </div>
         </Link>
