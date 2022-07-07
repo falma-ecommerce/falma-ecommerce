@@ -7,12 +7,17 @@ import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import { Paper, TextField } from "@material-ui/core";
 import { CartContext } from "../../../contexts/CartContext";
+import MyContext from "../../../contexts/MyContext";
 
 import "./Header.modules.css";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { PrivateNav, PublicNav } from "../../Navigation";
+// import SearchProduct from "../../SearchProduct/SearchProductB";
+import SearchForm from "../../SearchForm/SearchForm";
 
 export default function Header() {
+  const { search, data, page, imageList, previousPage, nextPage } = useContext(MyContext);
+
   const { loggedIn } = useContext(AuthContext);
   const { totalQuantities } = useContext(CartContext);
   return (
@@ -23,12 +28,14 @@ export default function Header() {
         </Marquee>
       </div>
       <div className="nav-info">
-        <div className="searchForm">
-          <Paper style={{ padding: "0 2rem" }}>
+        <div className="searchForm">  
+        <SearchForm />
+
+          {/* <Paper style={{ padding: "0 2rem" }}>
             <form>
               <TextField fullWidth label="Search...." />
             </form>
-          </Paper>
+          </Paper> */}
         </div>
 
         <div className="websiteName">
@@ -36,14 +43,12 @@ export default function Header() {
             <h1> FALMA Shop</h1>
           </NavLink>
         </div>
-        <div className="toggleNav" >
-        {loggedIn ? <PrivateNav /> : <PublicNav />}
+        <div className="toggleNav">
+          {loggedIn ? <PrivateNav /> : <PublicNav />}
         </div>
-        <div className="login-cart">          
+        <div className="login-cart">
           <div className="loginIcon">
-            <NavLink to="/signin">
-              {/* <PersonOutlineIcon /> */}
-            </NavLink>
+            <NavLink to="/signin">{/* <PersonOutlineIcon /> */}</NavLink>
           </div>
           <div>
             <NavLink to="/myCart">
@@ -56,7 +61,7 @@ export default function Header() {
       </div>
 
       <div className="dropdown-nav">
-      <div>
+        <div>
           <Button id="dropdown-basic-button" title="All">
             <a href="/">Home</a>
           </Button>
@@ -96,7 +101,7 @@ export default function Header() {
             <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
           </DropdownButton>
         </div>
-      </div>      
+      </div>
     </div>
   );
 }
