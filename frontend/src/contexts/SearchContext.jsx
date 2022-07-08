@@ -2,7 +2,6 @@ import axios from "axios";
 import { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-
 import Spinner from "../components/Spinner";
 import MyContext from "./MyContext";
 
@@ -47,7 +46,9 @@ const SearchContext = ({ children }) => {
     fetchData();
   }, [URI]);
   if (data.loading)
-  return <p>Loading...</p>;
+  return <div style={{textAlign: 'center', marginTop: '100px'}}>
+    <Spinner />
+    </div> ;
 
   if (data.error) return <p>{data.error}</p>;
 
