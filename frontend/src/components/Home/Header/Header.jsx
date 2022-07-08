@@ -2,12 +2,16 @@ import React, { useContext } from "react";
 // import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { NavLink } from "react-router-dom";
-// import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import { DropdownButton, Dropdown, Button } from "react-bootstrap";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import { DropdownButton, Dropdown, Button, Nav } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import { Paper, TextField } from "@material-ui/core";
 import { CartContext } from "../../../contexts/CartContext";
+<<<<<<< HEAD
 import MyContext from "../../../contexts/MyContext";
+=======
+import Navigation from "../Header/Navigation"
+>>>>>>> lindaUpdate
 
 import "./Header.modules.css";
 import { AuthContext } from "../../../contexts/AuthContext";
@@ -58,20 +62,26 @@ export default function Header() {
             </NavLink>
           </div>
         </div>
+       
       </div>
+      <div> <Navigation /></div>
 
       <div className="dropdown-nav">
+<<<<<<< HEAD
         <div>
           <Button id="dropdown-basic-button" title="All">
             <a href="/">Home</a>
           </Button>
         </div>
         <div>
+=======
+       {/*  <div>
+>>>>>>> lindaUpdate
           <NavLink to="/all-products" id="dropdown-basic-button" title="All">
             All
           </NavLink>
-        </div>
-        <div>
+        </div> */}
+      {/*   <div>
           <DropdownButton id="dropdown-basic-button" title="New Arrivals">
             <div>
               <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
@@ -79,29 +89,36 @@ export default function Header() {
               <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
             </div>
           </DropdownButton>
-        </div>
-        <div>
+        </div> */}
+       {/*  <div>
           <DropdownButton id="dropdown-basic-button" title="Men">
             <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
             <Dropdown.Item href="#/action-2">Shoes</Dropdown.Item>
             <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
           </DropdownButton>
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <DropdownButton id="dropdown-basic-button" title="Women">
             <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
             <Dropdown.Item href="#/action-2">Shoes auction</Dropdown.Item>
             <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
           </DropdownButton>
-        </div>
-        <div>
+        </div> */}
+       {/*  <div>
           <DropdownButton id="dropdown-basic-button" title="Children">
             <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
             <Dropdown.Item href="#/action-2">Shoes</Dropdown.Item>
             <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
           </DropdownButton>
+<<<<<<< HEAD
         </div>
       </div>
+=======
+        </div> */}
+      </div>
+     
+      
+>>>>>>> lindaUpdate
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Container from "react-bootstrap/Container"
 import Header from "./components/Home/Header/Header";
 import Products from "./components/Products/Products";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
