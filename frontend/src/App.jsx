@@ -10,6 +10,12 @@ import SignupScreen from "./screens/SignupScreen/SignupScreen";
 import SignoutScreen from "./screens/SignupScreen/SignoutScreen";
 import ProfileScreen from "./screens/SignupScreen/ProfileScreen";
 import SigninScreen from "./screens/SignupScreen/SigninScreen";
+import Shipping from "./components/Home/Footer/Footer links/Shipping";
+import Terms from "./components/Home/Footer/Footer links/Terms";
+import Privacy from "./components/Home/Footer/Footer links/Privacy";
+import Refund from "./components/Home/Footer/Footer links/Refund";
+import Vision from "./components/Home/Footer/Footer links/Vision";
+import Mission from "./components/Home/Footer/Footer links/Mission";
 import "./App.css";
 
 // const App = () => {
@@ -58,6 +64,12 @@ const App = () => {
               <Route path="/signout" element={<SignoutScreen />} />
               <Route path="/profile" element={<ProfileScreen />} />
               <Route path="/myCart" element={<Cart />} />
+              <Route path="/shipping" element={<Shipping/>} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/refund" element={<Refund />} />
+              <Route path="/mission" element={<Mission />} />
+              <Route path="/vision" element={<Vision />} />
             </Routes>
           </main>
         </div>
