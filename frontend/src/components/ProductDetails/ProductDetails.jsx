@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { sanitize } from "dompurify";
 import { CartContext } from "../../contexts/CartContext";
+import './ProductDetails.module.css'
 
-import "./ProductDetails.module.css";
 import { toast } from "react-toastify";
 import { getError } from "../../utils";
 
