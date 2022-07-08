@@ -90,9 +90,9 @@ function Navigation() {
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
-                              {/* <h6 className="font-weight-bold text-uppercase">
-                              
-                              </h6> */}
+                                <h6 className="font-weight-bold text-uppercase"> 
+                              Unisex
+                              </h6> 
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
@@ -251,7 +251,7 @@ function Navigation() {
                                     href=""
                                     className="nav-link text-small pb-0 "
                                   >
-                                     Shirts
+                                     Shorts
                                   </a>
                                 </li>
                                 <li className="nav-item">
@@ -273,9 +273,9 @@ function Navigation() {
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
-                              {/* <h6 className="font-weight-bold text-uppercase">
-                                MegaMenu heading
-                              </h6> */}
+                              <h6 className="font-weight-bold text-uppercase">
+                                Officials
+                              </h6> 
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
@@ -298,7 +298,7 @@ function Navigation() {
                                     href=""
                                     className="nav-link text-small pb-0 "
                                   >
-                                    Shorts
+                                    Shirts
                                   </a>
                                 </li>
                                 <li className="nav-item">
@@ -456,9 +456,9 @@ function Navigation() {
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
-                              {/* <h6 className="font-weight-bold text-uppercase">
-                             
-                              </h6> */}
+                              <h6 className="font-weight-bold text-uppercase">
+                              CASUALS                             
+                              </h6> 
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
