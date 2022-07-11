@@ -1,10 +1,9 @@
 import axios from "axios";
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import MyContext from "./MyContext";
-
 
 const SearchContext = ({ children }) => {
   const [data, setData] = useState({
@@ -12,13 +11,13 @@ const SearchContext = ({ children }) => {
     loading: true,
     error: null,
   });
-  const [search, setSearch] = useState("");
+  const [search, setSearch,] = useState("");
   const [searchInput, setSearchInput] = useState("");
 
   const inputRef = useRef();
- 
 
   const URI = `/extApi/products?q=${search}`;
+ 
 
   const submitHandler = (e) => {
     e.preventDefault();

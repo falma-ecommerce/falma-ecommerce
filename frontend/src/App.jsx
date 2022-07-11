@@ -3,7 +3,6 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Container from "react-bootstrap/Container"
 import Header from "./components/Home/Header/Header";
 import Products from "./components/Products/Products";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
@@ -11,17 +10,14 @@ import SignupScreen from "./screens/SignupScreen/SignupScreen";
 import SignoutScreen from "./screens/SignupScreen/SignoutScreen";
 import ProfileScreen from "./screens/SignupScreen/ProfileScreen";
 import SigninScreen from "./screens/SignupScreen/SigninScreen";
-import "./App.css";
-
-// const App = () => {
-//   return (
-//     <AuthProvider>
 import Cart from "./components/Cart/Cart";
 import { CartProvider } from "./contexts/CartContext";
 import SearchContext from "./contexts/SearchContext";
 import SearchProduct from "./components/SearchProduct/SearchProduct";
+import "./App.css";
 
 const App = () => {
+
   return (
     <SearchContext>
       <CartProvider>
@@ -53,9 +49,27 @@ const App = () => {
                     element={<Products q="kids/cloths" />}
                   />
                   <Route path="/trending" element={<Products q="trending" />} />
+                  <Route path="/seasonal" element={<Products q="seasonal" />} />
+                  <Route path="/sales" element={<Products q="sales" />} />
                   <Route
                     path="/men-shoes"
                     element={<Products q="men-shoes" />}
+                  />
+                  <Route
+                    path="/men-shirt"
+                    element={<Products q="men-shirt" />}
+                  />
+                  <Route
+                    path="/men-t-shirt"
+                    element={<Products q="men-t-shirt" />}
+                  />
+                  <Route
+                    path="/hoodies"
+                    element={<Products q="men-hoodies" />}
+                  />
+                  <Route
+                    path="/free-style"
+                    element={<Products q="men-free-style" />}
                   />
                   <Route
                     path="/women-shoes"
@@ -64,6 +78,10 @@ const App = () => {
                   <Route
                     path="/sport-shoes"
                     element={<Products q="sport-shoes" />}
+                  />
+                  <Route
+                    path="/women-bags"
+                    element={<Products q="women-bags" />}
                   />
                   <Route
                     path="/product-details/:id"

@@ -21,7 +21,7 @@ const Categories = () => {
           >
             <div className="one"></div>
             <div className="details">
-              <h2>MEN</h2>
+              <h3>MEN</h3>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@ const Categories = () => {
           >
             <div className="two"></div>
             <div className="details">
-              <h2>WOMEN</h2>
+              <h3>WOMEN</h3>
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@ const Categories = () => {
           >
             <div className="three"></div>
             <div className="details">
-              <h2>KIDS</h2>
+              <h3>KIDS</h3>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ const Categories = () => {
           >
             <div className="four"></div>
             <div className="details">
-              <h2>MEN SHOES</h2>
+              <h3>MEN SHOES</h3>
             </div>
           </div>
         </div>
@@ -105,13 +105,13 @@ const Categories = () => {
           >
             <div className="five"></div>
             <div className="details">
-              <h2>WOMEN SHOES</h2>
+              <h3>WOMEN SHOES</h3>
             </div>
           </div>
         </div>
       </Link>
 
-      <Link to="/kids-shoes">
+      <Link to="/sport-shoes">
         <div className="bg-items">
           <div
             className="items"
@@ -126,7 +126,7 @@ const Categories = () => {
           >
             <div className="six"></div>
             <div className="details">
-              <h2>KIDS SHOES</h2>
+              <h3>KIDS SHOES</h3>
             </div>
           </div>
         </div>

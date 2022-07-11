@@ -19,7 +19,7 @@ export default function Trending() {
       <div className="products">
         {products.map((product) => (
           <div className="product" key={product.slug}>
-            <Link to="/trending">
+            <Link to={`${product.link}`}>
               <img src={product.image} alt={product.name} />
             </Link>
 
@@ -32,5 +32,7 @@ export default function Trending() {
         ))}
       </div>
     </div>
+
+    
   );
 }

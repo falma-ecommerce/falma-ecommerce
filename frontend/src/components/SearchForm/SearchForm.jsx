@@ -4,8 +4,8 @@ import MyContext from "../../contexts/MyContext";
 import { Paper, TextField } from "@material-ui/core";
 
 const SearchForm = () => {
-  const { searchInput, setSearchInput, inputRef, submitHandler } =
-    useContext(MyContext);
+
+   const { searchInput, setSearchInput, inputRef, submitHandler } = useContext(MyContext);
 
   const navigate = useNavigate();
 
@@ -25,8 +25,11 @@ const SearchForm = () => {
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             onKeyPress={(e) => {
-              e.key === "Enter" && submitHandler(e);
-              navigate("/search-products");
+              if (e.key === "Enter" ) {
+                // e.preventDefault();
+                submitHandler(e)
+                navigate(`/search-products`);                
+              } 
             }}
           />
         </form>

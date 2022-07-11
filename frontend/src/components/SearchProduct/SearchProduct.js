@@ -9,7 +9,7 @@ export default function SearchProduct() {
 
   return (
     <div className='products-link'>
-    {productList}
+      {productList}
   </div>
   )
 }
