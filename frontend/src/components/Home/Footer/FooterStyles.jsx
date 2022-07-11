@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
+
+
 export const Box = styled.div`
   padding: 34px 65px;
   background: black;
+  opacity: 0.9;
   width: 100%;
   margin-top: 60px;
   @media (max-width: 1000px) {
@@ -32,21 +35,13 @@ export const Row = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 `;
-export const FooterLink = styled.a`
-  color: #fff;
-  margin-bottom: 20px;
-  font-size: 16px;
-  text-decoration: none;
-  &:hover {
-    color: orange;
-    transition: 270ms ease-in;
-  }
-`;
+
 export const Heading = styled.div`
   // text-align: center;
   font-size: 1rem;
-  color: #fff;
-  margin: 40px 0;
+  color: #FFFAFA;
+  margin: 30px 0;
   font-weight: bold;
-  opacity: 0.6
+  opacity: 0.6;
+  
 `;
