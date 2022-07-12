@@ -35,7 +35,7 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <Link  className="link" to="/"onClick={() => openInNewTab('https://github.com/FreemanJE')} >Freeman Johnson </Link>
+            <Link  className="link" to="/team" >Freeman Johnson </Link>
             <Link  className="link" to="/"onClick={() => openInNewTab('https://github.com/abdsimon')}>Abdulwahed Diab</Link>
             <Link  className="link" to="/"onClick={() => openInNewTab('https://github.com/MartinsOni')}>Martins Oni</Link>
             <Link  className="link" to="/"onClick={() => openInNewTab('https://github.com/Lindaroy202')}>Linda Awasiri </Link>

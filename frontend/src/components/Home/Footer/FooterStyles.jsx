@@ -44,8 +44,4 @@ export const Heading = styled.div`
   font-weight: bold;
   opacity: 0.6;
   
-<<<<<<< HEAD
 `;
-=======
-`;
->>>>>>> simon+freeman

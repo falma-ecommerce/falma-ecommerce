@@ -16,6 +16,7 @@ import Privacy from "./components/Home/Footer/Footer links/Privacy";
 import Refund from "./components/Home/Footer/Footer links/Refund";
 import Vision from "./components/Home/Footer/Footer links/Vision";
 import Mission from "./components/Home/Footer/Footer links/Mission";
+import TeamMember from "./components/Home/Footer/Footer links/TeamMembers";
 import "./App.css";
 
 // const App = () => {
@@ -70,6 +71,7 @@ const App = () => {
               <Route path="/refund" element={<Refund />} />
               <Route path="/mission" element={<Mission />} />
               <Route path="/vision" element={<Vision />} />
+              <Route path="/team"   element={<TeamMember />} />
             </Routes>
           </main>
         </div>
