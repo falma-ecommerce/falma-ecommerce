@@ -7,23 +7,19 @@ import {
   AiOutlineShopping,
 } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
-import { FaCcPaypal, FaCcVisa, FaCcApplePay, FaCcAmex } from "react-icons/fa";
 import "./Cart.modules.css";
-import toast from "react-hot-toast";
+import PaymentDetail from "../Utility/PaymentDetail";
+import PaymentMethods from "../Utility/PaymentMethods";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const Cart = () => {
   const cartRef = useRef();
   const {
     cartItems,
-    addItemToCart,
-    totalPrice,
-    setShowCart,
     totalQuantities,
     removeItemFromCart,
     toggleCartItemQuantity,
-    itemPercentage,
-    shipment,
-    itemTotal,
   } = useContext(CartContext);
 
   const linkStyle = {
@@ -49,7 +45,7 @@ const Cart = () => {
                   <div className="item" key={item.id}>
                     <img
                       src={`https://${item.media.images[0].url}`}
-                      style={{ width: "15vh", padding: "0 1rem"}}
+                      style={{ width: "15vh", padding: "0 1rem" }}
                       alt="Article not no longer in stock"
                     />
                     <div className="item-desc">
@@ -69,7 +65,7 @@ const Cart = () => {
                             >
                               <AiOutlineMinus />
                             </span>
-                            {item.quantity}                        
+                            <span className="quantity">{item.quantity}</span>
                             <span
                               className="plus"
                               onClick={() =>
@@ -85,7 +81,7 @@ const Cart = () => {
                           className="remove-item"
                           onClick={() => removeItemFromCart(item)}
                         >
-                          <TiDeleteOutline />
+                          <FontAwesomeIcon icon={faTrash} className="trashIcon"/>
                         </button>
                       </div>
                     </div>
@@ -97,38 +93,7 @@ const Cart = () => {
             <div className="total-item">
               {cartItems.length >= 1 && (
                 <div className="cart-bottom">
-                  <h3>Order Overview</h3>
-                  <hr />
-                  <div className="total">
-                    <div>Subtotal</div>
-                    <div>
-                      <p>${totalPrice.toFixed(2)}</p>
-                    </div>
-                  </div>
-                  <div className="total">
-                    <div>Taxes 19 percent%</div>
-                    <div>
-                      <p>${itemPercentage}</p>
-                    </div>
-                  </div>
-                  <div className="total">
-                    <div>Shipment</div>
-                    <div>
-                      <p>${shipment}</p>
-                    </div>
-                  </div>
-
-                  <hr />
-
-                  <div className="total">
-                    <div>
-                      <h3>TOTAL</h3>
-                    </div>
-                    <div>
-                      <h3>${itemTotal}</h3>
-                    </div>
-                  </div>
-                  <hr />
+                  <PaymentDetail />
                   <div style={linkStyle}>
                     <Link to="/all-products" className="checkout">
                       Continue Shopping
@@ -136,26 +101,12 @@ const Cart = () => {
                   </div>
                   <div style={linkStyle}>
                     <Link to="/shipping-address" className="checkout">
-                      Proceed to checkout
+                      Proceed to Payment
                     </Link>
                   </div>
                 </div>
               )}
-              <h5 className="payment-methods">Payment methods</h5>
-              <div className="icons">
-                <div className="paypal">
-                  <FaCcPaypal />
-                </div>
-                <div className="visa">
-                  <FaCcVisa />
-                </div>
-                <div className="apple-pay">
-                  <FaCcApplePay />
-                </div>
-                <div className="america-express">
-                  <FaCcAmex />
-                </div>
-              </div>
+              <PaymentMethods />
             </div>
           </div>
           <div className="cart-container">

@@ -69,6 +69,7 @@ export const shipping = expressAsyncHandler(async (req, res) => {
     country,
     user: req.user._id
   });
+  console.log("shipping", shipping)
   return res
     .status(200)
     .json({ message: "Shipping address was created", createdShipping: shipping });

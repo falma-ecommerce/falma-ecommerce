@@ -21,7 +21,7 @@ export default function SigninScreen() {
       console.log("response ", response);
 
       handleLogin(true, response.data.user);
-      navigate("/");
+      navigate("/shipping-address");
     } catch (error) {}
   };
 
@@ -29,7 +29,6 @@ export default function SigninScreen() {
     <div className="register-container align-items-center">
       <h3 className="text-center">You are Welcome Back </h3>
       <div className=" d-flex justify-content-around align-items-center flex-wrap ">
-       
         <form
           className=" d-flex flex-column justify-content-center align-items-center"
           onSubmit={handleSubmit}
@@ -55,6 +54,7 @@ export default function SigninScreen() {
 
           <div className="p-3">
             <button className="btn btn-primary w-100 ">Sign In</button>
+
           </div>
         </form>
         <div className="p-2 text-center">

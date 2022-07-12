@@ -1,16 +1,19 @@
 import React, { useState, useContext, useEffect } from "react";
-import { CartContext } from "../../contexts/CartContext";
+// import { CartContext } from "../../contexts/CartContext";
 import axios from "axios";
-import { FaCcPaypal, FaCcVisa, FaCcApplePay, FaCcAmex } from "react-icons/fa";
-import "./ShippingAddress.module.css";
+// import { FaCcPaypal, FaCcVisa, FaCcApplePay, FaCcAmex } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CheckoutContext } from "../../contexts/CheckoutContext";
+import PaymentDetail from "../Utility/PaymentDetail";
+import ShippingAddressUtil from "../ShippingAddressUtil/ShippingAddressUtil";
+import PaymentMethods from "../Utility/PaymentMethods";
+import "./ShippingAddress.module.css";
 
 const ShippingAddress = () => {
-  const { totalPrice, itemPercentage, shipment, itemTotal } =
-    useContext(CartContext);
+  // const { totalPrice, itemPercentage, shipment, itemTotal } =
+  //   useContext(CartContext);
 
-  const { checkoutAddresses, updateCheckoutAddresses, setCheckoutAddresses } =
+  const { checkoutAddresses, setCheckoutAddresses } =
     useContext(CheckoutContext);
 
   const [formData, setFormData] = useState({
@@ -47,10 +50,9 @@ const ShippingAddress = () => {
       alert("Shipping address registration was successful");
     } catch (error) {
       console.error("An error happened", error);
-      alert(` Shipping address registration failed`);
+      alert(`Please signing in or sign up before filling in your Shipping details `);
     }
   };
-
   const loadShippingDetails = async () => {
     try {
       const response = await axios.get("/api/users/getShippingAddress");
@@ -58,7 +60,7 @@ const ShippingAddress = () => {
       console.log("response ", response);
     } catch (error) {
       console.error("An error happened", error);
-      alert(` Shipping address registration failed`);
+      alert(`Please signing in or sign up before filling in the Shipping details`);
     }
   };
   console.log(checkoutAddresses);
@@ -71,9 +73,9 @@ const ShippingAddress = () => {
     justifyContent: "space-around",
     flexWrap: "wrap",
     padding: "0.3rem",
-    margin: "0.8rem",
+    margin: "2rem 3rem",
     borderRadius: "0.3rem",
-    border: "1rem solid black",
+    boxShadow: "inset 0 0 10px",
     fontSize: "1.3rem",
   };
 
@@ -100,7 +102,7 @@ const ShippingAddress = () => {
       <div>
         {checkoutAddresses && checkoutAddresses.length < 1 ? (
           <form onSubmit={handleSubmit} style={styleForm}>
-            <h1>Sipping Detail</h1>
+            <h1>Shipping Detail</h1>
             <div className="shipping-address">
               <h5>
                 <label>Full Name</label>
@@ -161,45 +163,15 @@ const ShippingAddress = () => {
             </div>
           </form>
         ) : (
-          <>
-            <p>{checkoutAddresses[0]?.fullName}</p>
-          </>
+          <div>
+            <ShippingAddressUtil />
+          </div>
         )}
       </div>
       <div>
-        <h1>Order Overview</h1>
-        <div className="total">
-          <div>Subtotal</div>
-          <div>
-            <p>${totalPrice.toFixed(2)}</p>
-          </div>
-        </div>
-        <div className="total">
-          <div>Taxes 19 percent%</div>
-          <div>
-            <p>${itemPercentage}</p>
-          </div>
-        </div>
-        <div className="total">
-          <div>Shipment</div>
-          <div>
-            <p>${shipment}</p>
-          </div>
-        </div>
-
-        <hr />
-
-        <div className="total">
-          <div>
-            <h3>TOTAL</h3>
-          </div>
-          <div>
-            <h3>${itemTotal}</h3>
-          </div>
-        </div>
-        <hr />
+        <PaymentDetail />
         <div style={shippingLinkStyle}>
-          <Link to="/success" className="checkout">
+          <Link to="/all-products" className="checkout">
             Continue Shopping
           </Link>
         </div>
@@ -208,23 +180,8 @@ const ShippingAddress = () => {
             Proceed to payment
           </Link>
         </div>
-
         <div>
-          <h5 className="payment-methods">Payment methods</h5>
-          <div className="icons">
-            <div className="paypal">
-              <FaCcPaypal />
-            </div>
-            <div className="visa">
-              <FaCcVisa />
-            </div>
-            <div className="apple-pay">
-              <FaCcApplePay />
-            </div>
-            <div className="america-express">
-              <FaCcAmex />
-            </div>
-          </div>
+          <PaymentMethods />
         </div>
       </div>
     </div>

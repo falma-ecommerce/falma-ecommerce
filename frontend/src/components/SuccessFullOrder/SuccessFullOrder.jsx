@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { BsBagCheckFill } from "react-icons/bs";
 import { CartContext } from "../../contexts/CartContext";
 import { fireworksConfetti } from "../Utility/fireworksConfetti";
-import "./SuccessfulOrder.css"
+import "./SuccessFullOrder.css"
 
 const SuccessFullOrder = () => {
   const { setCartItems, setTotalPrice, setTotalQuantities } =

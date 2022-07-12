@@ -25,7 +25,7 @@ export default function Register() {
       console.log("response ", response);
       event.target.reset();
       alert("Your registration was successful");
-      navigate("/");
+      navigate("/signin");
     } catch (error) {
       console.log(error);
       alert("Registration failure. \n username exist already");

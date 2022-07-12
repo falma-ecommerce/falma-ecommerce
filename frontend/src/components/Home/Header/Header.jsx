@@ -7,10 +7,11 @@ import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import { Paper, TextField } from "@material-ui/core";
 import { CartContext } from "../../../contexts/CartContext";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./Header.modules.css";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { PrivateNav, PublicNav } from "../../Navigation";
+import CartIcon from "../../Utility/cartIcon";
 
 export default function Header() {
   const { loggedIn } = useContext(AuthContext);
@@ -36,27 +37,23 @@ export default function Header() {
             <h1> FALMA Shop</h1>
           </NavLink>
         </div>
-        <div className="toggleNav" >
-        {loggedIn ? <PrivateNav /> : <PublicNav />}
+        <div className="toggleNav">
+          {loggedIn ? <PrivateNav /> : <PublicNav />}
         </div>
-        <div className="login-cart">          
+        <div className="login-cart">
           <div className="loginIcon">
-            <NavLink to="/signin">
-              {/* <PersonOutlineIcon /> */}
-            </NavLink>
+            <NavLink to="/signin">{/* <PersonOutlineIcon /> */}</NavLink>
           </div>
           <div>
             <NavLink to="/myCart">
-              {/* <ShoppingCartIcon /> */}
-              <ShoppingCartIcon />
-              <p id="shopping-cart-count">{totalQuantities}</p>
+              <CartIcon/>
             </NavLink>
           </div>
         </div>
       </div>
 
       <div className="dropdown-nav">
-      <div>
+        <div>
           <Button id="dropdown-basic-button" title="All">
             <a href="/">Home</a>
           </Button>
@@ -96,7 +93,7 @@ export default function Header() {
             <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
           </DropdownButton>
         </div>
-      </div>      
+      </div>
     </div>
   );
 }

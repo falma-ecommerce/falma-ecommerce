@@ -14,8 +14,7 @@ import Cart from "./components/Cart/Cart";
 import { CartProvider } from "./contexts/CartContext";
 import ShippingAddress from "./components/ShippingAddress/ShippingAddress";
 import Payment from "./components/Payment/Payment";
-import SuccessFullOrder from "./components/SuccessfulOrder/SuccessfulOrder";
-import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import SuccessFullOrder from "./components/SuccessFullOrder/SuccessFullOrder";
 import "./App.css";
 import { CheckoutProvider } from "./contexts/CheckoutContext";
 
@@ -24,12 +23,6 @@ const App = () => {
     <CartProvider>
       <CheckoutProvider>
         <AuthProvider>
-          <PayPalScriptProvider
-            options={{
-              "client-id":
-                "AXixCeiml4Fbn-iljVT44igo7lRhS7lqPZisAJpE1PAthAA1oKOclrVqj-0rcagQM563HexKXmP4_CYf",
-            }}
-          >
             <BrowserRouter>
               <Header />
               <div>
@@ -96,7 +89,6 @@ const App = () => {
                 </main>
               </div>
             </BrowserRouter>
-          </PayPalScriptProvider>
         </AuthProvider>
       </CheckoutProvider>
     </CartProvider>
