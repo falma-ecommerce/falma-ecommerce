@@ -3,10 +3,10 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { sanitize } from "dompurify";
 import { CartContext } from "../../contexts/CartContext";
-
-import "./ProductDetails.modules.css";
 import { toast } from "react-toastify";
 import { getError } from "../../utils";
+import "./ProductDetails.modules.css"
+
 
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
