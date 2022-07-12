@@ -10,7 +10,6 @@ import SignupScreen from "./screens/SignupScreen/SignupScreen";
 import SignoutScreen from "./screens/SignupScreen/SignoutScreen";
 import ProfileScreen from "./screens/SignupScreen/ProfileScreen";
 import SigninScreen from "./screens/SignupScreen/SigninScreen";
-<<<<<<< HEAD
 import Shipping from "./components/Home/Footer/Footer links/Shipping";
 import Terms from "./components/Home/Footer/Footer links/Terms";
 import Privacy from "./components/Home/Footer/Footer links/Privacy";
@@ -22,8 +21,6 @@ import "./App.css";
 // const App = () => {
 //   return (
 //     <AuthProvider>
-=======
->>>>>>> 6f74b173b7261d28408b8a894cc1fc9adc538fa7
 import Cart from "./components/Cart/Cart";
 import { CartProvider } from "./contexts/CartContext";
 import SearchContext from "./contexts/SearchContext";
@@ -32,7 +29,6 @@ import "./App.css";
 
 const App = () => {
 
-<<<<<<< HEAD
     <CartProvider>
       <AuthProvider>
       <BrowserRouter>
@@ -82,7 +78,6 @@ const App = () => {
       </BrowserRouter>
     </AuthProvider>
     </CartProvider>
-=======
   return (
     <SearchContext>
       <CartProvider>
@@ -164,7 +159,6 @@ const App = () => {
         </AuthProvider>
       </CartProvider>
     </SearchContext>
->>>>>>> 6f74b173b7261d28408b8a894cc1fc9adc538fa7
   );
 };
 
