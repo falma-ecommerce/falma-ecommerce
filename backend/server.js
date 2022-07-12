@@ -22,8 +22,6 @@ app.use(cookieParser());
 app.use(passport.initialize());
 configurePassport(passport);
 
-// app.use(express.urlencoded({ extended: true }));
-
 app.get("/interApi/products", (req, res) => {
   res.send(data.products);
 });

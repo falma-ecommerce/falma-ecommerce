@@ -1,19 +1,24 @@
 import React, { useContext } from "react";
-// import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { NavLink } from "react-router-dom";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
-import { Paper, TextField } from "@material-ui/core";
 import { CartContext } from "../../../contexts/CartContext";
+<<<<<<< HEAD
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./Header.modules.css";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { PrivateNav, PublicNav } from "../../Navigation";
 import CartIcon from "../../Utility/cartIcon";
+=======
+import Navigation from "../Header/Navigation"
+import "./Header.modules.css";
+import { AuthContext } from "../../../contexts/AuthContext";
+import { PrivateNav, PublicNav } from "../../Menu";
+import SearchForm from "../../SearchForm/SearchForm";
 
-export default function Header() {
+export default function Header() {  
+>>>>>>> freemanupdate
+
   const { loggedIn } = useContext(AuthContext);
   const { totalQuantities } = useContext(CartContext);
   return (
@@ -24,12 +29,8 @@ export default function Header() {
         </Marquee>
       </div>
       <div className="nav-info">
-        <div className="searchForm">
-          <Paper style={{ padding: "0 2rem" }}>
-            <form>
-              <TextField fullWidth label="Search...." />
-            </form>
-          </Paper>
+        <div className="searchForm">  
+        <SearchForm />         
         </div>
 
         <div className="websiteName">
@@ -42,16 +43,29 @@ export default function Header() {
         </div>
         <div className="login-cart">
           <div className="loginIcon">
+<<<<<<< HEAD
             <NavLink to="/signin">{/* <PersonOutlineIcon /> */}</NavLink>
           </div>
           <div>
             <NavLink to="/myCart">
               <CartIcon/>
+=======
+            <NavLink to="/signin"></NavLink>
+          </div>
+          <div>
+            <NavLink to="/myCart">
+              <ShoppingCartIcon />
+              <p id="shopping-cart-count">{totalQuantities}</p>
+>>>>>>> freemanupdate
             </NavLink>
           </div>
         </div>
+       
+      </div>
+      <div> <Navigation />
       </div>
 
+<<<<<<< HEAD
       <div className="dropdown-nav">
         <div>
           <Button id="dropdown-basic-button" title="All">
@@ -94,6 +108,11 @@ export default function Header() {
           </DropdownButton>
         </div>
       </div>
+=======
+     
+     
+      
+>>>>>>> freemanupdate
     </div>
   );
 }

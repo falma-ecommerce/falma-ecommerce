@@ -60,7 +60,11 @@ const Products = ({ q }) => {
           {loading ? (
             <div>
               <Box sx={{ display: "flex" }}>
+<<<<<<< HEAD
                 <Spinner />
+=======
+                  <Spinner />
+>>>>>>> freemanupdate
               </Box>
             </div>
           ) : error ? (
