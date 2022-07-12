@@ -18,13 +18,6 @@ const SearchContext = ({ children }) => {
 
   const URI = `/extApi/products?q=${search}`;
  
-
-  const submitHandler = (e) => {
-    e.preventDefault();
-    setSearch(searchInput);
-    setSearchInput("");
-  };
-
   useEffect(() => {
     const fetchData = async ( req, res) => {
       try {
@@ -85,7 +78,6 @@ const SearchContext = ({ children }) => {
         searchInput,
         setSearchInput,
         productList,
-        submitHandler,
         inputRef,
       }}
     >

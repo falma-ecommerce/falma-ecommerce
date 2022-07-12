@@ -12,9 +12,7 @@
     grid-template-columns: 1fr 1fr auto auto;
     margin: 20px 40px ;
     justify-content: center;
-    /* width: 80%; */
-    /* text-align: center; */
-    /* box-shadow: 0 5px 5px 0px #a09ea3; */
+   
 }
 .searchForm {
     width: 60%;    

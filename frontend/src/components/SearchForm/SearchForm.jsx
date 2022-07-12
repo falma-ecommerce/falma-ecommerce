@@ -4,10 +4,17 @@ import MyContext from "../../contexts/MyContext";
 import { Paper, TextField } from "@material-ui/core";
 
 const SearchForm = () => {
-
-   const { searchInput, setSearchInput, inputRef, submitHandler } = useContext(MyContext);
+  const { search, setSearch, searchInput, setSearchInput, inputRef } =
+    useContext(MyContext);
 
   const navigate = useNavigate();
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    setSearch(searchInput);
+    setSearchInput("");
+    navigate(`/search-products`);
+  };
 
   useEffect(() => {
     inputRef.current.focus();
@@ -25,14 +32,10 @@ const SearchForm = () => {
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             onKeyPress={(e) => {
-              if (e.key === "Enter" ) {
-                // e.preventDefault();
-                submitHandler(e)
-                navigate(`/search-products`);                
-              } 
-            }}
-          />
-        </form>
+              e.key === "Enter" && submitHandler(e);              
+            }}            
+          />          
+        </form> 
       </Paper>
     </div>
   );
