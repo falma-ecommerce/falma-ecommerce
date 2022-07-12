@@ -1,18 +1,16 @@
 import React, { useContext } from "react";
-// import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { NavLink } from "react-router-dom";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
-import { Paper, TextField } from "@material-ui/core";
 import { CartContext } from "../../../contexts/CartContext";
-
+import Navigation from "../Header/Navigation"
 import "./Header.modules.css";
 import { AuthContext } from "../../../contexts/AuthContext";
-import { PrivateNav, PublicNav } from "../../Navigation";
+import { PrivateNav, PublicNav } from "../../Menu";
+import SearchForm from "../../SearchForm/SearchForm";
 
-export default function Header() {
+export default function Header() {  
+
   const { loggedIn } = useContext(AuthContext);
   const { totalQuantities } = useContext(CartContext);
   return (
@@ -23,12 +21,8 @@ export default function Header() {
         </Marquee>
       </div>
       <div className="nav-info">
-        <div className="searchForm">
-          <Paper style={{ padding: "0 2rem" }}>
-            <form>
-              <TextField fullWidth label="Search...." />
-            </form>
-          </Paper>
+        <div className="searchForm">  
+        <SearchForm />         
         </div>
 
         <div className="websiteName">
@@ -36,67 +30,28 @@ export default function Header() {
             <h1> FALMA Shop</h1>
           </NavLink>
         </div>
-        <div className="toggleNav" >
-        {loggedIn ? <PrivateNav /> : <PublicNav />}
+        <div className="toggleNav">
+          {loggedIn ? <PrivateNav /> : <PublicNav />}
         </div>
-        <div className="login-cart">          
+        <div className="login-cart">
           <div className="loginIcon">
-            <NavLink to="/signin">
-              {/* <PersonOutlineIcon /> */}
-            </NavLink>
+            <NavLink to="/signin"></NavLink>
           </div>
           <div>
             <NavLink to="/myCart">
-              {/* <ShoppingCartIcon /> */}
               <ShoppingCartIcon />
               <p id="shopping-cart-count">{totalQuantities}</p>
             </NavLink>
           </div>
         </div>
+       
+      </div>
+      <div> <Navigation />
       </div>
 
-      <div className="dropdown-nav">
-      <div>
-          <Button id="dropdown-basic-button" title="All">
-            <a href="/">Home</a>
-          </Button>
-        </div>
-        <div>
-          <NavLink to="/all-products" id="dropdown-basic-button" title="All">
-            All
-          </NavLink>
-        </div>
-        <div>
-          <DropdownButton id="dropdown-basic-button" title="New Arrivals">
-            <div>
-              <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Shoes</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
-            </div>
-          </DropdownButton>
-        </div>
-        <div>
-          <DropdownButton id="dropdown-basic-button" title="Men">
-            <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Shoes</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
-          </DropdownButton>
-        </div>
-        <div>
-          <DropdownButton id="dropdown-basic-button" title="Women">
-            <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Shoes auction</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
-          </DropdownButton>
-        </div>
-        <div>
-          <DropdownButton id="dropdown-basic-button" title="Children">
-            <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Shoes</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
-          </DropdownButton>
-        </div>
-      </div>      
+     
+     
+      
     </div>
   );
 }

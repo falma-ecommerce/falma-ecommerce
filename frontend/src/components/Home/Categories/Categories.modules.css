@@ -1,7 +1,7 @@
-body {
+/* body {
     background-color: #e43;
   }
-  
+   */
   .container {
     margin: 0 auto;
     /* display: grid;
@@ -66,9 +66,9 @@ body {
   .one {
     left: 100%;
     bottom: 100%;
-    width: 100%;
+    width: 100%; 
     height: inherit;
-    background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
+    background-image: url("https://img01.ztat.net/article/spp-media-p1/2a70e23635b34019a028eaba0f6eaffe/621bd31ba1c2417e908b2548a532e2f3.jpg?imwidth=1800");
     transition: all 0.3s;
     background-position: center;
     background-size: cover;
@@ -86,7 +86,7 @@ body {
   .two {
     width: 100%;
     height: inherit;
-    background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
+    background-image: url("https://img01.ztat.net/article/spp-media-p1/500672c56b4a4454836c1640e47d0484/f20bfb384e65463baa2e96e041cd7a86.jpg?imwidth=1800");
     transition: all 0.3s;
     left: 0;
     bottom: 100%;
@@ -108,7 +108,7 @@ body {
     top: 0;
     width: 100%;
     height: inherit;
-    background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
+    background-image: url("https://img01.ztat.net/article/spp-media-p1/0fbe12e0e43a415aa1d5e0c5d06ed3fa/5108e84789e7496ebf4d3802b3521339.jpg?imwidth=1800");
     transition: all 0.3s;
     transform: scale(0, 0);
     background-position: center;
@@ -128,8 +128,8 @@ body {
   .four {
     width: 100%;
     height: inherit;
-    background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
-    transition: all 0.3s;
+    background-image: url("https://img01.ztat.net/article/spp-media-p1/525440abc2dc414eb50930228ceb586d/174afda02e61497493d3ccd2fda7d4b7.jpg?imwidth=1800");
+    transition: all 1s;
     left: 0;
     top: 0;
     transform: scale(0, 0) rotate(0deg);
@@ -142,7 +142,7 @@ body {
     left: 0;
     top: 0;
     transform: scale(1, 1) rotate(1080deg);
-    transition: all 0.3s;
+    transition: all 1s;
   }
   
   /* five */
@@ -150,8 +150,8 @@ body {
   .five {
       width: 100%;
       height: inherit;
-      background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
-      transition: all 0.3s;
+      background-image: url("https://img01.ztat.net/article/spp-media-p1/69c2348f4a764cde8332a67b06e07051/ab25ec448b0d47eb937702ea4e53facb.jpg?imwidth=1800");
+      transition: all 1s;
       left: 0;
       top: 0;
       transform: scale(0, 0) rotate(0deg);
@@ -164,15 +164,15 @@ body {
       left: 0;
       top: 0;
       transform: scale(1, 1) rotate(1080deg);
-      transition: all 0.3s;
+      transition: all 1s;
     }
   /* six */
   
   .six {
       width: 100%;
       height: inherit;
-      background-image: url("https://www.2trendy.de/media/cache/sylius_shop_product_large_thumbnail/26/7d/822ab18dc9ee7c48e86769974e4f.jpg");
-      transition: all 0.3s;
+      background-image: url("https://img01.ztat.net/article/spp-media-p1/928ee8ef23074e34951e38dd6d592e09/b4e33fdd8b404308ab75f43f00aa3914.jpg?imwidth=1800");
+      transition: all 1s;
       left: 0;
       top: 0;
       transform: scale(0, 0) rotate(0deg);
@@ -184,5 +184,5 @@ body {
       left: 0;
       top: 0;
       transform: scale(1, 1) rotate(1080deg);
-      transition: all 0.3s;
+      transition: all 1s;
     }
