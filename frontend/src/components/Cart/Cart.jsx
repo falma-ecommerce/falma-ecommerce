@@ -100,8 +100,8 @@ const Cart = () => {
                     </Link>
                   </div>
                   <div style={linkStyle}>
-                    <Link to="/shipping-address" className="checkout">
-                      Proceed to Payment
+                    <Link to="/signin" className="checkout">
+                      Proceed to sign in or sign up
                     </Link>
                   </div>
                 </div>
