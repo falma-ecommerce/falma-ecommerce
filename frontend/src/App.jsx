@@ -30,56 +30,8 @@ import "./App.css";
 
 const App = () => {
 
-    <CartProvider>
-      <AuthProvider>
-      <BrowserRouter>
-        <Header />
-        <div>
-          <main>
-            <Routes>
-              <Route path="/" element={<HomeScreen />} />
-              <Route path="/all-products" element={<Products q="all" />} />
-              <Route path="/menCategory" element={<Products q="men" />} />
-              <Route path="/womenCategory" element={<Products q="women" />} />
-              <Route path="/kidsCategory" element={<Products q="kids" />} />
-              <Route path="/men/cloths" element={<Products q="men/cloths" />} />
-              <Route
-                path="/women/cloths"
-                element={<Products q="women/cloths" />}
-              />
-              <Route
-                path="/kids/cloths"
-                element={<Products q="kids/cloths" />}
-              />
-              <Route path="/trending" element={<Products q="trending" />} />
-              <Route path="/men-shoes" element={<Products q="men-shoes" />} />
-              <Route
-                path="/women-shoes"
-                element={<Products q="women-shoes" />}
-              />
-              <Route
-                path="/sport-shoes"
-                element={<Products q="sport-shoes" />}
-              />
-              <Route path="/product-details/:id" element={<ProductDetails />} />
-              <Route path="/signup" element={<SignupScreen />} />
-              <Route path="/signin" element={<SigninScreen />} />
-              <Route path="/signout" element={<SignoutScreen />} />
-              <Route path="/profile" element={<ProfileScreen />} />
-              <Route path="/myCart" element={<Cart />} />
-              <Route path="/shipping" element={<Shipping/>} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/refund" element={<Refund />} />
-              <Route path="/mission" element={<Mission />} />
-              <Route path="/vision" element={<Vision />} />
-              <Route path="/team"   element={<TeamMember />} />
-            </Routes>
-          </main>
-        </div>
-      </BrowserRouter>
-    </AuthProvider>
-    </CartProvider>
+   
+
   return (
     <SearchContext>
       <CartProvider>
@@ -93,10 +45,8 @@ const App = () => {
                   <Route path="/all-products" element={<Products q="all" />} />
                   <Route path="/search-products" element={<SearchProduct />} />
                   <Route path="/menCategory" element={<Products q="men" />} />
-                  <Route
-                    path="/womenCategory"
-                    element={<Products q="women" />}
-                  />
+                  <Route   path="/womenCategory"     element={<Products q="women" />}   />
+              
                   <Route path="/kidsCategory" element={<Products q="kids" />} />
                   <Route
                     path="/men/cloths"
@@ -137,23 +87,21 @@ const App = () => {
                     path="/women-shoes"
                     element={<Products q="women-shoes" />}
                   />
-                  <Route
-                    path="/sport-shoes"
-                    element={<Products q="sport-shoes" />}
-                  />
-                  <Route
-                    path="/women-bags"
-                    element={<Products q="women-bags" />}
-                  />
-                  <Route
-                    path="/product-details/:id"
-                    element={<ProductDetails />}
-                  />
+                  <Route path="/sport-shoes" element={<Products q="sport-shoes" />} />
+                  <Route path="/women-bags" element={<Products q="women-bags" />} />
+                  <Route path="/product-details/:id"  element={<ProductDetails />} />
                   <Route path="/signup" element={<SignupScreen />} />
                   <Route path="/signin" element={<SigninScreen />} />
                   <Route path="/signout" element={<SignoutScreen />} />
                   <Route path="/profile" element={<ProfileScreen />} />
-                  <Route path="/myCart" element={<Cart />} />
+                  <Route path="/myCart" element={<Cart />} /> 
+                   <Route path="/shipping" element={<Shipping/>} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/refund" element={<Refund />} />
+              <Route path="/mission" element={<Mission />} />
+              <Route path="/vision" element={<Vision />} />
+              <Route path="/team"   element={<TeamMember />} />
                 </Routes>
               </main>
             </div>
