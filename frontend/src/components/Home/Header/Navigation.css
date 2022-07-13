@@ -46,21 +46,21 @@
 
   .megaimaga1 {
     background: center center
-      url("https://img01.ztat.net/outfit/77ee40c005814cf4952b3609e5530024/b1c2780416a14a439c0eada710a8dab2.jpg?imwidth=1800") no-repeat;
+      url("../../../components/images/man&&woman.webp") no-repeat ;
     background-size: cover;
   }
 
 
   .megaimaga {
     background: center center
-      url("https://images.unsplash.com/photo-1559697242-cacab5d5b62c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80") no-repeat;
+      url("../../../components/images/men.webp") no-repeat;
     background-size: cover;
    
   }
 
   .megaimage {
     background: center center
-      url("https://images.unsplash.com/flagged/photo-1570733117311-d990c3816c47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80") no-repeat;
+      url("../../../components/images/woman.webp") no-repeat;
     background-size: cover;
   }
 
