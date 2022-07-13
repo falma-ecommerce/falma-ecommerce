@@ -2,10 +2,13 @@
   /* display: grid;
   grid-template-columns: auto auto auto;
   gap: 10px; */
+  margin: 3rem 0;
   display: flex;
   justify-content: center;
-  margin: 3rem;
   flex-wrap: wrap;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .product {
   position: relative;

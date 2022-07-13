@@ -1,11 +1,11 @@
 .shipping-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
   font-size: 1.5rem;
-  padding: 0 0 1rem;
+  padding: 1rem;
   /* margin: 0.8rem; */
   border-radius: 0.3rem;
   /* box-shadow: inset 0 0 10px; */
@@ -22,6 +22,7 @@
   border-radius: 0.5rem;
   box-shadow: inset 0 0 10px;
   max-width: 40vw;
+  padding: 1rem;
 }
 
 .shipping-detail {

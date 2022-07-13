@@ -47,7 +47,7 @@ const Products = ({ q }) => {
   }, []);
 
   return (
-    <>
+    <div className="product-container">
       <motion.div
         className="products-link"
         layout
@@ -60,11 +60,7 @@ const Products = ({ q }) => {
           {loading ? (
             <div>
               <Box sx={{ display: "flex" }}>
-<<<<<<< HEAD
-                <Spinner />
-=======
                   <Spinner />
->>>>>>> freemanupdate
               </Box>
             </div>
           ) : error ? (
@@ -90,6 +86,7 @@ const Products = ({ q }) => {
                   </p>
                 </div>
                 <div className="products-name">
+                  <p>{product.name}</p>
                   <Helmet>
                     <title>{product.name}</title>
                   </Helmet>
@@ -99,7 +96,7 @@ const Products = ({ q }) => {
           )}
         </AnimatePresence>
       </motion.div>
-    </>
+    </div>
   );
 };
 

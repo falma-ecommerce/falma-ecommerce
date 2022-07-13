@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin: 1rem;
   align-items: center;
 }
 
@@ -11,9 +11,9 @@
   width: fit-content;
 }
 
-h1 {
+/* h1 {
   text-align: center;
-}
+} */
 
 .product-image{
   display: flex;

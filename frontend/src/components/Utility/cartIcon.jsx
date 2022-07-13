@@ -8,7 +8,7 @@ import { CartContext } from "../../contexts/CartContext";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
-    right: -1,
+    right: 1,
     top: 3,
     border: `2px solid ${theme.palette.background.paper}`,
     padding: '8px 4px',
@@ -19,7 +19,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 export default function CartIcon() {
   const { totalQuantities } = useContext(CartContext);
   return (
-    <IconButton aria-label="cart" style={{marginTop:"-1rem", color: "black" }}>
+    <IconButton aria-label="cart" style={{color: "black" }}>
       <StyledBadge badgeContent={totalQuantities} color="secondary">
         <ShoppingCartIcon style={{fontSize:"2rem"}}/>
       </StyledBadge>

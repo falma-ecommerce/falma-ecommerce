@@ -72,7 +72,7 @@ const ShippingAddress = () => {
     display: "flex",
     justifyContent: "space-around",
     flexWrap: "wrap",
-    padding: "0.3rem",
+    padding: "1rem",
     margin: "2rem 3rem",
     borderRadius: "0.3rem",
     boxShadow: "inset 0 0 10px",
@@ -102,7 +102,7 @@ const ShippingAddress = () => {
       <div>
         {checkoutAddresses && checkoutAddresses.length < 1 ? (
           <form onSubmit={handleSubmit} style={styleForm}>
-            <h1>Shipping Detail</h1>
+            <h1 className="shipping-header">Shipping Detail</h1>
             <div className="shipping-address">
               <h5>
                 <label>Full Name</label>

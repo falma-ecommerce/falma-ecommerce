@@ -49,7 +49,7 @@ const Cart = () => {
                       alt="Article not no longer in stock"
                     />
                     <div className="item-desc">
-                      <div className="flex top">
+                      <div className="flex-top">
                         <p>{item.name}</p>
                         <p>{item.price.current.text}</p>
                       </div>
@@ -81,7 +81,10 @@ const Cart = () => {
                           className="remove-item"
                           onClick={() => removeItemFromCart(item)}
                         >
-                          <FontAwesomeIcon icon={faTrash} className="trashIcon"/>
+                          <FontAwesomeIcon
+                            icon={faTrash}
+                            className="trashIcon"
+                          />
                         </button>
                       </div>
                     </div>
@@ -104,9 +107,9 @@ const Cart = () => {
                       Proceed to sign in or sign up
                     </Link>
                   </div>
+                  <PaymentMethods />
                 </div>
               )}
-              <PaymentMethods />
             </div>
           </div>
           <div className="cart-container">

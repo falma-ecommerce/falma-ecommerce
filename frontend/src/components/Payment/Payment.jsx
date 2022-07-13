@@ -38,7 +38,7 @@ const Payment = () => {
     <div className="shipping-container" >
       <div className="shipping-payment">
         {<ShippingAddressUtil />}
-        {shipmentInfo != null ? (
+        {/* {shipmentInfo != null ? (
           <div>
             <p>{shipmentInfo.fullName}</p>
             <p>{shipmentInfo.address}</p>
@@ -51,7 +51,7 @@ const Payment = () => {
             ✋ No shipping address found, Filling in your shipping detail or we
             will assume your billing address as your shipping address please.
           </p>
-        )}
+        )} */}
       </div>
       <div className="shipping-payment">
         <PaymentDetail />

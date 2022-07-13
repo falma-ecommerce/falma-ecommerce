@@ -7,7 +7,7 @@ const PaymentDetail = () => {
 
   return (
     <div>
-      <h1>Order Overview</h1>
+      <h1 style={{textAlign: "center"}}>Order Overview</h1>
       <hr />
       <div className="total">
         <div>Subtotal</div>

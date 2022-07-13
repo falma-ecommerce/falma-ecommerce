@@ -3,14 +3,10 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { sanitize } from "dompurify";
 import { CartContext } from "../../contexts/CartContext";
-<<<<<<< HEAD
 import "./ProductDetails.modules.css";
-=======
->>>>>>> freemanupdate
 import { toast } from "react-toastify";
 import { getError } from "../../utils";
-import "./ProductDetails.modules.css"
-
+import "./ProductDetails.modules.css";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
@@ -79,7 +75,6 @@ const ProductDetails = () => {
             )}
           </div>
         </div>
-
         <div className="all-product-info">
           <h4>{productInfo && productInfo.name}</h4>
           <p>

@@ -5,6 +5,14 @@
   padding: 1rem;
 }
 
+.flex-top {
+  min-width: fit-content;
+}
+
+.cart-detail{
+  background-color: white;
+}
+
 .item {
   display: flex;
   align-items: center;
@@ -89,6 +97,7 @@
   color: white;
   border-radius: 0.2rem;
 }
+
 
 .shopping:hover {
   color: black;

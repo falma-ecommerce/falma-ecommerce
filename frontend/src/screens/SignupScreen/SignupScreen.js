@@ -41,7 +41,7 @@ export default function Register() {
 
   return (
     <div className="register-container ">
-      <h1>Sign Up</h1>
+      <h1 className="signup-header">Sign Up</h1>
       <div className=" d-flex justify-content-around align-items-center flex-wrap ">
         <div className="p-2 text-center">
           <h5>Your are Welcome Back</h5>

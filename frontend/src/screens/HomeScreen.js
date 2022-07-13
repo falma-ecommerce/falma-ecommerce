@@ -6,6 +6,7 @@ import Footer from '../components/Home/Footer/Footer'
 import ControlledCarousel from '../components/Home/HomeCarousel/ControlledCarousel'
 import ShoesCarousel from '../components/Home/ShoesCarousel/ShoesCarousel'
 import Trending from '../components/Home/Trending/Trending'
+import "./home.css"
 
 
 export default function HomeScreen() {

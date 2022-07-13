@@ -14,7 +14,7 @@ const ShippingAddressUtil = () => {
     <div>
       <div className="address">
         <h1>Shipping Address</h1>
-        {checkoutAddresses &&
+        {checkoutAddresses && checkoutAddresses.length > 0 ? (
           checkoutAddresses.map((address) => {
             return (
               <div key={address}>
@@ -26,7 +26,13 @@ const ShippingAddressUtil = () => {
                 <p>{address.country}</p>
               </div>
             );
-          })}
+          })
+        ) : (
+          <p>
+            ✋ No shipping address found, Filling in your shipping detail or we
+            will assume your billing address as your shipping address please.
+          </p>
+        )}
       </div>
     </div>
   );

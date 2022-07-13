@@ -1,8 +1,13 @@
+.product-container{
+  margin: 0 5rem;
+}
+
 .products-link {
   display: flex;
   flex-wrap: wrap;
   margin: 1rem;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 0 1rem;
   text-align: center;
 }
 
