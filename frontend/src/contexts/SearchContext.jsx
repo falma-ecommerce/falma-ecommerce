@@ -10,26 +10,24 @@ const SearchContext = ({ children }) => {
     loading: true,
     error: null,
   });
-  const [search, setSearch,] = useState("");
+  const [search, setSearch] = useState("");
   const [searchInput, setSearchInput] = useState("");
 
   const inputRef = useRef();
 
   const URI = `/extApi/products?q=${search}`;
- 
+
   useEffect(() => {
-    const fetchData = async ( req, res) => {
+    const fetchData = async (req, res) => {
       try {
         const response = await fetch(URI);
         const results = await response.json();
-        console.log(results)
-
+        console.log(results);
 
         // const results = await axios.get(URI)
         // return res.status(200).json(data.results);
-        console.log(results)
-        setData({results, loading: false, error: null });
-
+        console.log(results);
+        setData({ results, loading: false, error: null });
       } catch (error) {
         setData({ results: null, loading: false, error });
       }
@@ -37,9 +35,11 @@ const SearchContext = ({ children }) => {
     fetchData();
   }, [URI]);
   if (data.loading)
-  return <div style={{textAlign: 'center', marginTop: '100px'}}>
-    <Spinner />
-    </div> ;
+    return (
+      <div style={{ textAlign: "center", marginTop: "100px" }}>
+        <Spinner />
+      </div>
+    );
 
   if (data.error) return <p>{data.error}</p>;
 
@@ -57,7 +57,6 @@ const SearchContext = ({ children }) => {
           <span className="new-price">{product.price.current.text}</span>
           <span className="tax">(inkl. Taxes)</span>
         </p>
-       
       </div>
       <div className="productNname">
         <Helmet>
