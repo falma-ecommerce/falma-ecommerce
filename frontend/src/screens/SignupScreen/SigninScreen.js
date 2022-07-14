@@ -4,7 +4,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { NavLink, useNavigate } from "react-router-dom";
 
 export default function SigninScreen() {
-  const { handleLogin, loggedIn } = useContext(AuthContext);
+  const { handleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
