@@ -1,7 +1,7 @@
-body {
+/* body {
     background-color: #e43;
   }
-  
+   */
   .container {
     margin: 0 auto;
     /* display: grid;
@@ -68,7 +68,7 @@ body {
   .one {
     left: 100%;
     bottom: 100%;
-    width: 100%;
+    width: 100%; 
     height: inherit;
     background-image: url(../../../components/images/mensuit2.webp);
     transition: all 0.3s;

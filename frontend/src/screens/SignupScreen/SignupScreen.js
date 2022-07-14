@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "../../components/Utility/axiosInstance";
+import { ToastContainer, toast } from 'react-toastify'
 import "./SignupScreen.css";
 
 export default function Register() {
@@ -11,6 +12,10 @@ export default function Register() {
 
     const formData = new FormData(event.target);
 
+    const userDetails = () => toast('Registration form completed')
+    const regConfirm = () => toast("Your registration was successful")
+    
+
     const data = {
       username: formData.get("username"),
       firstname: formData.get("firstname"),
@@ -19,13 +24,15 @@ export default function Register() {
       password: formData.get("password"),
       confirmPassword: formData.get("confirmPassword"),
     };
-    alert(`You have entered the user details`);
+    userDetails()
+    // alert(`You have entered the user details`);
     try {
       const response = await axios.post("/api/users/signup", data);
       console.log("response ", response);
       event.target.reset();
+      // regConfirm()
       alert("Your registration was successful");
-      navigate("/");
+      navigate("/signin");
     } catch (error) {
       console.log(error);
       alert("Registration failure. \n username exist already");
@@ -118,7 +125,17 @@ export default function Register() {
               />
             </span>
           </label>
-
+          <label> 
+            <span className='checkbox'>
+              <input
+                type="checkbox"
+                autoComplete="privacy"
+                name="privacy"
+                required={true}
+              />
+            </span>
+            I have read and understood the Privacy Policy
+          </label>
           <div className="d-flex  p-3">
             <button className="btn btn-primary" type="submit">
               Register

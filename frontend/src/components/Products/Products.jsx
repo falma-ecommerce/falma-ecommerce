@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { AnimatePresence, motion } from "framer-motion";
 import logger from "logger-for-use-reducer";
-// import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import "./Products.modules.css";
 // import { toast } from "react-toastify";
@@ -68,8 +67,7 @@ const Products = ({ q }) => {
           {loading ? (
             <div>
               <Box sx={{ display: "flex" }}>
-                {/* <CircularProgress /> */}
-                <Spinner />
+                  <Spinner />
               </Box>
             </div>
           ) : error ? (

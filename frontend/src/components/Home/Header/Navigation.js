@@ -7,7 +7,7 @@ function Navigation() {
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-2 shadow-sm">
         <div className="container-fluid">
           <a
-            href="#"
+            href="/all-products"
             className="navbar-brand font-weight-bold d-block d-lg-none "
           >
          Shop
@@ -34,7 +34,7 @@ function Navigation() {
               <li className="nav-item dropdown megamenu dropdown-hover px-3">
                 <a
                   id="megamneu"
-                  href="#"
+                  href="/"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   className="nav-link dropdown-toggle font-weight-bold text-uppercase "
@@ -57,15 +57,15 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/free-style"
                                     className="nav-link text-small pb-0"
                                   >
-                                   
+                                   Free Sytyle
                                   </a>
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/men-shirt"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Shirts
@@ -73,7 +73,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/hoodies"
                                     className="nav-link text-small pb-0 "
                                   >
                                Sweatshirts & Hoodies
@@ -81,7 +81,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Jackets
@@ -90,13 +90,13 @@ function Navigation() {
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
-                              {/* <h6 className="font-weight-bold text-uppercase">
-                              
-                              </h6> */}
+                                <h6 className="font-weight-bold text-uppercase"> 
+                              Unisex
+                              </h6> 
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Trousers
@@ -104,7 +104,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                  Shorts
@@ -112,7 +112,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                 Suits & Tailoring
@@ -120,7 +120,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Coats
@@ -135,15 +135,15 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/women-bags"
                                     className="nav-link text-small pb-0 "
                                   >
-                                  Unisex
+                                  Bags
                                   </a>
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Essentials
@@ -151,7 +151,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Personal Styling
@@ -159,7 +159,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Special Occasions
@@ -174,7 +174,7 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Underpants
@@ -182,7 +182,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Boxer shorts
@@ -190,7 +190,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Undershirts
@@ -198,7 +198,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                 Pyjamas
@@ -217,7 +217,7 @@ function Navigation() {
               <li className="nav-item dropdown megamenu dropdown-hover px-3">
                 <a
                   id="megamneu"
-                  href="#"
+                  href="/menCategory"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   className="nav-link dropdown-toggle font-weight-bold text-uppercase dropdown-toggle"
@@ -240,7 +240,7 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/men-t-shirt"
                                     className="nav-link text-small pb-0 "
                                   >
                                     T-shirts & Polos
@@ -248,15 +248,15 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                     Shirts
+                                     Shorts
                                   </a>
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/hoodies"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Sweatshirts & Hoodies
@@ -264,7 +264,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Jackets
@@ -273,13 +273,13 @@ function Navigation() {
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
-                              {/* <h6 className="font-weight-bold text-uppercase">
-                                MegaMenu heading
-                              </h6> */}
+                              <h6 className="font-weight-bold text-uppercase">
+                                Officials
+                              </h6> 
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                Coats
@@ -287,7 +287,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Trousers
@@ -295,15 +295,15 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/men-shirt"
                                     className="nav-link text-small pb-0 "
                                   >
-                                    Shorts
+                                    Shirts
                                   </a>
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Suits & Tailoring
@@ -318,7 +318,7 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Unisex
@@ -326,7 +326,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Essentials
@@ -334,7 +334,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Personal Styling
@@ -342,7 +342,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Special Occasions
@@ -357,7 +357,7 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Designer shoes
@@ -365,7 +365,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Outdoor shoes
@@ -373,7 +373,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                 Loafers
@@ -381,7 +381,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                  Sneaker 
@@ -400,7 +400,7 @@ function Navigation() {
               <li className="nav-item dropdown megamenu dropdown-hover px-3">
               <a
                   id="megamneu"
-                  href="#"
+                  href="/womenCategory"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   className="nav-link dropdown-toggle font-weight-bold text-uppercase dropdown-toggle"
@@ -423,7 +423,7 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/womenCategory"
                                     className="nav-link text-small pb-0"
                                   >
                                     Dresses
@@ -431,7 +431,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    T-shirts & tops 
@@ -439,7 +439,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Shirts & Blouses 
@@ -447,7 +447,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                   Jackets & Blazers
@@ -456,13 +456,13 @@ function Navigation() {
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
-                              {/* <h6 className="font-weight-bold text-uppercase">
-                             
-                              </h6> */}
+                              <h6 className="font-weight-bold text-uppercase">
+                              CASUALS                             
+                              </h6> 
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Jumpsuits
@@ -470,7 +470,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Shorts
@@ -478,7 +478,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Jeans
@@ -486,7 +486,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                   Skirts 
@@ -501,7 +501,7 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Unisex
@@ -509,7 +509,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                  More Sustainable Fashion
@@ -517,7 +517,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Plus Size
@@ -525,7 +525,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Swimwear
@@ -540,7 +540,7 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    High heels
@@ -548,7 +548,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Pumps
@@ -556,7 +556,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Trainers
@@ -564,7 +564,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                   Sandals
@@ -583,7 +583,7 @@ function Navigation() {
               <li className="nav-item dropdown megamenu dropdown-hover px-3">
                 <a
                   id="megamneu"
-                  href="#"
+                  href="kidsCategory"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   className="nav-link dropdown-toggle font-weight-bold text-uppercase dropdown-toggle"
@@ -606,7 +606,7 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0"
                                   >
                                     Dresses
@@ -614,7 +614,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     T-Shirts & Tops
@@ -622,7 +622,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                Trousers & Jeans
@@ -630,7 +630,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Sets
@@ -645,7 +645,7 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Trousers & Jeans
@@ -653,7 +653,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Trousers & Jeans
@@ -661,7 +661,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Shirts
@@ -669,7 +669,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Shorts
@@ -684,7 +684,7 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Sandals
@@ -692,7 +692,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Ballet pumps
@@ -700,7 +700,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Ankle boots
@@ -708,7 +708,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                 Trainers
@@ -723,7 +723,7 @@ function Navigation() {
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Loafers
@@ -732,7 +732,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Lace-up shoes
@@ -740,7 +740,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Trainers
@@ -748,7 +748,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <a
-                                    href=""
+                                    href="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                    Boots
