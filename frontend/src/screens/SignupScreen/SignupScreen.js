@@ -1,21 +1,19 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "../../components/Utility/axiosInstance";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "material-react-toastify";
+import "material-react-toastify/dist/ReactToastify.css";
 import "./SignupScreen.css";
 
 export default function Register() {
   const navigate = useNavigate();
-  const regConfirm = () => toast("Your registration was successful");
-
+ 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
 
-    const userDetails = () => toast("Registration form completed");
-
-    const data = {
+      const data = {
       username: formData.get("username"),
       firstname: formData.get("firstname"),
       lastname: formData.get("lastname"),
@@ -23,24 +21,23 @@ export default function Register() {
       password: formData.get("password"),
       confirmPassword: formData.get("confirmPassword"),
     };
-    userDetails();
-    // alert(`You have entered the user details`);
+    
     try {
       const response = await axios.post("/api/users/signup", data);
       console.log("response ", response);
-      event.target.reset();
-      regConfirm();
-      alert("Your registration was successful");
+      event.target.reset();      
       navigate("/signin");
+      toast.success('Information Completed. Your registration was successful😻'  )
+
     } catch (error) {
       console.log(error);
-      alert("Registration failure. \n username exist already");
+      toast.error('Registration failure. Username email exist already ' );
     }
   };
 
   return (
     <main>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
       <div className="register-container ">
         <h1>Sign Up</h1>
         <div className=" d-flex justify-content-around align-items-center flex-wrap ">
@@ -141,7 +138,7 @@ export default function Register() {
               <button
                 className="btn btn-primary"
                 type="submit"
-                onClick={regConfirm}
+                // onClick={notify}
               >
                 Register
               </button>

@@ -15,6 +15,9 @@ import { CartProvider } from "./contexts/CartContext";
 import SearchContext from "./contexts/SearchContext";
 import SearchProduct from "./components/SearchProduct/SearchProduct";
 import "./App.css";
+import { ToastContainer } from "material-react-toastify";
+import "material-react-toastify/dist/ReactToastify.css";
+
 
 const App = () => {
 
@@ -94,6 +97,7 @@ const App = () => {
                   <Route path="/myCart" element={<Cart />} />
                 </Routes>
               </main>
+              <ToastContainer position="top-center" newestOnTop rtl/>
             </div>
           </BrowserRouter>
         </AuthProvider>
