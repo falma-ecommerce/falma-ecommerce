@@ -18,6 +18,7 @@ router.get( "/:id", (req, res) => {
           "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
           "X-RapidAPI-Host": "asos2.p.rapidapi.com",
         },
+
       };
   
       try {
