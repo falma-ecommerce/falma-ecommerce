@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import { CartContext } from "../../../contexts/CartContext";
 import "./Header.modules.css";
 import { AuthContext } from "../../../contexts/AuthContext";
 import CartIcon from "../../Utility/cartIcon";
@@ -42,7 +41,7 @@ export default function Header() {
         </div>
         <div className="login-cart">
           <div className="loginIcon">
-            <NavLink to="/signin">{/* <PersonOutlineIcon /> */}</NavLink>
+            <NavLink to="/signin"></NavLink>
           </div>
           <div>
             <NavLink to="/myCart">
