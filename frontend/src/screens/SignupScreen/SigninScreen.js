@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import axios from "../../components/Utility/axiosInstance";
 import { AuthContext } from "../../contexts/AuthContext";
 import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from "material-react-toastify";
 
 export default function SigninScreen() {
-  const { handleLogin, loggedIn } = useContext(AuthContext);
+  const { handleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -21,14 +22,28 @@ export default function SigninScreen() {
       console.log("response ", response);
 
       handleLogin(true, response.data.user);
+<<<<<<< HEAD
       navigate("/shipping-address");
     } catch (error) {}
+=======
+      navigate("/");
+      toast.success("You are Welcome Back");
+    } catch (error) {
+      toast.error(
+        "Sorry! you entered wrong username or password. Please try again"
+      );
+    }
+>>>>>>> freemanupdate
   };
 
   return (
     <div className="register-container align-items-center p-3">
       <h3 className="text-center">You are Welcome Back </h3>
+<<<<<<< HEAD
       <div className=" d-flex justify-content-around align-items-center flex-wrap">
+=======
+      <div className=" d-flex justify-content-around align-items-center flex-wrap ">
+>>>>>>> freemanupdate
         <form
           className=" d-flex flex-column justify-content-center align-items-center"
           onSubmit={handleSubmit}

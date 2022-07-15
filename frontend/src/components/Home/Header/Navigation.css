@@ -21,9 +21,16 @@
   pointer-events: none;
 }
 
+<<<<<<< HEAD
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     left: 0 !important;
+=======
+  .megaimaga1 {
+    background: center center
+      url("../../../components/images/man&&woman.webp") no-repeat ;
+    background-size: cover;
+>>>>>>> freemanupdate
   }
 }
 .APP {
@@ -39,6 +46,7 @@ code {
   border-radius: 0.2rem;
 }
 
+<<<<<<< HEAD
 .text-uppercase {
   letter-spacing: 0.08em;
 }
@@ -63,6 +71,20 @@ code {
     no-repeat;
   background-size: cover;
 }
+=======
+  .megaimaga {
+    background: center center
+      url("../../../components/images/men.webp") no-repeat;
+    background-size: cover;
+   
+  }
+
+  .megaimage {
+    background: center center
+      url("../../../components/images/woman.webp") no-repeat;
+    background-size: cover;
+  }
+>>>>>>> freemanupdate
 
 .megaimagakids {
   background: center center

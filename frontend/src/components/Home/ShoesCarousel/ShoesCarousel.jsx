@@ -35,16 +35,16 @@ const ShoesCarousel = () => {
           </div>
         </Link>
 
-        <Link to="/sport-shoes">
+        <Link to="/kids-shoes">
           <div className="carousel-category">
             <div className="carousel-img">
-              <img src="../shoe-img/shoe-c1.jpeg" alt="" />
+              <img src="../shoe-img/kidshoe1.jpg" alt="" />
             </div>
             <div className="carousel-img">
-              <img src="../shoe-img/shoe-c2.jpg" alt="" />
+              <img src="../shoe-img/kidsandals.jpg" alt="" />
             </div>
             <div className="carousel-img">
-              <img src="../shoe-img/shoe-c3.jpg" alt="" />
+              <img src="../shoe-img/kidshoe2.webp" alt="" />
             </div>
           </div>
         </Link>

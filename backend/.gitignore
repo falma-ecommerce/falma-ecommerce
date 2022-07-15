@@ -1,3 +1,10 @@
+<<<<<<< HEAD
 node_modules
+=======
+
+/node_modules
+
+
+>>>>>>> freemanupdate
 .env
 **/node_modules
