@@ -23,17 +23,18 @@ export default function SigninScreen() {
 
       handleLogin(true, response.data.user);
       navigate("/");
-      toast.success('You are Welcome Back')
-
-    } catch (error) {}
-    toast.error('Sorry! you entered wrong username or password. Please try again')
+      toast.success("You are Welcome Back");
+    } catch (error) {
+      toast.error(
+        "Sorry! you entered wrong username or password. Please try again"
+      );
+    }
   };
 
   return (
     <div className="register-container align-items-center">
       <h3 className="text-center">You are Welcome Back </h3>
       <div className=" d-flex justify-content-around align-items-center flex-wrap ">
-       
         <form
           className=" d-flex flex-column justify-content-center align-items-center"
           onSubmit={handleSubmit}
