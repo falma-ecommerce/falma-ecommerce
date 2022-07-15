@@ -7,15 +7,15 @@ router.get(
   "/",
   async (req, res) => {
     const params = {
-      store: "US",
+      store: "ROE",
       offset: "0",
       categoryId: "4209",
       limit: "48",
-      country: "US",
+      country: "CZ",
       sort: "freshness",
-      currency: "USD",
-      sizeSchema: "US",
-      lang: "en-US",
+      currency: "EUR",
+      sizeSchema: "UK",
+      lang: "en-GB",
       q: req.query.q,
     };
 

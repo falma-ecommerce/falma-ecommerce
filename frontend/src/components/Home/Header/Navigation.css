@@ -1,0 +1,65 @@
+.megamenu {
+  position: static;
+}
+
+.megamenu .dropdown-menu {
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.menu2 {
+  margin-left: 7rem;
+}
+
+.dropdown-hover:hover > .dropdown-menu {
+  display: inline-block;
+}
+
+.dropdown-hover > .dropdown-toggle:active {
+  pointer-events: none;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    left: 0 !important;
+  }
+}
+.APP {
+  background: #eaafc8;
+  background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
+  background: linear-gradient(to right, #eaafc8, #654ea3);
+}
+
+code {
+  color: #745eb1;
+  background: #fff;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.2rem;
+}
+.text-uppercase {
+  letter-spacing: 0.08em;
+}
+.megaimaga {
+  background: center center url("../../../components/images/men.webp") no-repeat;
+  background-size: cover;
+}
+
+.megaimage {
+  background: center center url("../../../components/images/woman.webp")
+    no-repeat;
+  background-size: cover;
+}
+
+.megaimaga1 {
+  background: center center url("../../../components/images/man&&woman.webp")
+    no-repeat;
+  background-size: cover;
+}
+
+.megaimagakids {
+  background: center center
+    url("https://img01.ztat.net/banner/deea76a2e25d4d9dadd9350a37b6b111/fadb3ccc5ced4da694a1981e419b6788.jpg?imwidth=693")
+    no-repeat;
+  background-size: cover;
+}

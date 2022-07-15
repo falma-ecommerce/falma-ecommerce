@@ -1,11 +1,16 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useReducer } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { AnimatePresence, motion } from "framer-motion";
 import logger from "logger-for-use-reducer";
+<<<<<<< HEAD
 import CircularProgress from "@mui/material/CircularProgress";
+=======
+>>>>>>> f4b1ef5b91aaf2e60ab52bff324b3fdf764e6329
 import Box from "@mui/material/Box";
 import "./Products.modules.css";
+import { Helmet } from "react-helmet-async";
+import Spinner from "../Spinner";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -26,7 +31,6 @@ const Products = ({ q }) => {
     loading: true,
     error: "",
   });
-  // const [products, setProducts] = useState([]);
 
   const myProductsOptions = {
     method: "GET",
@@ -40,17 +44,14 @@ const Products = ({ q }) => {
       .request(myProductsOptions)
       .then(function (response) {
         dispatch({ type: "FETCH_SUCCESS", payload: response.data.products });
-        // setProducts(response.data.products);
       })
       .catch(function (error) {
-        // console.error(error);
         dispatch({ type: "FETCH_FAIL", payload: error.message });
       });
   }, []);
 
   return (
-    <>
-      {/* <h1 className="products-header">All Products</h1> */}
+    <div className="product-container">
       <motion.div
         className="products-link"
         layout
@@ -62,8 +63,8 @@ const Products = ({ q }) => {
         <AnimatePresence>
           {loading ? (
             <div>
-              <Box sx={{ display: "flex"}}>
-                <CircularProgress />
+              <Box sx={{ display: "flex" }}>
+                  <Spinner />
               </Box>
             </div>
           ) : error ? (
@@ -87,17 +88,19 @@ const Products = ({ q }) => {
                     </span>
                     <span className="tax">(inkl. Taxes)</span>
                   </p>
-                  {/* <p>{product.colour}</p> */}
                 </div>
                 <div className="products-name">
                   <p>{product.name}</p>
+                  <Helmet>
+                    <title>{product.name}</title>
+                  </Helmet>
                 </div>
               </Link>
             ))
           )}
         </AnimatePresence>
       </motion.div>
-    </>
+    </div>
   );
 };
 

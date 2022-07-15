@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import mensuit from "../../../components/images/mensuit1.webp"
+import menshoes from "../../../components/images/menshoes1.webp"
+import womensuit from "../../../components/images/womensuit1.webp"
+import womenshoes from "../../../components/images/womenshoes1.webp"
+import kids from "../../../components/images/kids1.webp"
+import kidshoes from "../../../components/images/kidshoes1.webp"
 import "./Categories.modules.css";
 
 const Categories = () => {
-
-  
   return (
     <div className="container">
       <Link to="/menCategory">
@@ -14,16 +17,18 @@ const Categories = () => {
             className="items"
             style={{
               backgroundImage:
-                "url(" +
-                "http://cdn.shopify.com/s/files/1/0849/8112/products/Women-Business-Pant-Suits.jpg?v=1647376493" +
-                ")",
+               `url(${mensuit})`,
               minWidth: "19vw",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              
               height: "60vh",
             }}
+            // "https://img01.ztat.net/article/spp-media-p1/c335a45df8d1426fbdcecb8eaf9dc5ba/53d764af5aad4167819846e85771c60c.jpg?imwidth=400" +
           >
             <div className="one"></div>
             <div className="details">
-              <h2>MEN</h2>
+              <h3>MEN</h3>
             </div>
           </div>
         </div>
@@ -35,100 +40,100 @@ const Categories = () => {
             className="items"
             style={{
               backgroundImage:
-                "url(" +
-                "http://cdn.shopify.com/s/files/1/0849/8112/products/Women-Business-Pant-Suits.jpg?v=1647376493" +
-                ")",
-              minWidth: "19vw",
-              height: "60vh",
+              `url(${womensuit})`,
+             minWidth: "19vw",
+             height: "60vh",
+             backgroundPosition: "center",
+             backgroundSize: "cover",
             }}
           >
             <div className="two"></div>
             <div className="details">
-              <h2>WOMEN</h2>
+              <h3>WOMEN</h3>
             </div>
           </div>
         </div>
       </Link>
 
-      <Link to="/kidsCategory" >
+      <Link to="/kidsCategory">
         <div className="bg-items">
           <div
             className="items"
             style={{
               backgroundImage:
-                "url(" +
-                "http://cdn.shopify.com/s/files/1/0849/8112/products/Women-Business-Pant-Suits.jpg?v=1647376493" +
-                ")",
-              minWidth: "19vw",
-              height: "60vh",
+              `url(${kids})`,
+             minWidth: "19vw",
+             height: "60vh",
+             backgroundPosition: "center",
+             backgroundSize: "cover",
             }}
           >
             <div className="three"></div>
             <div className="details">
-              <h2>CHILDREN</h2>
+              <h3>KIDS</h3>
             </div>
           </div>
         </div>
       </Link>
 
-      <Link to="/men/cloths">
+      <Link to="/men-shoes">
         <div className="bg-items">
           <div
             className="items"
             style={{
               backgroundImage:
-                "url(" +
-                "http://cdn.shopify.com/s/files/1/0849/8112/products/Women-Business-Pant-Suits.jpg?v=1647376493" +
-                ")",
-              minWidth: "19vw",
-              height: "60vh",
+              `url(${menshoes})`,
+             minWidth: "19vw",
+             height: "60vh",
+             backgroundPosition: "center",
+             backgroundSize: "cover",
             }}
           >
             <div className="four"></div>
             <div className="details">
-              <h2>MEN CLOTHES</h2>
+              <h3>MEN SHOES</h3>
             </div>
           </div>
         </div>
       </Link>
 
-      <Link to="/women/cloths">
+      <Link to="/women-shoes">
         <div className="bg-items">
           <div
             className="items"
             style={{
               backgroundImage:
-                "url(" +
-                "http://cdn.shopify.com/s/files/1/0849/8112/products/Women-Business-Pant-Suits.jpg?v=1647376493" +
-                ")",
-              minWidth: "19vw",
-              height: "60vh",
+              `url(${womenshoes})`,
+             minWidth: "19vw",
+             height: "60vh",
+             backgroundPosition: "center",
+             backgroundSize: "cover",
             }}
           >
             <div className="five"></div>
             <div className="details">
-              <h2>WOMEN CLOTHES</h2>
+              <h3>WOMEN SHOES</h3>
             </div>
           </div>
         </div>
       </Link>
 
-      <Link to="/kids/cloths">
+      <Link to="/sport-shoes">
         <div className="bg-items">
           <div
             className="items"
             style={{
               backgroundImage:
-                "url(" +
-                "http://cdn.shopify.com/s/files/1/0849/8112/products/Women-Business-Pant-Suits.jpg?v=1647376493" +
-                ")",
-              minWidth: "19vw",
-              height: "60vh",
+              `url(${kidshoes})`,
+             minWidth: "19vw",
+             height: "60vh",
+             backgroundPosition: "center",
+             backgroundSize: "cover",
             }}
           >
             <div className="six"></div>
             <div className="details">
-              <h2>KIDS CLOTHES</h2>
+              <h3>KIDS SHOES</h3>
             </div>
           </div>
         </div>

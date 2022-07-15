@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
-// import SearchIcon from "@mui/icons-material/Search";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
-import { Paper, TextField } from "@material-ui/core";
-import { CartContext } from "../../../contexts/CartContext";
-
 import "./Header.modules.css";
+import { AuthContext } from "../../../contexts/AuthContext";
+import CartIcon from "../../Utility/cartIcon";
+import Navigation from "../Header/Navigation";
+import "./Header.modules.css";
+import { PrivateNav, PublicNav } from "../../Menu";
+import SearchForm from "../../SearchForm/SearchForm";
 
 export default function Header() {
-  const { totalQuantities } = useContext(CartContext);
+  const { loggedIn } = useContext(AuthContext);
   return (
     <div>
       <div className="shipping-info">
@@ -19,13 +19,16 @@ export default function Header() {
           <h6>FREE STANDARD SHIPPING ON ORDERS OVER €75</h6>
         </Marquee>
       </div>
-      <div className="nav-info">
+      <div className="nav-info ">
+        <Link to="/">
+          <img
+            className="logo"
+            src="../images/FullLogo.png"
+            alt="logo"
+          />
+        </Link>
         <div className="searchForm">
-          <Paper style={{ padding: "0 2rem" }}>
-            <form>
-              <TextField fullWidth label="Search...." />
-            </form>
-          </Paper>
+          <SearchForm />
         </div>
 
         <div className="websiteName">
@@ -33,57 +36,23 @@ export default function Header() {
             <h1> FALMA Shop</h1>
           </NavLink>
         </div>
+        <div className="toggleNav" >
+          {loggedIn ? <PrivateNav /> : <PublicNav />}
+        </div>
         <div className="login-cart">
           <div className="loginIcon">
-            <NavLink to="/login">
-              <PersonOutlineIcon />
-            </NavLink>
+            <NavLink to="/signin"></NavLink>
           </div>
           <div>
             <NavLink to="/myCart">
-              <ShoppingCartIcon />
-              <p id="shopping-cart-count">{totalQuantities}</p>
+              <CartIcon />
             </NavLink>
           </div>
         </div>
       </div>
-
-      <div className="dropdown-nav">
-        <div>
-          <NavLink to="/all-products" id="dropdown-basic-button" title="All">
-            All
-          </NavLink>
-        </div>
-        <div>
-          <DropdownButton id="dropdown-basic-button" title="New Arrivals">
-            <div>
-              <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Shoes</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
-            </div>
-          </DropdownButton>
-        </div>
-        <div>
-          <DropdownButton id="dropdown-basic-button" title="Men">
-            <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Shoes</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
-          </DropdownButton>
-        </div>
-        <div>
-          <DropdownButton id="dropdown-basic-button" title="Women">
-            <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Shoes auction</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
-          </DropdownButton>
-        </div>
-        <div>
-          <DropdownButton id="dropdown-basic-button" title="Children">
-            <Dropdown.Item href="#/action-1">Clothes</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Shoes</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Brands</Dropdown.Item>
-          </DropdownButton>
-        </div>
+      <div>
+        {" "}
+        <Navigation />
       </div>
     </div>
   );
