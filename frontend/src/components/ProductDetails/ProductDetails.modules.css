@@ -11,9 +11,6 @@
   width: fit-content;
 }
 
-/* h1 {
-  text-align: center;
-} */
 
 .product-image{
   display: flex;
@@ -50,7 +47,7 @@
 }
 .new-price {
   color: red;
-  margin: 0 1rem;
+  margin: 0 1rem 0 0;
 }
 .tax {
   color: gray;
@@ -80,5 +77,7 @@
   }
   .firstUrl img{
     align-self: center;
+    max-width: 100%;
+    max-height: 70vh;
   }
 }

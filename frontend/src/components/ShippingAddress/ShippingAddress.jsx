@@ -1,18 +1,15 @@
 import React, { useState, useContext, useEffect } from "react";
-// import { CartContext } from "../../contexts/CartContext";
 import axios from "axios";
-// import { FaCcPaypal, FaCcVisa, FaCcApplePay, FaCcAmex } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CheckoutContext } from "../../contexts/CheckoutContext";
 import PaymentDetail from "../Utility/PaymentDetail";
 import ShippingAddressUtil from "../ShippingAddressUtil/ShippingAddressUtil";
 import PaymentMethods from "../Utility/PaymentMethods";
+import { toast } from "react-hot-toast";
+import "react-toastify/dist/ReactToastify.css";
 import "./ShippingAddress.module.css";
 
 const ShippingAddress = () => {
-  // const { totalPrice, itemPercentage, shipment, itemTotal } =
-  //   useContext(CartContext);
-
   const { checkoutAddresses, setCheckoutAddresses } =
     useContext(CheckoutContext);
 
@@ -40,17 +37,22 @@ const ShippingAddress = () => {
       postCode,
       country,
     };
-    alert(
-      `Your order will be shipped out within 24 hours.\nIncase of any changes in the shipping address, notify us immediately,`
-    );
 
+    toast.success(
+      `Your order will be shipped out within 24 hours.\nIncase of any changes in the shipping address, notify us immediately`
+    );
     try {
       const response = await axios.post("/api/users/shipping", newShipping);
       console.log("response ", response);
-      alert("Shipping address registration was successful");
+      if (response.status === 200) {
+        loadShippingDetails();
+      }
+      toast.success(`Shipping address input was successful`);
     } catch (error) {
       console.error("An error happened", error);
-      alert(`Please signing in or sign up before filling in your Shipping details `);
+      toast.error(
+        `Please signing in or sign up before filling in your Shipping details`
+      );
     }
   };
   const loadShippingDetails = async () => {
@@ -60,7 +62,9 @@ const ShippingAddress = () => {
       console.log("response ", response);
     } catch (error) {
       console.error("An error happened", error);
-      alert(`Please signing in or sign up before filling in the Shipping details`);
+      toast.error(
+        `Please signing in or sign up before filling in the Shipping details`
+      );
     }
   };
   console.log(checkoutAddresses);
@@ -70,13 +74,18 @@ const ShippingAddress = () => {
 
   const shippingContainerStyle = {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "center",
+    alignItems: "center",
     flexWrap: "wrap",
     padding: "1rem",
     margin: "2rem 3rem",
     borderRadius: "0.3rem",
-    boxShadow: "inset 0 0 10px",
-    fontSize: "1.3rem",
+    fontSize: "1.5rem",
+    backgroundImage:
+      "url(https://cdn.w600.comps.canstockphoto.com/beautiful-young-woman-in-ripped-leggings-pictures_csp76797384.jpg",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
   };
 
   const styleForm = {
@@ -84,22 +93,30 @@ const ShippingAddress = () => {
   };
 
   const shippingLinkStyle = {
-    border: "0.1rem solid black",
     textAlign: "center",
     padding: "0.6rem 0",
     margin: "0.8rem 0",
     width: "100%",
     borderRadius: "0.3rem",
+    border: "0.1rem solid",
   };
 
   const buttonStyle = {
-    padding: "0.7rem 1rem",
+    padding: "0.5rem 3rem",
     margin: "0.5rem 38%",
+  };
+  const shippingInfo = {
+    backgroundColor: "white",
+    padding: "1rem 3rem",
+    border: "0.1rem solid black",
+    boxShadow: "inset 0 0 10px",
+    borderRadius: "0.6rem",
+    margin: "2rem",
   };
 
   return (
     <div style={shippingContainerStyle}>
-      <div>
+      <div style={shippingInfo}>
         {checkoutAddresses && checkoutAddresses.length < 1 ? (
           <form onSubmit={handleSubmit} style={styleForm}>
             <h1 className="shipping-header">Shipping Detail</h1>
@@ -168,7 +185,7 @@ const ShippingAddress = () => {
           </div>
         )}
       </div>
-      <div>
+      <div style={shippingInfo}>
         <PaymentDetail />
         <div style={shippingLinkStyle}>
           <Link to="/all-products" className="checkout">

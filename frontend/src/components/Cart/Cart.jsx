@@ -6,7 +6,6 @@ import {
   AiOutlinePlus,
   AiOutlineShopping,
 } from "react-icons/ai";
-import { TiDeleteOutline } from "react-icons/ti";
 import "./Cart.modules.css";
 import PaymentDetail from "../Utility/PaymentDetail";
 import PaymentMethods from "../Utility/PaymentMethods";

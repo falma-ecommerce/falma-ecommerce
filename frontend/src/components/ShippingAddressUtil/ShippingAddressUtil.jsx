@@ -6,14 +6,12 @@ import React from "react";
 const ShippingAddressUtil = () => {
   const { checkoutAddresses } = useContext(CheckoutContext);
 
-  // useEffect(() => {
-
-  // }, []);
 
   return (
     <div>
-      <div className="address">
+      <div style={{textAlign: "center"}}>
         <h1>Shipping Address</h1>
+        <hr />
         {checkoutAddresses && checkoutAddresses.length > 0 ? (
           checkoutAddresses.map((address) => {
             return (

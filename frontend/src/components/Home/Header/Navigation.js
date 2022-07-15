@@ -1,17 +1,18 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import { Link } from "react-router-dom";
 import "./Navigation.css";
 function Navigation() {
   return (
     <div className="APP">
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-2 shadow-sm">
         <div className="container-fluid">
-          <a
-            href="/all-products"
+          <Link
+            to="/all-products"
             className="navbar-brand font-weight-bold d-block d-lg-none "
           >
-         Shop
-          </a>
+            Shop
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,24 +24,23 @@ function Navigation() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          
+
           <div id="navbarSupportedContent" className="collapse navbar-collapse">
             <ul className="navbar-nav mx-auto">
-            <li className="nav-item px-3">
-                <a href="/all-products" className="nav-link font-weight-bold text-uppercase">
-                 All 
-                </a>
+              <li className="nav-item px-3">
+                <Link to="/all-products" className="nav-link font-weight-bold text-uppercase">
+                    All
+                </Link>
               </li>
               <li className="nav-item dropdown megamenu dropdown-hover px-3">
-                <a
+                <Link to="/"
                   id="megamneu"
-                  href="/"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   className="nav-link dropdown-toggle font-weight-bold text-uppercase "
                 >
-                New Arrivals
-                </a>
+                  New Arrivals
+                </Link>
                 <div
                   aria-labelledby="dropdownMenuButton1"
                   className="dropdown-menu border-0 p-0 m-0"
@@ -52,157 +52,157 @@ function Navigation() {
                           <div className="row menu2">
                             <div className="col-lg-6 mb-">
                               <h6 className="font-weight-bold text-uppercase">
-                               Men
+                                Men
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/free-style"
+                                  <Link
+                                    to="/free-style"
                                     className="nav-link text-small pb-0"
                                   >
-                                   Free Sytyle
-                                  </a>
+                                    Free Style
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/men-shirt"
+                                  <Link
+                                    to="/men-shirt"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Shirts
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/hoodies"
+                                  <Link
+                                    to="/hoodies"
                                     className="nav-link text-small pb-0 "
                                   >
-                               Sweatshirts & Hoodies
-                                  </a>
+                                    Sweatshirts & Hoodies
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Jackets
-                                  </a>
+                                    Jackets
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
-                                <h6 className="font-weight-bold text-uppercase"> 
-                              Unisex
-                              </h6> 
+                              <h6 className="font-weight-bold text-uppercase">
+                                Unisex
+                              </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Trousers
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                 Shorts
-                                  </a>
+                                    Shorts
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                Suits & Tailoring
-                                  </a>
+                                    Suits & Tailoring
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Coats
-                                  </a>
+                                    Coats
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
                               <h6 className="font-weight-bold text-uppercase">
-                               Women
+                                Women
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/women-bags"
+                                  <Link
+                                    to="/women-bags"
                                     className="nav-link text-small pb-0 "
                                   >
-                                  Bags
-                                  </a>
+                                    Bags
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Essentials
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Personal Styling
-                                  </a>
+                                    Personal Styling
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Special Occasions
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
                               <h6 className="font-weight-bold text-uppercase">
-                            Children
+                                Children
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Underpants
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Boxer shorts
-                                  </a>
+                                    Boxer shorts
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Undershirts
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                Pyjamas
-                                  </a>
+                                    Pyjamas
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -215,15 +215,15 @@ function Navigation() {
                 </div>
               </li>
               <li className="nav-item dropdown megamenu dropdown-hover px-3">
-                <a
+                <Link
                   id="megamneu"
-                  href="/menCategory"
+                  to="/menCategory"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   className="nav-link dropdown-toggle font-weight-bold text-uppercase dropdown-toggle"
                 >
-                 Men
-                </a>
+                  Men
+                </Link>
                 <div
                   aria-labelledby="dropdownMenuButton1"
                   className="dropdown-menu border-0 p-0 m-0"
@@ -235,157 +235,157 @@ function Navigation() {
                           <div className="row menu2">
                             <div className="col-lg-6 mb-4 ">
                               <h6 className="font-weight-bold text-uppercase ">
-                               Category
+                                Category
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/men-t-shirt"
+                                  <Link
+                                    to="/men-t-shirt"
                                     className="nav-link text-small pb-0 "
                                   >
                                     T-shirts & Polos
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                     Shorts
-                                  </a>
+                                    Shorts
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/hoodies"
+                                  <Link
+                                    to="/hoodies"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Sweatshirts & Hoodies
-                                  </a>
+                                    Sweatshirts & Hoodies
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Jackets
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
                               <h6 className="font-weight-bold text-uppercase">
                                 Officials
-                              </h6> 
+                              </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                               Coats
-                                  </a>
+                                    Coats
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Trousers
-                                  </a>
+                                    Trousers
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/men-shirt"
+                                  <Link
+                                    to="/men-shirt"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Shirts
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Suits & Tailoring
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
                               <h6 className="font-weight-bold text-uppercase">
-                              Highlights
+                                Highlights
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Unisex
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Essentials
-                                  </a>
+                                    Essentials
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Personal Styling
-                                  </a>
+                                    Personal Styling
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Special Occasions
-                                  </a>
+                                    Special Occasions
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
                               <h6 className="font-weight-bold text-uppercase">
-                              Shoes
+                                Shoes
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Designer shoes
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Outdoor shoes
-                                  </a>
+                                    Outdoor shoes
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                Loafers
-                                  </a>
+                                    Loafers
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                 Sneaker 
-                                  </a>
+                                    Sneaker
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -398,15 +398,15 @@ function Navigation() {
                 </div>
               </li>
               <li className="nav-item dropdown megamenu dropdown-hover px-3">
-              <a
+                <Link
                   id="megamneu"
-                  href="/womenCategory"
+                  to="/womenCategory"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   className="nav-link dropdown-toggle font-weight-bold text-uppercase dropdown-toggle"
                 >
                   Women
-                </a>
+                </Link>
                 <div
                   aria-labelledby="dropdownMenuButton1"
                   className="dropdown-menu border-0 p-0 m-0"
@@ -422,75 +422,75 @@ function Navigation() {
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/womenCategory"
+                                  <Link
+                                    to="/womenCategory"
                                     className="nav-link text-small pb-0"
                                   >
                                     Dresses
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   T-shirts & tops 
-                                  </a>
+                                    T-shirts & tops
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Shirts & Blouses 
-                                  </a>
+                                    Shirts & Blouses
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                  Jackets & Blazers
-                                  </a>
+                                    Jackets & Blazers
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
                               <h6 className="font-weight-bold text-uppercase">
-                              CASUALS                             
-                              </h6> 
+                                CASUALS
+                              </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Jumpsuits
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Shorts
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Jeans
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                  Skirts 
-                                  </a>
+                                    Skirts
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -500,36 +500,36 @@ function Navigation() {
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Unisex
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                 More Sustainable Fashion
-                                  </a>
+                                    More Sustainable Fashion
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Plus Size
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Swimwear
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -539,36 +539,36 @@ function Navigation() {
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   High heels
-                                  </a>
+                                    High heels
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Pumps
-                                  </a>
+                                    Pumps
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Trainers
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                  Sandals
-                                  </a>
+                                    Sandals
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -581,15 +581,15 @@ function Navigation() {
                 </div>
               </li>
               <li className="nav-item dropdown megamenu dropdown-hover px-3">
-                <a
+                <Link
                   id="megamneu"
-                  href="kidsCategory"
+                  to="kidsCategory"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   className="nav-link dropdown-toggle font-weight-bold text-uppercase dropdown-toggle"
                 >
                   Kids
-                </a>
+                </Link>
                 <div
                   aria-labelledby="dropdownMenuButton1"
                   className="dropdown-menu border-0 p-0 m-0"
@@ -601,40 +601,40 @@ function Navigation() {
                           <div className="row menu2">
                             <div className="col-lg-6 mb-4">
                               <h6 className="font-weight-bold text-uppercase">
-                              Girls
+                                Girls
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0"
                                   >
                                     Dresses
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     T-Shirts & Tops
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                               Trousers & Jeans
-                                  </a>
+                                    Trousers & Jeans
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Sets
-                                  </a>
+                                    Sets
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -644,115 +644,114 @@ function Navigation() {
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Trousers & Jeans
-                                  </a>
+                                    Trousers & Jeans
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Trousers & Jeans
-                                  </a>
+                                    Trousers & Jeans
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Shirts
-                                  </a>
+                                    Shirts
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Shorts
-                                  </a>
+                                    Shorts
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
                               <h6 className="font-weight-bold text-uppercase">
-                              Girls Shoes 
+                                Girls Shoes
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Sandals
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Ballet pumps
-                                  </a>
+                                    Ballet pumps
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Ankle boots
-                                  </a>
+                                    Ankle boots
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                Trainers
-                                  </a>
+                                    Trainers
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
                             <div className="col-lg-6 mb-4">
                               <h6 className="font-weight-bold text-uppercase">
-                               Boys Shoes
+                                Boys Shoes
                               </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Loafers
-
-                                  </a>
+                                    Loafers
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Lace-up shoes
-                                  </a>
+                                    Lace-up shoes
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Trainers
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li className="nav-item">
-                                  <a
-                                    href="/"
+                                  <Link
+                                    to="/"
                                     className="nav-link text-small pb-0 "
                                   >
-                                   Boots
-                                  </a>
+                                    Boots
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -768,8 +767,6 @@ function Navigation() {
           </div>
         </div>
       </nav>
-
-      
     </div>
   );
 }

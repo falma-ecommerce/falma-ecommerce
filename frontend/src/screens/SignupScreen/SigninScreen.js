@@ -26,9 +26,9 @@ export default function SigninScreen() {
   };
 
   return (
-    <div className="register-container align-items-center">
+    <div className="register-container align-items-center p-3">
       <h3 className="text-center">You are Welcome Back </h3>
-      <div className=" d-flex justify-content-around align-items-center flex-wrap ">
+      <div className=" d-flex justify-content-around align-items-center flex-wrap">
         <form
           className=" d-flex flex-column justify-content-center align-items-center"
           onSubmit={handleSubmit}

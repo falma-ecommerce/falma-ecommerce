@@ -18,6 +18,7 @@ import SuccessFullOrder from "./components/SuccessFullOrder/SuccessFullOrder";
 import { CheckoutProvider } from "./contexts/CheckoutContext";
 import  SearchContext  from "./contexts/SearchContext";
 import SearchProduct from "./components/SearchProduct/SearchProduct";
+import {Toaster} from "react-hot-toast";
 import "./App.css";
 
 const App = () => {
@@ -119,6 +120,7 @@ const App = () => {
                     <Route path="/success" element={<SuccessFullOrder />} />
                   </Routes>
                 </main>
+                <Toaster/>
               </div>
             </BrowserRouter>
           </AuthProvider>

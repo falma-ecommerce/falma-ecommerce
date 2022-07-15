@@ -4,7 +4,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 const CartContext = createContext({});
 
-// you can give this component any name you wish
 function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
   const [showCart, setShowCart] = useState(false);
@@ -25,7 +24,6 @@ function CartProvider({ children }) {
     console.log(item.price);
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
     if (checkProductInCart) {
-      // eslint-disable-next-line array-callback-return
       const updatedCartItems = cartItems.map((cartProduct) => {
         if (cartProduct.id === item.id)
           return {
@@ -34,6 +32,7 @@ function CartProvider({ children }) {
           };
       });
       setCartItems(updatedCartItems);
+      
     } else {
       item.quantity = quantity;
 
@@ -97,7 +96,7 @@ function CartProvider({ children }) {
   };
   const itemPercentage = ((19 / 100) * totalPrice).toFixed(2);
   const shipment = (totalPrice > 75 ? 0 : totalPrice < 1 ? 0 : 3.99).toFixed(2)
-  const itemTotal = (+totalPrice + -itemPercentage + +shipment).toFixed(2);
+  const grossTotal = (+totalPrice + +itemPercentage + +shipment).toFixed(2);
 
   return (
     <CartContext.Provider
@@ -117,7 +116,7 @@ function CartProvider({ children }) {
         totalQuantities,
         itemPercentage,
         shipment,
-        itemTotal,
+        grossTotal,
       }}
     >
       {children}

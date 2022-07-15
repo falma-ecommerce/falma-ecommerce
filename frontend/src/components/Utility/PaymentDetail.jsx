@@ -2,12 +2,12 @@ import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 
 const PaymentDetail = () => {
-  const { totalPrice, itemPercentage, shipment, itemTotal } =
+  const { totalPrice, itemPercentage, shipment, grossTotal } =
     useContext(CartContext);
 
   return (
     <div>
-      <h1 style={{textAlign: "center"}}>Order Overview</h1>
+      <h1 style={{ textAlign: "center", margin: "" }}>Order Overview</h1>
       <hr />
       <div className="total">
         <div>Subtotal</div>
@@ -27,15 +27,13 @@ const PaymentDetail = () => {
           <p>€{shipment}</p>
         </div>
       </div>
-
       <hr />
-
       <div className="total">
         <div>
           <h3>TOTAL</h3>
         </div>
         <div>
-          <h3>€{itemTotal}</h3>
+          <h3>€{grossTotal}</h3>
         </div>
       </div>
       <hr />

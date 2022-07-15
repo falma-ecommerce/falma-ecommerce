@@ -20,7 +20,6 @@ const ProductDetails = () => {
   const handleClick = (url) => {
     const mainImage = document.getElementById("main-image");
     mainImage.src = url;
-    // alert(url);
   };
 
   const options = {
@@ -69,7 +68,7 @@ const ProductDetails = () => {
               <img
                 id="main-image"
                 src={`https://${firstUrl.url}`}
-                style={{ height: "83.5vh" }}
+                style={{ height: "83.5vh", width: "100%" }}
                 alt="Article not no longer in stock"
               ></img>
             )}

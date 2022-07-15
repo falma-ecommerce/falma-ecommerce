@@ -1,10 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { NavLink } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import { CartContext } from "../../../contexts/CartContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.modules.css";
 import { AuthContext } from "../../../contexts/AuthContext";
 import CartIcon from "../../Utility/cartIcon";
@@ -15,7 +13,6 @@ import SearchForm from "../../SearchForm/SearchForm";
 
 export default function Header() {
   const { loggedIn } = useContext(AuthContext);
-  const { totalQuantities } = useContext(CartContext);
   return (
     <div>
       <div className="shipping-info">
@@ -24,11 +21,10 @@ export default function Header() {
         </Marquee>
       </div>
       <div className="nav-info ">
-        <Link to="/womenCategory">
+        <Link to="/">
           <img
             className="logo"
             src="../images/FullLogo.png"
-            // href="/womenCategory"
             alt="logo"
           />
         </Link>

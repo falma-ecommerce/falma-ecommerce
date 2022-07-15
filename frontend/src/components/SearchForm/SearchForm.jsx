@@ -4,7 +4,7 @@ import MyContext from "../../contexts/MyContext";
 import { Paper, TextField } from "@material-ui/core";
 
 const SearchForm = () => {
-  const { search, setSearch, searchInput, setSearchInput, inputRef } =
+  const { setSearch, searchInput, setSearchInput, inputRef } =
     useContext(MyContext);
 
   const navigate = useNavigate();

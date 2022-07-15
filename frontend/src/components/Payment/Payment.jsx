@@ -38,20 +38,6 @@ const Payment = () => {
     <div className="shipping-container" >
       <div className="shipping-payment">
         {<ShippingAddressUtil />}
-        {/* {shipmentInfo != null ? (
-          <div>
-            <p>{shipmentInfo.fullName}</p>
-            <p>{shipmentInfo.address}</p>
-            <p>{shipmentInfo.city}</p>
-            <p>{shipmentInfo.postCode}</p>
-            <p>{shipmentInfo.county}</p>
-          </div>
-        ) : (
-          <p>
-            ✋ No shipping address found, Filling in your shipping detail or we
-            will assume your billing address as your shipping address please.
-          </p>
-        )} */}
       </div>
       <div className="shipping-payment">
         <PaymentDetail />
