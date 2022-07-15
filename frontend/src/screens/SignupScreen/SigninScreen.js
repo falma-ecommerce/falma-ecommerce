@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import axios from "../../components/Utility/axiosInstance";
 import { AuthContext } from "../../contexts/AuthContext";
 import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from "material-react-toastify";
 
 export default function SigninScreen() {
-  const { handleLogin, loggedIn } = useContext(AuthContext);
+  const { handleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -22,7 +23,10 @@ export default function SigninScreen() {
 
       handleLogin(true, response.data.user);
       navigate("/");
+      toast.success('You are Welcome Back')
+
     } catch (error) {}
+    toast.error('Sorry! you entered wrong username or password. Please try again')
   };
 
   return (

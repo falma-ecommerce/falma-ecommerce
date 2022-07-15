@@ -1,89 +1,86 @@
 import React from "react";
-import "./Footer.css";
-import {
-  FaCcPaypal,
-  FaCcVisa,
-  FaCcApplePay,
-  FaCcAmex,
-} from "react-icons/fa";
+import "./Footer.modules.css";
 import { RiVisaFill } from "react-icons/ri";
-
+import { FaCcPaypal, FaCcVisa, FaCcApplePay, FaCcAmex } from "react-icons/fa";
 import {
   Box,
   Container,
   Row,
-  Column,
-  FooterLink,
+  Column, 
   Heading,
 } from "./FooterStyles";
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
+  const openInNewTab = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
   return (
     <Box>
       <Container>
         <Row>
         <Column>
             <Heading> Falma</Heading>
-            <FooterLink to="/">Shipping + Returns</FooterLink>
-            <FooterLink to="/">Vision</FooterLink>
-            <FooterLink to="/">Refund Policy</FooterLink>
-            <FooterLink to="/">Terms and Services</FooterLink>
-            <FooterLink to="/">Privacy Policy</FooterLink>
+            <Link className="link" to="/shipping">Shipping + Returns</Link>
+            <Link className="link" to="/vision">Vision</Link>
+            <Link className="link"  to="/refund">Refund Policy</Link>
+            <Link className="link"  to="/terms">Terms and Services</Link>
+            <Link className="link" to="/privacy">Privacy Policy</Link>
           </Column>
           <Column>
             <Heading>About us</Heading>
-            <FooterLink to="/">Our Mission</FooterLink>
-            <FooterLink to="/"></FooterLink>
-            {/* <FooterLink to="/">Next day Delivery</FooterLink> */}
-           {/*  <FooterLink to="/">Teaching</FooterLink> */}
+            <Link className="link"  to="/mission">Our Mission</Link>
+           
           </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink to="/">Freeman</FooterLink>
-            <FooterLink to="/">Abdul</FooterLink>
-            <FooterLink to="/">Martins</FooterLink>
-            <FooterLink to="/">Linda</FooterLink>
+            <Link  className="link" to="/" onClick={() => openInNewTab('https://github.com/FreemanJE')} >Freeman Johnson </Link>
+            <Link  className="link" to="/"onClick={() => openInNewTab('https://github.com/abdsimon')}>Abdulwahed Diab</Link>
+            <Link  className="link" to="/"onClick={() => openInNewTab('https://github.com/MartinsOni')}>Martins Oni</Link>
+            <Link  className="link" to="/"onClick={() => openInNewTab('https://github.com/Lindaroy202')}>Linda Awasiri </Link>
           </Column>
           <Column>
             <Heading>Social Media</Heading>
-            <FooterLink to="/">
+
+               <Link className="link" to="/" onClick={() => openInNewTab('https://github.com/falma-ecommerce/falma-ecommerce/tree/main')}>
+              <i className="fab fa-github">
+                <span style={{ marginLeft: "10px" }}>Github</span>
+              </i>
+            </Link>
+            <Link className="link"  to="/"onClick={() => openInNewTab('https://www.facebook.com/')} >
               <i className="fab fa-facebook-f">
                 <span style={{ marginLeft: "10px" }}>Facebook</span>
               </i>
-            </FooterLink>
-            <FooterLink to="/">
+            </Link>
+            <Link className="link"  to="/"onClick={() => openInNewTab('https://www.instagram.com/?hl=en')} >
               <i className="fab fa-instagram">
                 <span style={{ marginLeft: "10px" }}>Instagram</span>
               </i>
-            </FooterLink>
-            <FooterLink to="/">
+            </Link>
+            <Link className="link" to="/"onClick={() => openInNewTab('https://twitter.com/?lang=en')} >
               <i className="fab fa-twitter">
                 <span style={{ marginLeft: "10px" }}>Twitter</span>
               </i>
-            </FooterLink>
-            <FooterLink to="/">
-              <i className="fab fa-youtube">
-                <span style={{ marginLeft: "10px" }}>Youtube</span>
-              </i>
-            </FooterLink>
+            </Link>
           </Column>
         </Row>
         <div className="icons">
-          <div className="paypal">
+          <div className="paypal" style={{color:"blue"}}>
             <FaCcPaypal />
           </div>          
-          <div className="visa">
+          <div className="visa"style={{color:"red"}} >
             <FaCcVisa />
           </div>          
-          <div className="visa">
+          <div className="visa"style={{color:"white "}} >
             <FaCcApplePay />
           </div>
-          <div className="visa">
+          <div className="visa"style={{color:"blue"}} >
             <FaCcAmex />
           </div>
         </div>
         <Heading className="text-center">
-          <p style={{ color: "#DAA03DFF "}}>
+          <p style={{ color: "	rgb(255,255,255)"  }}>
            &copy;{new Date().getFullYear()}  @Falma | Only for Educational Purposes
           </p>
           
