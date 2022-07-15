@@ -49,7 +49,7 @@ const ProductDetails = () => {
     <div>
       <div className="product-detail">
         <div className="product-image">
-          <div className="images">
+          <div className="detail-images">
             {images &&
               images.map((product, index) => (
                 <div className="hover-image" key={index}>

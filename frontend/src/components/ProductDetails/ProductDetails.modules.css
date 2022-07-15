@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.images img{
+.detail-images img{
   margin: 0.1rem 2rem;
   width: fit-content;
 }
@@ -17,7 +17,7 @@
   justify-content: center;
 }
 
-.images img:hover {
+.detail-images img:hover {
   border: 0.1rem solid black ; 
 }
 
@@ -61,12 +61,12 @@
   .all-product-info {
     max-width: 80%;
   }
-  .images {
+  .detail-images {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .images img {
+  .detail-images img {
     margin: 0.2rem;
   }
   .product-image{

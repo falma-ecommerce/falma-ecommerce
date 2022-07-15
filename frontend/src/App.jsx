@@ -2,7 +2,6 @@ import React from "react";
 import { AuthProvider } from "./contexts/AuthContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Home/Header/Header";
 import Products from "./components/Products/Products";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
@@ -17,11 +16,6 @@ import Refund from "./components/Home/Footer/Footer links/Refund";
 import Vision from "./components/Home/Footer/Footer links/Vision";
 import Mission from "./components/Home/Footer/Footer links/Mission";
 import TeamMember from "./components/Home/Footer/Footer links/TeamMembers";
-import "./App.css";
-
-// const App = () => {
-//   return (
-//     <AuthProvider>
 import Cart from "./components/Cart/Cart";
 import { CartProvider } from "./contexts/CartContext";
 import ShippingAddress from "./components/ShippingAddress/ShippingAddress";
@@ -31,16 +25,15 @@ import { CheckoutProvider } from "./contexts/CheckoutContext";
 import  SearchContext  from "./contexts/SearchContext";
 import SearchProduct from "./components/SearchProduct/SearchProduct";
 import {Toaster} from "react-hot-toast";
-import "./App.css";
 import { ToastContainer } from "material-react-toastify";
 import "material-react-toastify/dist/ReactToastify.css";
-
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
-<<<<<<< HEAD
   return (
     <SearchContext>
-      <CartProvider>
+    <CartProvider>
         <CheckoutProvider>
           <AuthProvider>
             <BrowserRouter>
@@ -134,18 +127,29 @@ const App = () => {
                     />
                     <Route path="/payment" element={<Payment />} />
                     <Route path="/success" element={<SuccessFullOrder />} />
+                    <Route path="/shipping" element={<Shipping/>} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/privacy" element={<Privacy />} />
+                    <Route path="/refund" element={<Refund />} />
+                    <Route path="/mission" element={<Mission />} />
+                    <Route path="/vision" element={<Vision />} />
+                    <Route path="/team"   element={<TeamMember />} />
                   </Routes>
                 </main>
                 <Toaster/>
+                <ToastContainer position="top-center" newestOnTop rtl/>
               </div>
             </BrowserRouter>
           </AuthProvider>
         </CheckoutProvider>
-=======
+        </CartProvider>
+        </SearchContext>
+      );
+    };
+ 
+export default App; 
 
-   
-
-  return (
+  /* return (
     <SearchContext>
       <CartProvider>
         <AuthProvider>
@@ -221,10 +225,9 @@ const App = () => {
             </div>
           </BrowserRouter>
         </AuthProvider>
->>>>>>> freemanupdate
       </CartProvider>
     </SearchContext>
   );
 };
 
-export default App;
+export default App; */

@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 
 export default function Paypal() {
-  const { itemTotal, cartItems } = useContext(CartContext);
+  const { grossTotal, cartItems } = useContext(CartContext);
 
   const paypal = useRef();
 
@@ -17,7 +17,7 @@ export default function Paypal() {
                 description: cartItems.name,
                 amount: {
                   currency_code: "EUR",
-                  value: itemTotal,
+                  value: grossTotal,
                 },
               },
             ],
@@ -40,4 +40,5 @@ export default function Paypal() {
       <div ref={paypal}></div>
     </div>
   );
+  
 }
