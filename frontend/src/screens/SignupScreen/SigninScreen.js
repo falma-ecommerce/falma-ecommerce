@@ -25,8 +25,9 @@ export default function SigninScreen() {
       navigate("/");
       toast.success('You are Welcome Back')
 
-    } catch (error) {}
-    toast.error('Sorry! you entered wrong username or password. Please try again')
+    } catch (error) {
+      toast.error('Sorry! you entered wrong username or password. Please try again')}
+    
   };
 
   return (
