@@ -7,24 +7,31 @@
   color: white;
 }
 .nav-info {
-    /* display: flex; */
-    display: grid;    
-    grid-template-columns: 1fr 1fr auto auto;
-    margin: 20px 40px ;
-    justify-content: center;
-   
+  display: flex;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr auto auto; */
+  /* margin: 20px 40px; */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* background-color: rgb(254, 94, 254); */
+  background-color: rgb(89, 203, 249);
+  /* background-color: rgb(98, 251, 98); */
+  border-bottom: 0.2rem solid;
+  align-items: center;
+  padding: 1rem;
 }
-.searchForm {
-    width: 60%;    
-    /* border: 1px solid black */
+.logo{
+  width: 5rem;
+  margin-bottom: 0.5rem;
 }
-.websiteName a {
+/* .websiteName a {
   text-decoration: underline;
-}
+} */
 .websiteName h1 {
   font-family: "Faster One", cursive;
   color: black;
-
+  text-decoration: underline;
+  /* color: white; */
 }
 
 .login-cart {

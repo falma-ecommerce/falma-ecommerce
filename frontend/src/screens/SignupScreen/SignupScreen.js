@@ -37,7 +37,6 @@ export default function Register() {
 
   return (
     <main>
-      {/* <ToastContainer /> */}
       <div className="register-container ">
         <h1>Sign Up</h1>
         <div className=" d-flex justify-content-around align-items-center flex-wrap ">
@@ -138,7 +137,6 @@ export default function Register() {
               <button
                 className="btn btn-primary"
                 type="submit"
-                // onClick={notify}
               >
                 Register
               </button>

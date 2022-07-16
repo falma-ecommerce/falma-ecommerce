@@ -1,7 +1,7 @@
 .products-link {
     display: flex;
     flex-wrap: wrap;
-    margin: 1rem;
+    margin: 1rem 10rem;
     justify-content: space-evenly;
     text-align: center;
   }

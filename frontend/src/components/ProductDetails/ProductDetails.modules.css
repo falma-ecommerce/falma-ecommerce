@@ -2,25 +2,22 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin: 1rem;
   align-items: center;
 }
 
-.images img{
+.detail-images img{
   margin: 0.1rem 2rem;
   width: fit-content;
 }
 
-h1 {
-  text-align: center;
-}
 
 .product-image{
   display: flex;
   justify-content: center;
 }
 
-.images img:hover {
+.detail-images img:hover {
   border: 0.1rem solid black ; 
 }
 
@@ -64,21 +61,23 @@ h1 {
   .all-product-info {
     max-width: 80%;
   }
-  .images {
+  .detail-images {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .images img {
+  .detail-images img {
     margin: 0.2rem;
   }
   .product-image{
     display: flex;
     flex-direction: column-reverse;
-    justify-content: end;
+    justify-content: flex-end;
     width: fit-content;
   }
   .firstUrl img{
     align-self: center;
+    max-width: 100%;
+    max-height: 70vh;
   }
 }

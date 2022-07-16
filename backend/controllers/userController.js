@@ -1,5 +1,6 @@
 import bcrypt from "bcrypt";
 import User from "./../models/userModel.js";
+import ShippingAddress from "./../models/ShippingModel.js"
 import expressAsyncHandler from "express-async-handler";
 import jwtissuer from "../helpers/jwtissuer.js";
 
@@ -13,6 +14,7 @@ export const getAllUsers = expressAsyncHandler(async (req, res) => {
   const users = await User.find({}).select("username firstname lastname email");
   return res.status(200).json(users);
 });
+
 
 /**
  * Registration method
@@ -44,6 +46,39 @@ export const signup = expressAsyncHandler(async (req, res) => {
     .status(200)
     .json({ message: "User was created", createdUser: user });
 });
+
+/**
+ * Shipment method
+ * @param {*} req
+ * @param {*} res
+ */
+export const shipping = expressAsyncHandler(async (req, res) => {
+  const {
+    fullName,
+    address,
+    city,
+    postCode,
+    country
+  } = req.body;
+
+  const shipping = await ShippingAddress.create({
+    fullName,
+    address,
+    city,
+    postCode,
+    country,
+    user: req.user._id
+  });
+  console.log("shipping", shipping)
+  return res
+    .status(200)
+    .json({ message: "Shipping address was created", createdShipping: shipping });
+});
+
+export const getShippingAddress = async (req, res) => {
+  const shippingAddress = await ShippingAddress.find({user:req.user._id})
+  return res.status(200).json({ shippingAddress });
+};
 
 export const signin = expressAsyncHandler(async (req, res) => {
   const { email, password } = req.body;
@@ -83,6 +118,7 @@ export const signout = async (req, res) => {
     })
     .json({ message: "You are logged out." });
 };
+
 
 export const getProfile = async (req, res) => {
   return res.status(200).json({ profile: req.user });

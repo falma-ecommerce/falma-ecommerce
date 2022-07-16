@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.modules.css";
-import { RiVisaFill } from "react-icons/ri";
 import { FaCcPaypal, FaCcVisa, FaCcApplePay, FaCcAmex } from "react-icons/fa";
 import {
   Box,

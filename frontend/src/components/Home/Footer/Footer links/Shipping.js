@@ -1,9 +1,9 @@
 import React from "react";
-import "./Shipping.modules.css";
+import "./Style.modules.css";
 
 const Shipping = () => {
   return (
-    <div className="shippingpage">
+    <div className="styleContainer">
       <div className="title">
         <h1 className="changing">About our Shipping </h1>
         <br></br>

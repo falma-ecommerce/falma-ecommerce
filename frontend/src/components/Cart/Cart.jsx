@@ -6,25 +6,29 @@ import {
   AiOutlinePlus,
   AiOutlineShopping,
 } from "react-icons/ai";
-import { TiDeleteOutline } from "react-icons/ti";
-import { FaCcPaypal, FaCcVisa, FaCcApplePay, FaCcAmex } from "react-icons/fa";
 import "./Cart.modules.css";
-// import toast from "react-hot-toast";
+import PaymentDetail from "../Utility/PaymentDetail";
+import PaymentMethods from "../Utility/PaymentMethods";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const Cart = () => {
   const cartRef = useRef();
   const {
     cartItems,
-    addItemToCart,
-    totalPrice,
-    setShowCart,
     totalQuantities,
     removeItemFromCart,
     toggleCartItemQuantity,
-    itemPercentage,
-    shipment,
-    itemTotal,
   } = useContext(CartContext);
+
+  const linkStyle = {
+    border: "0.1rem solid black",
+    textAlign: "center",
+    padding: "0.3rem 0",
+    margin: "0.8rem 0",
+    width: "100%",
+    borderRadius: "0.3rem",
+  };
 
   return (
     <>
@@ -40,13 +44,13 @@ const Cart = () => {
                   <div className="item" key={item.id}>
                     <img
                       src={`https://${item.media.images[0].url}`}
-                      style={{ width: "15vh" }}
+                      style={{ width: "15vh", padding: "0 1rem" }}
                       alt="Article not no longer in stock"
                     />
                     <div className="item-desc">
-                      <div className="flex top">
-                        <p>{item.price.current.text}</p>
+                      <div className="flex-top">
                         <p>{item.name}</p>
+                        <p>{item.price.current.text}</p>
                       </div>
 
                       <div className="flex bottom">
@@ -60,9 +64,7 @@ const Cart = () => {
                             >
                               <AiOutlineMinus />
                             </span>
-                            {/* <span className="num" onClick=""> */}
-                            {item.quantity}
-                            {/* </span> */}
+                            <span className="quantity">{item.quantity}</span>
                             <span
                               className="plus"
                               onClick={() =>
@@ -78,7 +80,10 @@ const Cart = () => {
                           className="remove-item"
                           onClick={() => removeItemFromCart(item)}
                         >
-                          <TiDeleteOutline />
+                          <FontAwesomeIcon
+                            icon={faTrash}
+                            className="trashIcon"
+                          />
                         </button>
                       </div>
                     </div>
@@ -90,68 +95,33 @@ const Cart = () => {
             <div className="total-item">
               {cartItems.length >= 1 && (
                 <div className="cart-bottom">
-                  <h3>Order Overview</h3>
-                  <div className="total">
-                    <div>Subtotal</div>
-                    <div>
-                      <p>${totalPrice.toFixed(2)}</p>
-                    </div>
+                  <PaymentDetail />
+                  <div style={linkStyle}>
+                    <Link to="/all-products" className="checkout">
+                      Continue Shopping
+                    </Link>
                   </div>
-                  <div className="total">
-                    <div>Taxes 19 percent%</div>
-                    <div>
-                      <p>${itemPercentage}</p>
-                    </div>
+                  <div style={linkStyle}>
+                    <Link to="/signin" className="checkout">
+                      Proceed to sign in or sign up
+                    </Link>
                   </div>
-                  <div className="total">
-                    <div>Shipment</div>
-                    <div>
-                      <p>${shipment}</p>
-                    </div>
-                  </div>
-
-                  <hr />
-
-                  <div className="total">
-                    <div>
-                      <h3>TOTAL</h3>
-                    </div>
-                    <div>
-                      <h3>${itemTotal}</h3>
-                    </div>
-                  </div>
-                  <hr />
-                  <button className="checkout">CHECKOUT</button>
+                  <PaymentMethods />
                 </div>
               )}
-              <h5 className="payment-methods">Payment methods</h5>
-              <div className="icons">
-                <div className="paypal">
-                  <FaCcPaypal />
-                </div>
-                <div className="visa">
-                  <FaCcVisa />
-                </div>
-                <div className="apple-pay">
-                  <FaCcApplePay />
-                </div>
-                <div className="america-express">
-                  <FaCcAmex />
-                </div>
-              </div>
             </div>
           </div>
           <div className="cart-container">
-              {cartItems.length < 1 && (
-                <div className="empty-cart">
-                  <AiOutlineShopping size={150} />
-                  <h3>Your shopping bag is empty</h3>
-                  <Link className="shopping" to="/all-products">
-                    Continue Shopping
-                  </Link>
-                </div>
-              )}
-            </div>
+            {cartItems.length < 1 && (
+              <div className="empty-cart">
+                <AiOutlineShopping size={150} />
+                <h3>Your shopping bag is empty</h3>
+                <Link className="shopping" to="/all-products">
+                  Continue Shopping
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>

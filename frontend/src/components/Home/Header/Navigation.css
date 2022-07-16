@@ -1,6 +1,15 @@
 .megamenu {
   position: static;
 }
+/* .bg-white {
+  background: green !important;
+  transition: 1.5s ease-in;
+}
+
+.bg-white.scrolled {
+  background: red !important;
+} */
+
 
 .megamenu .dropdown-menu {
   background: none;
@@ -38,17 +47,9 @@ code {
   padding: 0.1rem 0.2rem;
   border-radius: 0.2rem;
 }
-
 .text-uppercase {
   letter-spacing: 0.08em;
 }
-
-.megaimaga1 {
-  background: center center url("../../../components/images/man&&woman.webp")
-    no-repeat;
-  background-size: cover;
-}
-
 .megaimaga {
   background: center center url("../../../components/images/men.webp") no-repeat;
   background-size: cover;
@@ -56,6 +57,12 @@ code {
 
 .megaimage {
   background: center center url("../../../components/images/woman.webp")
+    no-repeat;
+  background-size: cover;
+}
+
+.megaimaga1 {
+  background: center center url("../../../components/images/man&&woman.webp")
     no-repeat;
   background-size: cover;
 }
