@@ -72,7 +72,7 @@
   .product-image{
     display: flex;
     flex-direction: column-reverse;
-    justify-content: end;
+    justify-content: flex-end;
     width: fit-content;
   }
   .firstUrl img{

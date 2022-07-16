@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { AnimatePresence, motion } from "framer-motion";
 import logger from "logger-for-use-reducer";
-<<<<<<< HEAD
-import CircularProgress from "@mui/material/CircularProgress";
-=======
->>>>>>> f4b1ef5b91aaf2e60ab52bff324b3fdf764e6329
 import Box from "@mui/material/Box";
 import "./Products.modules.css";
 import { Helmet } from "react-helmet-async";
