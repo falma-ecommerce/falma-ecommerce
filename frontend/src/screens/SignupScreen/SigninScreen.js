@@ -22,7 +22,7 @@ export default function SigninScreen() {
       console.log("response ", response);
 
       handleLogin(true, response.data.user);
-      navigate("/shipping-address");
+      navigate("/");
       toast.success("You are Welcome Back");
     } catch (error) {
       toast.error(
