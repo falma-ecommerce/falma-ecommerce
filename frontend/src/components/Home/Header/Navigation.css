@@ -30,6 +30,7 @@
   pointer-events: none;
 }
 
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     left: 0 !important;
@@ -38,7 +39,7 @@
 .APP {
   background: #eaafc8;
   background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
-  background: linear-gradient(to right, #eaafc8, #654ea3);
+  background: linear-gradient(to right, #a8f7f8, #44d7f8);
 }
 
 code {

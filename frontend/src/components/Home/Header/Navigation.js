@@ -51,9 +51,11 @@ function Navigation() {
                         <div className="p-4">
                           <div className="row menu2">
                             <div className="col-lg-6 mb-">
-                              <h6 className="font-weight-bold text-uppercase">
+                              <Link to="/men" className="font-weight-bold text-uppercase">
+                              
                                 Men
-                              </h6>
+                              
+                              </Link>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <Link
