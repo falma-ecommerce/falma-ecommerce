@@ -6,6 +6,7 @@ import {
   AiOutlinePlus,
   AiOutlineShopping,
 } from "react-icons/ai";
+import { AuthContext } from "../../contexts/AuthContext";
 import "./Cart.modules.css";
 import PaymentDetail from "../Utility/PaymentDetail";
 import PaymentMethods from "../Utility/PaymentMethods";
@@ -21,6 +22,7 @@ const Cart = () => {
     toggleCartItemQuantity,
   } = useContext(CartContext);
 
+  const {loggedIn} = useContext(AuthContext)
   const linkStyle = {
     border: "0.1rem solid black",
     textAlign: "center",
@@ -102,10 +104,16 @@ const Cart = () => {
                     </Link>
                   </div>
                   <div style={linkStyle}>
+                    {loggedIn && loggedIn ?
+                    <Link to="/shipping-address" className="checkout">
+                      Proceed to Checkout
+                    </Link>:
                     <Link to="/signin" className="checkout">
                       Proceed to sign in or sign up
                     </Link>
+                    }
                   </div>
+                
                   <PaymentMethods />
                 </div>
               )}

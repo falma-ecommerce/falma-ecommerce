@@ -23,8 +23,6 @@ export default function ControlledCarousel() {
             />
 
             <Carousel.Caption>
-              {/* <h3>Summer Sales</h3>
-              <p>Up to 70% off your favorite styles</p> */}
             </Carousel.Caption>
           </Link>
         </Carousel.Item>
@@ -38,8 +36,6 @@ export default function ControlledCarousel() {
               alt="Second slide"
             />
             <Carousel.Caption className="color">
-              {/* <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
             </Carousel.Caption>
           </Link>
         </Carousel.Item>
@@ -53,10 +49,6 @@ export default function ControlledCarousel() {
             />
 
             <Carousel.Caption>
-              {/* <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p> */}
             </Carousel.Caption>
           </Link>
         </Carousel.Item>

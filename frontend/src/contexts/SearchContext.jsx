@@ -24,8 +24,6 @@ const SearchContext = ({ children }) => {
         const results = await response.json();
         console.log(results);
 
-        // const results = await axios.get(URI)
-        // return res.status(200).json(data.results);
         console.log(results);
         setData({ results, loading: false, error: null });
       } catch (error) {

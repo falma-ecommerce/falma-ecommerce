@@ -9,6 +9,7 @@ import { getError } from "../../utils";
 import "./ProductDetails.modules.css";
 
 const ProductDetails = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [product, setProduct] = useState({});
   const [images, setImages] = useState([]);
   const [firstUrl, setFirstUrl] = useState();
@@ -35,6 +36,7 @@ const ProductDetails = () => {
         setFirstUrl(response.data.media.images[0]);
         setProductInfo(response.data.variants[0]);
         console.log(response.data.media.images);
+        setIsLoaded(true);
       });
     } catch (error) {
       toast.error(getError(error));
@@ -80,11 +82,10 @@ const ProductDetails = () => {
             <span className="new-price">
               {productInfo && productInfo.price.current.text}{" "}
             </span>
-            <span className="tax">(inkl. MwSt)</span>
+            {isLoaded ? <span className="tax">(inkl. MwSt)</span> : <></>}
           </p>
           <p>{productInfo && productInfo.id}</p>
-
-          <hr className="line"></hr>
+          {isLoaded ? <hr className="line"></hr> : <></>}
           <p
             dangerouslySetInnerHTML={{ __html: sanitize(product?.description) }}
           ></p>
@@ -104,9 +105,13 @@ const ProductDetails = () => {
             }}
           ></p>
           <div>
-            <button onClick={() => addToCart(product)} className="cart">
-              ADD TO CART
-            </button>
+            {isLoaded ? (
+              <button onClick={() => addToCart(product)} className="cart">
+                ADD TO CART
+              </button>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>

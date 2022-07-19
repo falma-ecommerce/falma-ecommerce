@@ -5,7 +5,6 @@ import Marquee from "react-fast-marquee";
 import "./Header.modules.css";
 import { AuthContext } from "../../../contexts/AuthContext";
 import CartIcon from "../../Utility/cartIcon";
-import Navigation from "../Header/Navigation";
 import "./Header.modules.css";
 import { PrivateNav, PublicNav } from "../../Menu";
 import SearchForm from "../../SearchForm/SearchForm";
@@ -49,10 +48,6 @@ export default function Header() {
             </NavLink>
           </div>
         </div>
-      </div>
-      <div>
-        {" "}
-        <Navigation />
       </div>
     </div>
   );

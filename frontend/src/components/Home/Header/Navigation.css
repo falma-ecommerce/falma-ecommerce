@@ -31,6 +31,7 @@
   background: linear-gradient(to right, #eaafc8, #654ea3);
 }
 
+
 code {
   color: #745eb1;
   background: #fff;
@@ -59,7 +60,7 @@ code {
 
 .megaimagakids {
   background: center center
-    url("https://img01.ztat.net/banner/deea76a2e25d4d9dadd9350a37b6b111/fadb3ccc5ced4da694a1981e419b6788.jpg?imwidth=693")
+    url("../../../components/images/kidsa1.webp")
     no-repeat;
   background-size: cover;
 }

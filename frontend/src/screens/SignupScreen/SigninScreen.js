@@ -2,11 +2,14 @@ import React, { useContext } from "react";
 import axios from "../../components/Utility/axiosInstance";
 import { AuthContext } from "../../contexts/AuthContext";
 import { NavLink, useNavigate } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
 import { toast } from "material-react-toastify";
 
 export default function SigninScreen() {
   const { handleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  const { cartItems } = useContext(CartContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,7 +25,7 @@ export default function SigninScreen() {
       console.log("response ", response);
 
       handleLogin(true, response.data.user);
-      navigate("/shipping-address");
+      cartItems.length >= 1 ? navigate("/shipping-address") : navigate("/");
       toast.success("You are Welcome Back");
     } catch (error) {
       toast.error(
@@ -60,7 +63,6 @@ export default function SigninScreen() {
 
           <div className="p-3">
             <button className="btn btn-primary w-100 ">Sign In</button>
-
           </div>
         </form>
         <div className="p-2 text-center">
