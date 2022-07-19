@@ -5,7 +5,7 @@ import "./Navigation.css";
 function Navigation() {
   
   return (
-    <div className="APP sticky-top border-bottom border-dark">
+    <div className="APP sticky-top">
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-2 shadow-sm ">
         <div className="container-fluid ">
           <Link

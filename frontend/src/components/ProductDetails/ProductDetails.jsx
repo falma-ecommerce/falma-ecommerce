@@ -82,10 +82,10 @@ const ProductDetails = () => {
             <span className="new-price">
               {productInfo && productInfo.price.current.text}{" "}
             </span>
-            {isLoaded ? <span className="tax">(inkl. MwSt)</span> : <p></p>}
+            {isLoaded ? <span className="tax">(inkl. MwSt)</span> : <></>}
           </p>
           <p>{productInfo && productInfo.id}</p>
-          {isLoaded ? <hr className="line"></hr> : <p></p>}
+          {isLoaded ? <hr className="line"></hr> : <></>}
           <p
             dangerouslySetInnerHTML={{ __html: sanitize(product?.description) }}
           ></p>
@@ -110,7 +110,7 @@ const ProductDetails = () => {
                 ADD TO CART
               </button>
             ) : (
-              <p></p>
+              <></>
             )}
           </div>
         </div>
