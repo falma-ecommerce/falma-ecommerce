@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
 import MyContext from '../../contexts/MyContext';
-import './SearchProduct.module.css'
+import '../Products/Products.modules.css'
 
 export default function SearchProduct() {
 

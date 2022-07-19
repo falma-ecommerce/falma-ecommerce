@@ -3,12 +3,13 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import { Link } from "react-router-dom";
 import "./Navigation.css";
 function Navigation() {
+  
   return (
-    <div className="APP">
-      <nav className="navbar navbar-expand-lg navbar-light bg-white py-2 shadow-sm">
-        <div className="container-fluid">
+    <div className="APP sticky-top">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white py-2 shadow-sm ">
+        <div className="container-fluid ">
           <Link
-            to="/all-products"
+            to="/all-products" 
             className="navbar-brand font-weight-bold d-block d-lg-none "
           >
             Shop
@@ -28,12 +29,16 @@ function Navigation() {
           <div id="navbarSupportedContent" className="collapse navbar-collapse">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item px-3">
-                <Link to="/all-products" className="nav-link font-weight-bold text-uppercase">
-                    All
+                <Link
+                  to="/all-products"
+                  className="nav-link font-weight-bold text-uppercase"
+                >
+                  All
                 </Link>
               </li>
               <li className="nav-item dropdown megamenu dropdown-hover px-3">
-                <Link to="/"
+                <Link
+                  to="/"
                   id="megamneu"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -81,7 +86,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <Link
-                                    to="/"
+                                    to="/men-jackets"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Jackets

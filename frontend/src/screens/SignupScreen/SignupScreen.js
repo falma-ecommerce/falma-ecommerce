@@ -3,7 +3,9 @@ import { NavLink, useNavigate } from "react-router-dom";
 import axios from "../../components/Utility/axiosInstance";
 import { toast } from "material-react-toastify";
 import "material-react-toastify/dist/ReactToastify.css";
+import Footer from "../../components/Home/Footer/Footer";
 import "./SignupScreen.css";
+
 
 export default function Register() {
   const navigate = useNavigate();
@@ -38,7 +40,7 @@ export default function Register() {
   return (
     <main>
       <div className="register-container ">
-        <h1>Sign Up</h1>
+        <h1 className="sign-up">Sign Up</h1>
         <div className=" d-flex justify-content-around align-items-center flex-wrap ">
           <div className="p-2 text-center">
             <h5>Your are Welcome Back</h5>
@@ -144,6 +146,7 @@ export default function Register() {
           </form>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

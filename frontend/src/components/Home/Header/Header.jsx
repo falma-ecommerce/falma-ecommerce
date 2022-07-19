@@ -5,7 +5,6 @@ import Marquee from "react-fast-marquee";
 import "./Header.modules.css";
 import { AuthContext } from "../../../contexts/AuthContext";
 import CartIcon from "../../Utility/cartIcon";
-import Navigation from "../Header/Navigation";
 import "./Header.modules.css";
 import { PrivateNav, PublicNav } from "../../Menu";
 import SearchForm from "../../SearchForm/SearchForm";
@@ -21,11 +20,7 @@ export default function Header() {
       </div>
       <div className="nav-info ">
         <Link to="/">
-          <img
-            className="logo"
-            src="../images/FullLogo.png"
-            alt="logo"
-          />
+          <img className="logo" src="../images/FullLogo.png" alt="logo" />
         </Link>
         <div className="searchForm">
           <SearchForm />
@@ -36,7 +31,7 @@ export default function Header() {
             <h1> FALMA Shop</h1>
           </NavLink>
         </div>
-        <div className="toggleNav" >
+        <div className="toggleNav">
           {loggedIn ? <PrivateNav /> : <PublicNav />}
         </div>
         <div className="login-cart">
@@ -49,10 +44,6 @@ export default function Header() {
             </NavLink>
           </div>
         </div>
-      </div>
-      <div>
-        {" "}
-        <Navigation />
       </div>
     </div>
   );

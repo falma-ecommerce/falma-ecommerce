@@ -24,8 +24,7 @@ const Categories = () => {
               
               height: "60vh",
             }}
-            // "https://img01.ztat.net/article/spp-media-p1/c335a45df8d1426fbdcecb8eaf9dc5ba/53d764af5aad4167819846e85771c60c.jpg?imwidth=400" +
-          >
+            >
             <div className="one"></div>
             <div className="details">
               <h3>MEN</h3>

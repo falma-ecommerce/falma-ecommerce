@@ -1,9 +1,8 @@
-.shippingpage{
-    margin: 0 10rem;
-    font-size: rem;
-    align-content: center;
+.styleContainer{
+  margin: 5rem 10rem;    
   
-  }
+
+}
   .changing{
     color: rgb(42, 99, 165); 
     font-weight: bold;
@@ -22,3 +21,4 @@
     font-size: 20px;
     margin-bottom: 30px;
   }
+  
