@@ -10,7 +10,7 @@ export default function SigninScreen() {
   const { handleLogin } = useContext(AuthContext);
   const { cartItems } = useContext(CartContext);
 
-  const navigate = useNavigate();
+  const navigate = useNavigate();  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,9 +25,9 @@ export default function SigninScreen() {
       const response = await axios.post("/api/users/signin", data);
       console.log("response ", response);
 
-      handleLogin(true, response.data.user);      
+      handleLogin(true, response.data.user);
       cartItems.length >= 1 ? navigate("/shipping-address") : navigate("/");
-
+      toast.success("You are Welcome Back");
     } catch (error) {
       toast.error(
         "Sorry! you entered wrong username or password. Please try again"

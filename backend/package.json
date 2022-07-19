@@ -12,8 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
-    "braintree": "^3.11.0",
     "bcrypt": "^5.0.1",
+    "braintree": "^3.11.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
@@ -25,6 +25,5 @@
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0"
   },
-  "devDependencies": {},
   "description": ""
 }

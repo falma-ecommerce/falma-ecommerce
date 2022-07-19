@@ -3,12 +3,13 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import { Link } from "react-router-dom";
 import "./Navigation.css";
 function Navigation() {
+  
   return (
-    <div className="APP sticky-top ">
-      <nav className="navbar navbar-expand-lg navbar-light py-2 shadow-sm  ">
-        <div className="container-fluid">
+    <div className="APP sticky-top">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white py-2 shadow-sm ">
+        <div className="container-fluid ">
           <Link
-            to="/all-products"
+            to="/all-products" 
             className="navbar-brand font-weight-bold d-block d-lg-none "
           >
             Shop

@@ -7,7 +7,7 @@ import Paypal from "./Paypal";
 import PaymentDetail from "../Utility/PaymentDetail";
 
 const Payment = () => {
-  const [ setShipmentInfo] = useState(null);
+  const [setShipmentInfo] = useState(null);
   const [checkout, setCheckOut] = useState(false);
 
   const getShipmentInfo = async () => {

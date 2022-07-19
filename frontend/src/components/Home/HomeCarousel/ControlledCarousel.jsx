@@ -22,7 +22,8 @@ export default function ControlledCarousel() {
               alt="First slide"
             />
 
-            <Carousel.Caption></Carousel.Caption>
+            <Carousel.Caption>
+            </Carousel.Caption>
           </Link>
         </Carousel.Item>
 
@@ -33,7 +34,8 @@ export default function ControlledCarousel() {
               src="../images/women-F.jpg"
               alt="Second slide"
             />
-            <Carousel.Caption className="color"></Carousel.Caption>
+            <Carousel.Caption className="color">
+            </Carousel.Caption>
           </Link>
         </Carousel.Item>
 
@@ -45,7 +47,8 @@ export default function ControlledCarousel() {
               alt="Third slide"
             />
 
-            <Carousel.Caption></Carousel.Caption>
+            <Carousel.Caption>
+            </Carousel.Caption>
           </Link>
         </Carousel.Item>
       </Carousel>

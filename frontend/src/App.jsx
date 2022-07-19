@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { AuthProvider } from "./contexts/AuthContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
@@ -30,6 +30,7 @@ import "material-react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navigation from "./components/Home/Header/Navigation";
+import Scroll from "./components/Home/scroll/Scroll";
 
 const App = () => {
   return (
@@ -138,8 +139,9 @@ const App = () => {
                     <Route path="/team" element={<TeamMember />} />
                   </Routes>
                 </main>
-                <Toaster />
-                <ToastContainer position="top-center" newestOnTop rtl />
+                <Toaster/>
+                <ToastContainer position="top-center" newestOnTop rtl/>
+                <Scroll />
               </div>
             </BrowserRouter>
           </AuthProvider>

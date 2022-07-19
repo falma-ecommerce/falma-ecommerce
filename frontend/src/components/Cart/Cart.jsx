@@ -6,12 +6,13 @@ import {
   AiOutlinePlus,
   AiOutlineShopping,
 } from "react-icons/ai";
+import { AuthContext } from "../../contexts/AuthContext";
 import "./Cart.modules.css";
 import PaymentDetail from "../Utility/PaymentDetail";
 import PaymentMethods from "../Utility/PaymentMethods";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { AuthContext } from "../../contexts/AuthContext";
+
 
 const Cart = () => {
   const cartRef = useRef();
@@ -105,16 +106,16 @@ const Cart = () => {
                     </Link>
                   </div>
                   <div style={linkStyle}>
-                    {loggedIn ? (
-                      <Link to="/shipping-address" className="checkout">
-                      Proceed to payment
+                    {loggedIn && loggedIn ?
+                    <Link to="/shipping-address" className="checkout">
+                      Proceed to Checkout
+                    </Link>:
+                    <Link to="/signin" className="checkout">
+                      Proceed to sign in or sign up
                     </Link>
-                    ) : (
-                      <Link to="/signin" className="checkout">
-                        Proceed to sign in or sign up
-                      </Link>
-                    )}
+                    }
                   </div>
+                
                   <PaymentMethods />
                 </div>
               )}

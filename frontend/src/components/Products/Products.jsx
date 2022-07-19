@@ -9,6 +9,7 @@ import { Helmet } from "react-helmet-async";
 import Spinner from "../Spinner";
 import Footer from "../Home/Footer/Footer";
 
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "FETCH_REQUEST":
@@ -33,6 +34,7 @@ const Products = ({ q }) => {
     method: "GET",
     url: `/extApi/products?q=${q}`,
   };
+
 
   useEffect(() => {
     dispatch({ type: "FETCH_REQUEST" });
