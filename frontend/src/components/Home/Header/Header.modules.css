@@ -7,24 +7,22 @@
   color: white;
 }
 .nav-info {
-    /* display: flex; */
-    display: grid;    
-    grid-template-columns: 1fr 1fr auto auto;
-    margin: 20px 40px ;
-    justify-content: center;
-   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #59cbf9;
+  align-items: center;
+  padding: 1rem;
+ 
 }
-.searchForm {
-    width: 60%;    
-    /* border: 1px solid black */
-}
-.websiteName a {
-  text-decoration: underline;
+.logo{
+  width: 5rem;
+  margin-bottom: 0.5rem;
 }
 .websiteName h1 {
   font-family: "Faster One", cursive;
   color: black;
-
+  text-decoration: underline; 
 }
 
 .login-cart {

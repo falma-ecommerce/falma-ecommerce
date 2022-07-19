@@ -1,18 +1,16 @@
 import React, { useContext } from "react";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import { CartContext } from "../../../contexts/CartContext";
-import Navigation from "../Header/Navigation"
 import "./Header.modules.css";
 import { AuthContext } from "../../../contexts/AuthContext";
+import CartIcon from "../../Utility/cartIcon";
+import "./Header.modules.css";
 import { PrivateNav, PublicNav } from "../../Menu";
 import SearchForm from "../../SearchForm/SearchForm";
 
-export default function Header() {  
-
+export default function Header() {
   const { loggedIn } = useContext(AuthContext);
-  const { totalQuantities } = useContext(CartContext);
   return (
     <div>
       <div className="shipping-info">
@@ -20,9 +18,12 @@ export default function Header() {
           <h6>FREE STANDARD SHIPPING ON ORDERS OVER €75</h6>
         </Marquee>
       </div>
-      <div className="nav-info">
-        <div className="searchForm">  
-        <SearchForm />         
+      <div className="nav-info ">
+        <Link to="/">
+          <img className="logo" src="../images/FullLogo.png" alt="logo" />
+        </Link>
+        <div className="searchForm">
+          <SearchForm />
         </div>
 
         <div className="websiteName">
@@ -39,19 +40,11 @@ export default function Header() {
           </div>
           <div>
             <NavLink to="/myCart">
-              <ShoppingCartIcon />
-              <p id="shopping-cart-count">{totalQuantities}</p>
+              <CartIcon />
             </NavLink>
           </div>
         </div>
-       
       </div>
-      <div> <Navigation />
-      </div>
-
-     
-     
-      
     </div>
   );
 }

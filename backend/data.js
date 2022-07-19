@@ -5,8 +5,7 @@ const data = {
         slug: 'nike-slim-shirt',       
         category: 'Trending',
         link: "/trending",
-        image: '/images/men1.jpg', // 679px × 829px
-        price: 120,
+        image: '/images/men1.jpg',
         countInStock: 10,
         brand: 'Nike',
         rating: 4.5,
@@ -39,18 +38,7 @@ const data = {
         numReviews: 14,
         description: 'high quality product',
       },
-      // {
-      //   name: 'Adidas Fit Pant',
-      //   slug: 'adidas-fit-pant',
-      //   category: 'Pants',
-      //   image: '/images/',
-      //   price: 65,
-      //   countInStock: 5,
-      //   brand: 'Puma',
-      //   rating: 4.5,
-      //   numReviews: 10,
-      //   description: 'high quality product',
-      // },
+      
     ],
   };
   export default data

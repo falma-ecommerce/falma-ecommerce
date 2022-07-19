@@ -4,18 +4,18 @@
   justify-content: center;
   gap: 0.5rem;
   flex-wrap: wrap;
-  max-width: fit-content;
+  width: 100vw;
 }
 
 .carousel-category img {
   height: 60vh;
-  min-width: 32.70vw;
+  min-width: 33vw;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
   border: 0.1rem solid;
 }
 
 @media only screen and (max-width: 400px) {
-  .shoe-carousel img {
-    width: 100vw;
+  .carousel-img {
+    min-width: 100%;
   }
 }

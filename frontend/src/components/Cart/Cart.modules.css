@@ -1,7 +1,15 @@
 .cart-wrapper {
-  margin: 0 10rem;
   font-size: 1.3rem;
   align-content: center;
+  padding: 1rem;
+}
+
+.flex-top {
+  max-width: 30vw;
+}
+
+.cart-detail{
+  background-color: white;
 }
 
 .item {
@@ -9,11 +17,26 @@
   align-items: center;
   padding: 1rem 0;
   flex-wrap: wrap;
-  min-width: 20vw;
 }
 
 .item-desc {
   padding: 0 1rem;
+  max-width: 40vw;
+}
+
+.plus,
+.minus,
+.quantity {
+  border: 0.1rem solid black;
+  padding: 0.5rem 0.8rem;
+  font-weight: bold;
+}
+
+.remove-item {
+  margin-left: 3.3rem;
+  border: none;
+  box-shadow: none;
+  background-color: white;
 }
 
 .item-total {
@@ -31,7 +54,7 @@
 }
 
 .checkout {
-  width: 100%;
+  text-decoration: none;
 }
 
 .icons {
@@ -74,6 +97,7 @@
   border-radius: 0.2rem;
 }
 
+
 .shopping:hover {
   color: black;
   background-color: rgb(168, 168, 168);
@@ -93,5 +117,10 @@
   }
   .cart-bottom {
     min-width: 50vw;
+  }
+
+  .bottom {
+    min-width: 60vw;
+    margin-left: none;
   }
 }

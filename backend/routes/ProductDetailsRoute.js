@@ -9,10 +9,10 @@ router.get( "/:id", (req, res) => {
         url: "https://asos2.p.rapidapi.com/products/v3/detail",
         params: {
           id: req.params.id,
-          lang: "en-US",
-          store: "US",
-          sizeSchema: "US",
-          currency: "USD",
+          lang: "en-GB",
+          store: "ROE",
+          sizeSchema: "UK",
+          currency: "EUR",
         },
         headers: {
           "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,

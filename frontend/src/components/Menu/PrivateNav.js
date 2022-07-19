@@ -8,6 +8,8 @@ export default function PrivateNav() {
 
   console.log(username);
 
+
+
   return (
     <div className="text-center">
       <OverlayTrigger
@@ -23,10 +25,10 @@ export default function PrivateNav() {
           </Popover>
         }
       >
-        <Button variant="link"> {username}</Button>
+        <Button className="btn btn-outline-dark text-decoration-none" variant="link"> {username}</Button>
       </OverlayTrigger>
 
-      <Link className="btn btn-outline-primary" to="/signout">
+      <Link className="btn btn-outline-dark m-3" to="/signout">
         Sign out
       </Link>
     </div>

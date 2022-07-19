@@ -9,15 +9,15 @@ import Trending from '../components/Home/Trending/Trending'
 
 export default function HomeScreen() {
   return (
-    <div className='home-screen'>
+    <div className="home-screen">
       <Helmet>
-       <title>Falma Shop</title>
-      </Helmet> 
+        <title>Falma Shop</title>
+      </Helmet>
       <ControlledCarousel />
       <Categories />
       <Trending />
       <ShoesCarousel />
-      <Footer /> 
+      <Footer />
     </div>
-  )
+  );
 }
