@@ -1,0 +1,14 @@
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2.5rem;
+}
+
+.link{
+  color: rgb(182, 203, 230);
+  margin-bottom: 20px;
+  font-size: 15px;
+  text-decoration: none;
+}
+

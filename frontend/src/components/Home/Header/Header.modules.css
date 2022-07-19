@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&family=Monoton&family=Poppins:ital,wght@0,400;1,300&display=swap");
+
+.shipping-info {
+  text-align: center;
+  background-color: #211f22;
+  padding: 5px;
+  color: white;
+}
+.nav-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #59cbf9;
+  align-items: center;
+  padding: 1rem;
+ 
+}
+.logo{
+  width: 5rem;
+  margin-bottom: 0.5rem;
+}
+.websiteName h1 {
+  font-family: "Faster One", cursive;
+  color: black;
+  text-decoration: underline; 
+}
+
+.login-cart {
+  display: flex;
+  align-items: space-between;
+  font-size: 2rem;
+}
+.loginIcon {
+  padding: 0 20px;
+  font-size: 2rem;
+}
+.dropdown-nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+#dropdown-basic-button {
+  background-color: white;
+
+  margin: 0 20px;
+  color: black;
+  border: none;
+}

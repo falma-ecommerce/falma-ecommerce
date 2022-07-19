@@ -1,0 +1,20 @@
+.register-container {
+  width: 40vw; 
+  margin: 7% 29%;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.774);
+  box-shadow: 0 5px 15px 0px rgb(116, 113, 117);
+}
+.checkbox{
+  padding: 10px;
+}
+
+.signup-header{
+  text-align: center;
+  padding-top: 5px;
+}
+
+.sign-up {
+  text-align: center;
+  padding: 0.8rem;
+}
