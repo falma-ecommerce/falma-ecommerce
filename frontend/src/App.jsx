@@ -30,9 +30,12 @@ import "material-react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navigation from "./components/Home/Header/Navigation";
+import Scroll from "./components/Home/scroll/Scroll";
+
 
 const App = () => {
   return (
+    
     <SearchContext>
       <CartProvider>
         <CheckoutProvider>
@@ -138,8 +141,9 @@ const App = () => {
                     <Route path="/team" element={<TeamMember />} />
                   </Routes>
                 </main>
-                <Toaster />
-                <ToastContainer position="top-center" newestOnTop rtl />
+                <Toaster/>
+                <ToastContainer position="top-center" newestOnTop rtl/>
+                <Scroll />
               </div>
             </BrowserRouter>
           </AuthProvider>

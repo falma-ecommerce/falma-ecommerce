@@ -23,7 +23,6 @@ const Cart = () => {
   } = useContext(CartContext);
 
   const {loggedIn} = useContext(AuthContext)
-
   const linkStyle = {
     border: "0.1rem solid black",
     textAlign: "center",
