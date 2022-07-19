@@ -6,10 +6,13 @@ import { CartContext } from "../../contexts/CartContext";
 import "./ProductDetails.modules.css";
 import { toast } from "react-toastify";
 import { getError } from "../../utils";
+import Box from "@mui/material/Box";
+import Spinner from "../Spinner";
 import "./ProductDetails.modules.css";
+import Footer from "../Home/Footer/Footer";
 
 const ProductDetails = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [loading, setLoading] = useState([]);
   const [product, setProduct] = useState({});
   const [images, setImages] = useState([]);
   const [firstUrl, setFirstUrl] = useState();
@@ -29,6 +32,7 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
+    setLoading(true);
     try {
       axios.request(options).then(function (response) {
         setProduct(response.data);
@@ -36,7 +40,7 @@ const ProductDetails = () => {
         setFirstUrl(response.data.media.images[0]);
         setProductInfo(response.data.variants[0]);
         console.log(response.data.media.images);
-        setIsLoaded(true);
+        setLoading(false)
       });
     } catch (error) {
       toast.error(getError(error));
@@ -49,71 +53,83 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <div className="product-detail">
-        <div className="product-image">
-          <div className="detail-images">
-            {images &&
-              images.map((product, index) => (
-                <div className="hover-image" key={index}>
+      <div className="product-container" >
+        {loading ? (
+          <div>
+            <Box>
+              <Spinner />
+            </Box>
+          </div>
+        ) :  (
+          <div className="product-detail"  >
+            <div className="product-image">
+              <div className="detail-images">
+                {images &&
+                  images.map((product, index) => (
+                    <div className="hover-image" key={index}>
+                      <img
+                        id={index}
+                        onClick={() => handleClick("https://" + product.url)}
+                        src={`https://${product.url}`}
+                        style={{ height: "20.55vh" }}
+                        alt="Article not no longer in stock"
+                      ></img>
+                    </div>
+                  ))}
+              </div>
+              <div className="firstUrl">
+                {firstUrl && (
                   <img
-                    id={index}
-                    onClick={() => handleClick("https://" + product.url)}
-                    src={`https://${product.url}`}
-                    style={{ height: "20.55vh" }}
+                    id="main-image"
+                    src={`https://${firstUrl.url}`}
+                    style={{ height: "83.5vh", width: "100%" }}
                     alt="Article not no longer in stock"
                   ></img>
-                </div>
-              ))}
+                )}
+              </div>
+            </div>
+            <div className="all-product-info">
+              <h4>{productInfo && productInfo.name}</h4>
+              <p>
+                <span className="new-price">
+                  {productInfo && productInfo.price.current.text}{" "}
+                </span>
+                <span className="tax">(inkl. MwSt)</span>
+              </p>
+              <p>{productInfo && productInfo.id}</p>
+
+              <hr className="line"></hr>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: sanitize(product?.description),
+                }}
+              ></p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: sanitize(
+                    product && product.info && product.info.aboutMe
+                  ),
+                }}
+              ></p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: sanitize(product?.info?.sizeAndFit),
+                }}
+              ></p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: sanitize(product?.info?.careInfo),
+                }}
+              ></p>
+              <div>
+                <button onClick={() => addToCart(product)} className="cart">
+                  ADD TO CART
+                </button>
+              </div>
+            </div>
+            <Footer />
           </div>
-          <div className="firstUrl">
-            {firstUrl && (
-              <img
-                id="main-image"
-                src={`https://${firstUrl.url}`}
-                style={{ height: "83.5vh", width: "100%" }}
-                alt="Article not no longer in stock"
-              ></img>
-            )}
-          </div>
-        </div>
-        <div className="all-product-info">
-          <h4>{productInfo && productInfo.name}</h4>
-          <p>
-            <span className="new-price">
-              {productInfo && productInfo.price.current.text}{" "}
-            </span>
-            {isLoaded ? <span className="tax">(inkl. MwSt)</span> : <></>}
-          </p>
-          <p>{productInfo && productInfo.id}</p>
-          {isLoaded ? <hr className="line"></hr> : <></>}
-          <p
-            dangerouslySetInnerHTML={{ __html: sanitize(product?.description) }}
-          ></p>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: sanitize(product && product.info && product.info.aboutMe),
-            }}
-          ></p>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: sanitize(product?.info?.sizeAndFit),
-            }}
-          ></p>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: sanitize(product?.info?.careInfo),
-            }}
-          ></p>
-          <div>
-            {isLoaded ? (
-              <button onClick={() => addToCart(product)} className="cart">
-                ADD TO CART
-              </button>
-            ) : (
-              <></>
-            )}
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

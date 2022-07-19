@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    /* padding: 20px; */
+   
    
   }
   .wrapper {
@@ -23,7 +23,6 @@ body {
     display: flex;
     flex-direction: column-reverse;
 }
-
 
   @media (max-width: 640px) {
     .video-item {

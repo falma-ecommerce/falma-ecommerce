@@ -14,6 +14,7 @@ const SearchForm = () => {
     setSearch(searchInput);
     setSearchInput("");
     navigate(`/search-products`);
+   
     
   };
 

@@ -29,12 +29,16 @@ function Navigation() {
           <div id="navbarSupportedContent" className="collapse navbar-collapse">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item px-3">
-                <Link to="/all-products" className="nav-link font-weight-bold text-uppercase">
-                    All
+                <Link
+                  to="/all-products"
+                  className="nav-link font-weight-bold text-uppercase"
+                >
+                  All
                 </Link>
               </li>
               <li className="nav-item dropdown megamenu dropdown-hover px-3">
-                <Link to="/"
+                <Link
+                  to="/"
                   id="megamneu"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -82,7 +86,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <Link
-                                    to="/"
+                                    to="/men-jackets"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Jackets

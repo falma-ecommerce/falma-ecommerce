@@ -32,7 +32,6 @@ export default function ControlledCarousel() {
             <img
               className="d-block w-100"
               src="../images/women-F.jpg"
-              // href="/womenCategory"
               alt="Second slide"
             />
             <Carousel.Caption className="color">

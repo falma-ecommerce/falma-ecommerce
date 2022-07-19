@@ -6,7 +6,6 @@ import axios from '../../components/Utility/axiosInstance';
 
 
 export default function Signout() {
-
   const navigate = useNavigate();
 
   const {handleLogin} = useContext(AuthContext);

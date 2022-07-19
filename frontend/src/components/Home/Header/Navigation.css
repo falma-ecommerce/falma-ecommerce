@@ -1,7 +1,6 @@
 .megamenu {
   position: static;
 }
-
 .megamenu .dropdown-menu {
   background: none;
   border: none;
@@ -17,8 +16,9 @@
 }
 
 .dropdown-hover > .dropdown-toggle:active {
-  pointer-events: none;
+   pointer-events: none;
 }
+
 
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .dropdown-menu {
@@ -27,8 +27,8 @@
 }
 .APP {
   background: #eaafc8;
-  background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
-  background: linear-gradient(to right, #eaafc8, #654ea3);
+  background: -webkit-linear-gradient(to right, #eaafc8, #654ea3); 
+  background-color: #59cbf9;
 }
 
 
@@ -40,6 +40,7 @@ code {
 }
 .text-uppercase {
   letter-spacing: 0.08em;
+  
 }
 .megaimaga {
   background: center center url("../../../components/images/men.webp") no-repeat;

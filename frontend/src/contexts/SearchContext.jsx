@@ -23,8 +23,6 @@ const SearchContext = ({ children }) => {
         const response = await fetch(URI);
         const results = await response.json();
         console.log(results);
-
-        console.log(results);
         setData({ results, loading: false, error: null });
       } catch (error) {
         setData({ results: null, loading: false, error });
@@ -48,15 +46,15 @@ const SearchContext = ({ children }) => {
       key={product.id}
     >
       <img src={`https://${product.imageUrl}`} alt=""></img>
-      <div className="priceGroup">
-        <p className="products-name">{product.name}</p>
+      <div className="price">
         <p>
           <span className="old-price">{product.price.previous.text}</span>
           <span className="new-price">{product.price.current.text}</span>
           <span className="tax">(inkl. Taxes)</span>
         </p>
       </div>
-      <div className="productNname">
+      <div className="products-name">
+      <p>{product.name}</p>
         <Helmet>
           <title>{product.name}</title>
         </Helmet>

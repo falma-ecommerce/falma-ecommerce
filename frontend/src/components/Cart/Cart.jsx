@@ -13,6 +13,7 @@ import PaymentMethods from "../Utility/PaymentMethods";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
+
 const Cart = () => {
   const cartRef = useRef();
   const {
@@ -22,7 +23,8 @@ const Cart = () => {
     toggleCartItemQuantity,
   } = useContext(CartContext);
 
-  const {loggedIn} = useContext(AuthContext)
+  const { loggedIn } = useContext(AuthContext);
+
   const linkStyle = {
     border: "0.1rem solid black",
     textAlign: "center",

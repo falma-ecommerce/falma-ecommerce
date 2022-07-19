@@ -1,64 +1,7 @@
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .site-container {
-    min-height: 100vh;
-  }
-  main {
-    flex: 1;
-  }
-  .btn-primary,
-  .btn-outline-primary {
-    background-color: #f0c040;
-    color: #000000;
-  }
-  .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .rating span {
-    color: #ffc000;
-  }
-  
-  .product {
-    border: 1px #404040 solid;
-    margin: 1rem;
-  }
-  .product img {
-    width: 100%;
-    max-width: 400px;
-  }
-  .product-info {
-    padding: 1rem;
-  }
-  .img-large {
-    max-width: 100%;
-  }
-  .img-thumbnail {
-    height: 80px;
-  }
-  .small-container {
-    max-width: 600px;
-  }
-  
-  .checkout-steps > div {
-    border-bottom: 0.2rem solid #a0a0a0;
-    color: #a0a0a0;
-  }
-  .checkout-steps > div.active {
-    border-bottom: 0.2rem solid #f08000;
-    color: #f08000;
-  }
+
   
   /* sidebar */
-  .navbar-brand {
+  /* .navbar-brand {
     font-weight: bold;
   }
   .side-navbar {
@@ -81,10 +24,10 @@ body {
   }
   .text-bold {
     font-weight: bold;
-  }
+  } */
   
   /* Map */
-  
+/*   
   .full-box {
     height: 100vh;
     max-width: initial;
@@ -125,4 +68,4 @@ body {
   button.thumbnail {
     padding: 0;
   }
-  
+    */

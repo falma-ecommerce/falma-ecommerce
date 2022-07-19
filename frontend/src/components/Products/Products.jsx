@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import "./Products.modules.css";
 import { Helmet } from "react-helmet-async";
 import Spinner from "../Spinner";
+import Footer from "../Home/Footer/Footer";
 
 
 const reducer = (state, action) => {
@@ -62,39 +63,44 @@ const Products = ({ q }) => {
           {loading ? (
             <div>
               <Box sx={{ display: "flex" }}>
-                  <Spinner />
+                <Spinner />
               </Box>
             </div>
           ) : error ? (
             <div>{error}</div>
           ) : (
-            products &&
-            products.map((product) => (
-              <Link
-                className="all-products"
-                to={`/product-details/${product.id}`}
-                key={product.id}
-              >
-                <img src={`https://${product.imageUrl}`} alt=""></img>
-                <div className="price">
-                  <p>
-                    <span className="old-price">
-                      {product.price.previous.text}
-                    </span>
-                    <span className="new-price">
-                      {product.price.current.text}
-                    </span>
-                    <span className="tax">(inkl. Taxes)</span>
-                  </p>
-                </div>
-                <div className="products-name">
-                  <p>{product.name}</p>
-                  <Helmet>
-                    <title>{product.name}</title>
-                  </Helmet>
-                </div>
-              </Link>
-            ))
+            <div className="product-screen">
+              <div className="allProduct-screen">
+                {products &&
+                  products.map((product) => (
+                    <Link
+                      className="all-products"
+                      to={`/product-details/${product.id}`}
+                      key={product.id}
+                    >
+                      <img src={`https://${product.imageUrl}`} alt=""></img>
+                      <div className="price">
+                        <p>
+                          <span className="old-price">
+                            {product.price.previous.text}
+                          </span>
+                          <span className="new-price">
+                            {product.price.current.text}
+                          </span>
+                          <span className="tax">(inkl. Taxes)</span>
+                        </p>
+                      </div>
+                      <div className="products-name">
+                        <p>{product.name}</p>
+                        <Helmet>
+                          <title>{product.name}</title>
+                        </Helmet>
+                      </div>
+                    </Link>
+                  ))}
+              </div>
+              <Footer />
+            </div>
           )}
         </AnimatePresence>
       </motion.div>

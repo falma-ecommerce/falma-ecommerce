@@ -3,7 +3,9 @@ import { NavLink, useNavigate } from "react-router-dom";
 import axios from "../../components/Utility/axiosInstance";
 import { toast } from "material-react-toastify";
 import "material-react-toastify/dist/ReactToastify.css";
+import Footer from "../../components/Home/Footer/Footer";
 import "./SignupScreen.css";
+
 
 export default function Register() {
   const navigate = useNavigate();
@@ -144,6 +146,7 @@ export default function Register() {
           </form>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }
