@@ -18,7 +18,6 @@ export default function HomeScreen() {
       <Categories />
       <Trending />
       <ShoesCarousel />
-
       <Footer />
     </div>
   );
