@@ -209,7 +209,7 @@ function Navigation() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimaga1"></div>
+                      <div className="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimaga1"></div>
                     </div>
                   </div>
                 </div>
@@ -392,7 +392,7 @@ function Navigation() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimaga"></div>
+                      <div className="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimaga"></div>
                     </div>
                   </div>
                 </div>
@@ -575,7 +575,7 @@ function Navigation() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimage"></div>
+                      <div className="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimage"></div>
                     </div>
                   </div>
                 </div>
@@ -758,7 +758,7 @@ function Navigation() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimagakids"></div>
+                      <div className="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimagakids"></div>
                     </div>
                   </div>
                 </div>
