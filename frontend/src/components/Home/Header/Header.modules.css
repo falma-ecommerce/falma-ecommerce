@@ -8,30 +8,21 @@
 }
 .nav-info {
   display: flex;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr auto auto; */
-  /* margin: 20px 40px; */
   flex-wrap: wrap;
   justify-content: space-around;
-  /* background-color: rgb(254, 94, 254); */
-  background-color: rgb(89, 203, 249);
-  /* background-color: rgb(98, 251, 98); */
-  border-bottom: 0.2rem solid;
+  background-color: #59cbf9;
   align-items: center;
   padding: 1rem;
+ 
 }
 .logo{
   width: 5rem;
   margin-bottom: 0.5rem;
 }
-/* .websiteName a {
-  text-decoration: underline;
-} */
 .websiteName h1 {
   font-family: "Faster One", cursive;
   color: black;
-  text-decoration: underline;
-  /* color: white; */
+  text-decoration: underline; 
 }
 
 .login-cart {

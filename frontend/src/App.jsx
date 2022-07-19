@@ -22,20 +22,19 @@ import ShippingAddress from "./components/ShippingAddress/ShippingAddress";
 import Payment from "./components/Payment/Payment";
 import SuccessFullOrder from "./components/SuccessFullOrder/SuccessFullOrder";
 import { CheckoutProvider } from "./contexts/CheckoutContext";
-import  SearchContext  from "./contexts/SearchContext";
+import SearchContext from "./contexts/SearchContext";
 import SearchProduct from "./components/SearchProduct/SearchProduct";
-import {Toaster} from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import { ToastContainer } from "material-react-toastify";
 import "material-react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "./components/Home/Footer/Footer";
-import Navigation from './components/Home/Header/Navigation'
+import Navigation from "./components/Home/Header/Navigation";
 
 const App = () => {
   return (
     <SearchContext>
-    <CartProvider>
+      <CartProvider>
         <CheckoutProvider>
           <AuthProvider>
             <BrowserRouter>
@@ -130,26 +129,24 @@ const App = () => {
                     />
                     <Route path="/payment" element={<Payment />} />
                     <Route path="/success" element={<SuccessFullOrder />} />
-                    <Route path="/shipping" element={<Shipping/>} />
+                    <Route path="/shipping" element={<Shipping />} />
                     <Route path="/terms" element={<Terms />} />
                     <Route path="/privacy" element={<Privacy />} />
                     <Route path="/refund" element={<Refund />} />
                     <Route path="/mission" element={<Mission />} />
                     <Route path="/vision" element={<Vision />} />
-                    <Route path="/team"   element={<TeamMember />} />
+                    <Route path="/team" element={<TeamMember />} />
                   </Routes>
                 </main>
-                <Toaster/>
-                <ToastContainer position="top-center" newestOnTop rtl/>
+                <Toaster />
+                <ToastContainer position="top-center" newestOnTop rtl />
               </div>
-              <Footer />
             </BrowserRouter>
           </AuthProvider>
         </CheckoutProvider>
-        </CartProvider>
-        </SearchContext>
-      );
-    };
- 
-export default App; 
+      </CartProvider>
+    </SearchContext>
+  );
+};
 
+export default App;

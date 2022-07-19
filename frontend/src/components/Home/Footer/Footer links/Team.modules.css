@@ -24,7 +24,6 @@ body {
     flex-direction: column-reverse;
 }
 
-
   @media (max-width: 640px) {
     .video-item {
       flex: 0 0 48%;

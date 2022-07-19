@@ -1,14 +1,27 @@
-/* .product-container{
-  margin: 0 5rem;
-} */
 
 .products-link {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 0 1rem;
+  text-align: center;
+}
+.product-screen {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  gap: 0 1rem;
+  text-align: center;
+
+}
+.allProduct-screen {
   display: flex;
   flex-wrap: wrap;
   margin: 1rem 5rem;
   justify-content: center;
   gap: 0 1rem;
   text-align: center;
+
 }
 
 .products-link img {

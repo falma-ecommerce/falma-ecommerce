@@ -28,12 +28,16 @@ function Navigation() {
           <div id="navbarSupportedContent" className="collapse navbar-collapse">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item px-3">
-                <Link to="/all-products" className="nav-link font-weight-bold text-uppercase">
-                    All
+                <Link
+                  to="/all-products"
+                  className="nav-link font-weight-bold text-uppercase"
+                >
+                  All
                 </Link>
               </li>
               <li className="nav-item dropdown megamenu dropdown-hover px-3">
-                <Link to="/"
+                <Link
+                  to="/"
                   id="megamneu"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -51,11 +55,9 @@ function Navigation() {
                         <div className="p-4">
                           <div className="row menu2">
                             <div className="col-lg-6 mb-">
-                              <Link to="/men" className="font-weight-bold text-uppercase">
-                              
+                              <h6 className="font-weight-bold text-uppercase">
                                 Men
-                              
-                              </Link>
+                              </h6>
                               <ul className="list-unstyled">
                                 <li className="nav-item">
                                   <Link
@@ -83,7 +85,7 @@ function Navigation() {
                                 </li>
                                 <li className="nav-item">
                                   <Link
-                                    to="/"
+                                    to="/men-jackets"
                                     className="nav-link text-small pb-0 "
                                   >
                                     Jackets
@@ -211,7 +213,7 @@ function Navigation() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimaga1"></div>
+                      <div className="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimaga1"></div>
                     </div>
                   </div>
                 </div>
@@ -394,7 +396,7 @@ function Navigation() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimaga"></div>
+                      <div className="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimaga"></div>
                     </div>
                   </div>
                 </div>
@@ -577,7 +579,7 @@ function Navigation() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimage"></div>
+                      <div className="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimage"></div>
                     </div>
                   </div>
                 </div>
@@ -760,7 +762,7 @@ function Navigation() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimagakids"></div>
+                      <div className="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimagakids"></div>
                     </div>
                   </div>
                 </div>

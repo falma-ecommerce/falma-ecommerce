@@ -11,6 +11,7 @@ import PaymentDetail from "../Utility/PaymentDetail";
 import PaymentMethods from "../Utility/PaymentMethods";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const Cart = () => {
   const cartRef = useRef();
@@ -20,6 +21,8 @@ const Cart = () => {
     removeItemFromCart,
     toggleCartItemQuantity,
   } = useContext(CartContext);
+
+  const { loggedIn } = useContext(AuthContext);
 
   const linkStyle = {
     border: "0.1rem solid black",
@@ -102,9 +105,15 @@ const Cart = () => {
                     </Link>
                   </div>
                   <div style={linkStyle}>
-                    <Link to="/signin" className="checkout">
-                      Proceed to sign in or sign up
+                    {loggedIn ? (
+                      <Link to="/shipping-address" className="checkout">
+                      Proceed to payment
                     </Link>
+                    ) : (
+                      <Link to="/signin" className="checkout">
+                        Proceed to sign in or sign up
+                      </Link>
+                    )}
                   </div>
                   <PaymentMethods />
                 </div>

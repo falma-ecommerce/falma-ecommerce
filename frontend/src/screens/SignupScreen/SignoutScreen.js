@@ -6,10 +6,7 @@ import axios from '../../components/Utility/axiosInstance';
 
 
 export default function Signout() {
-
-  // const logout = async () => {
-  //     await axios.get('/api/users/logout');
-  // }
+  
   const navigate = useNavigate();
 
   const {handleLogin} = useContext(AuthContext);
