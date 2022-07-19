@@ -3,12 +3,13 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import { Link } from "react-router-dom";
 import "./Navigation.css";
 function Navigation() {
+  
   return (
-    <div className="APP">
-      <nav className="navbar navbar-expand-lg navbar-light bg-white py-2 shadow-sm">
-        <div className="container-fluid">
+    <div className="APP sticky-top border-bottom border-dark">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white py-2 shadow-sm ">
+        <div className="container-fluid ">
           <Link
-            to="/all-products"
+            to="/all-products" 
             className="navbar-brand font-weight-bold d-block d-lg-none "
           >
             Shop
@@ -209,7 +210,7 @@ function Navigation() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimaga1"></div>
+                      <div className="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimaga1"></div>
                     </div>
                   </div>
                 </div>
@@ -392,7 +393,7 @@ function Navigation() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimaga"></div>
+                      <div className="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimaga"></div>
                     </div>
                   </div>
                 </div>
@@ -575,7 +576,7 @@ function Navigation() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimage"></div>
+                      <div className="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimage"></div>
                     </div>
                   </div>
                 </div>
@@ -758,7 +759,7 @@ function Navigation() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimagakids"></div>
+                      <div className="col-lg-5 col-xl-4 px-5 d-none d-lg-block megaimagakids"></div>
                     </div>
                   </div>
                 </div>
