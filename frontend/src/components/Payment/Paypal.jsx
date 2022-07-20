@@ -26,7 +26,7 @@ export default function Paypal() {
         onApprove: async (data, actions) => {
           const order = await actions.order.capture();
           console.log("Successful order:", order);
-          window.location.replace("http://localhost:3000/success")
+          window.location.replace("http://localhost:5000/success")
         },
         onError: (err) => {
           console.log(err);
