@@ -9,6 +9,12 @@ import configurePassport from './passport-config.js';
 import ProductsRoute from "./routes/ProductsRoute.js";
 import ProductDetailsRoute from "./routes/ProductDetailsRoute.js";
 import userRouter from "./routes/userRouter.js";
+import path from 'path'
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 dotenv.config();
 const app = express();
@@ -42,7 +48,11 @@ mongoose
   .then(() => console.log("Database connected! 😍☕"))
   .catch((error) => console.log(error, "Database did not connect! ☹️❌"));
 
-
+// Serve frontend client/build folder
+app.use(express.static(path.join(__dirname, "frontend/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/frontend/build/index.html"));
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () =>

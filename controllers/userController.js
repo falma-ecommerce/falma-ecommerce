@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
-import User from "./../models/userModel.js";
-import ShippingAddress from "./../models/ShippingModel.js"
+import User from "../models/userModel.js";
+import ShippingAddress from "../models/ShippingModel.js"
 import expressAsyncHandler from "express-async-handler";
 import jwtissuer from "../helpers/jwtissuer.js";
 
