@@ -1,4 +1,4 @@
-import confetti from 'canvas-confetti';
+import confetti from "canvas-confetti";
 
 export const fireworksConfetti = () => {
   var duration = 10 * 1000;
@@ -9,7 +9,7 @@ export const fireworksConfetti = () => {
     return Math.random() * (max - min) + min;
   }
 
-  var interval = setInterval(function() {
+  var interval = setInterval(function () {
     var timeLeft = animationEnd - Date.now();
 
     if (timeLeft <= 0) {
@@ -17,7 +17,17 @@ export const fireworksConfetti = () => {
     }
 
     var particleCount = 50 * (timeLeft / duration);
-    confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
-    confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+    confetti(
+      Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      })
+    );
+    confetti(
+      Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      })
+    );
   }, 250);
-}
+};
