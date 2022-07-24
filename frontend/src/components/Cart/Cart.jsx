@@ -7,12 +7,12 @@ import {
   AiOutlineShopping,
 } from "react-icons/ai";
 import { AuthContext } from "../../contexts/AuthContext";
-import "./Cart.modules.css";
 import PaymentDetail from "../Utility/PaymentDetail";
 import PaymentMethods from "../Utility/PaymentMethods";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-
+import Footer from '../Home/Footer/Footer'
+import "./Cart.modules.css";
 
 const Cart = () => {
   const cartRef = useRef();
@@ -134,6 +134,7 @@ const Cart = () => {
           </div>
         </div>
       </div>
+       <Footer />
     </>
   );
 };
